@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('../font/PretendardVariable.woff2') format('woff2-variations'),
+  url('../font/PretendardVariable.woff') format('woff-variations'),;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-style: normal;
+	font-display: swap;
+  src: local('Bebas Neue'), url(../font/BebasNeue-Regular.woff2) format('woff2'),
+  url(../font/BebasNeue-Regular.woff) format('woff');
+}

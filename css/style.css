@@ -1,0 +1,795 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 300;
+}
+
+.blind {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+/****** skip navigation ******/
+.skip_nav a {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-color: #000;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.skip_nav a:focus,
+.skip_nav a:active {
+  top: 0;
+}
+
+/****** header ******/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 90px; */
+  display: flex;
+  align-items: center;
+  padding: 2rem 2.4rem;
+  z-index: 9999;
+}
+
+.header_logo {
+  width: 66px;
+  height: 50px;
+}
+
+.header_logo a {
+  display: block;
+}
+
+.header p {
+  align-self: flex-end;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.header_menu {
+  position: relative;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.header_menu em {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: opacity 0.5s;
+}
+
+.header_menu::before,
+.header_menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: transform 0.5s;
+}
+
+.header_menu::before {
+  top: 2px;
+}
+
+.header_menu::after {
+  bottom: 2px;
+}
+
+.header_menu.active em {
+  opacity: 0;
+}
+
+.header_menu.active::before{
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.header_menu.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/****** side menu ******/
+.side {
+  display: none;
+}
+
+/****** main ******/
+
+/****** section1 info ******/
+.info_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  min-height: 500px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* info_txt */
+.info_txt {
+  margin: 23.2227vh 0 2rem;
+  padding: 0 2.4rem;
+}
+
+.info_txt h2 {
+  font-size: 5rem;
+  font-family: 'Bebas Neue', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 5.6rem;
+}
+
+.info_txt h2 .tit {
+  background: linear-gradient(91.75deg, #12C2E9 0%, #C471ED 43.58%, #F64F59 99.36%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.info_txt h2 .block {
+  display: block;
+}
+
+.info_txt p {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* info_grid */
+.info_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(min-content, 19.5rem);
+  overflow: hidden;
+}
+
+.info_item {
+  position: relative;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.info_item:nth-child(odd) {
+  border-left: none;
+}
+
+.info_item a {
+  position: relative;
+  padding: 2.4rem;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.info_item h3 {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 3.8rem;
+  transition: transform 0.5s;
+}
+
+.info_item .info_tit {
+  overflow: hidden;
+  height: 3.8rem;
+}
+
+.info_item .info_tit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% / cover;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.info_item:nth-child(1) .info_tit::before{
+  background-image: url(../images/img1.png);
+}
+
+.info_item:nth-child(2) .info_tit::before{
+  background-image: url(../images/img2.png);
+}
+
+.info_item:nth-child(3) .info_tit:before{
+  background-image: url(../images/img3.png);
+}
+
+.info_item:nth-child(4) .info_tit::before{
+  background-image: url(../images/img4.png);
+}
+
+
+.info_tit::after {
+  content: "";
+  position: absolute;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/small_arrow.svg) no-repeat 50% / cover;
+  transition: transform 0.3s;
+}
+
+/****** work ******/
+.work {
+  margin-top: 15rem;
+}
+
+.work_wrap {
+  position: relative;
+  margin: 0 2.4rem;
+  /* overflow: hidden; */
+}
+
+/* 화살표 버튼 */
+.work_arrow {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.work_prev,
+.work_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 100px;
+  background: no-repeat 50% / cover;
+  cursor: pointer;
+}
+
+.work_prev {
+  left: -50px;
+  background-image: url(../images/prev_arrow.svg);
+}
+
+.work_next {
+  right: -50px;
+  background-image: url(../images/next_arrow.svg);
+}
+
+
+.work_img {
+  height: 75vh;
+  min-height: 500px;
+}
+
+.work_img a {
+  display: block;
+  height: 100%;
+}
+
+.work_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work_txt {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+
+.work_txt h3 {
+  font-size: 8rem;
+  font-family: 'Bebas Neue', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 7rem;
+}
+
+.work_txt h3 .block {
+  display: block;
+}
+
+.work_txt > p {
+  display: none;
+}
+
+.work_txt .txt_etc {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-family: 'Bebas Neue', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  text-transform: uppercase;
+}
+
+.work_txt .txt_etc > * {
+  margin-right: 2rem;
+}
+
+.work_txt .txt_etc p {
+  color: #767676;
+}
+
+/* slide_index */
+.work_index {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 14rem;
+  /* font-weight: 300; */
+  line-height: 14rem;
+  height: 14rem;
+  overflow: hidden;
+}
+
+.work_index_num {
+  transition: transform 0.5s;
+}
+
+.work_index .second {
+  transform: translateY(-14rem);
+}
+
+/* slide_pagination */
+.work_pagination {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.work_pagination .page_btn {
+  margin: 0 0.25rem;
+  width: 40px;
+  height: 10px;
+  border-radius: 0;
+  background: #eee;
+}
+
+.work_pagination .page_btn.select {
+  background-color: #12C2E9;
+}
+
+/****** contact ******/
+
+.contact {
+  margin-top:20rem;
+}
+
+.contact_txt {
+  padding: 0 2.4rem;
+}
+
+.contact_txt h2 {
+  font-size: 5rem;
+  font-family: 'Bebas Neue', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.contact_txt p {
+  color: #555;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.contact_txt strong {
+  color: #000;
+}
+
+.contact_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact_address {
+  height: 29.6208vh;
+  min-height: 100px;
+  max-height: 250px;
+  border-top: 1px solid #ccc;
+}
+
+.contact_address a {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2.4rem;
+  width: 100%;
+  height: 100%;
+}
+
+.contact_tit {
+  overflow: hidden;
+  height: 2.8rem;
+  font-size: 2.8rem;
+  /* font-weight: 300; */
+  line-height: 2.8rem;
+}
+
+.contact_tit::before {
+  content: "";
+  position: absolute;
+  bottom: 6.8rem;
+  left: 2.4rem;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: no-repeat 50% / cover;
+}
+
+.contact_tit.email::before {
+  background-image: url(../images/mail.svg);
+}
+
+.contact_tit.phone::before {
+  background-image: url(../images/phone.svg);
+}
+
+
+.contact_tit::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 3rem;
+  right: 2.4rem;
+  width: 16px;
+  height: 16px;
+  background: url(../images/small_arrow.svg) no-repeat 50% / cover;
+  transition: transform 0.3s;
+}
+
+.contact_tit h3 {
+  transition: transform 0.5s;
+}
+
+/****** footer ******/
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+  font-size: 1.4rem;
+  /* font-weight: 300; */
+  color: #555;
+}
+
+.footer_link {
+  margin-top: 1.4rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.footer_link a {
+  margin-right: 2rem;
+}
+
+/****** btn_wrap ******/
+.btn_wrap {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+}
+
+.top_btn,
+.dark_btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 6px 12px 0 rgb(63 65 80 / 10%);
+  cursor: pointer;
+  transition: transform 0.3s;
+
+}
+
+/****** dark mode ******/
+.dark_btn p {
+  margin: 0 auto;
+  width: 26px;
+  height: 26px;
+  background-image: url(../common/images/dark_mode.svg); 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/****** go to up ******/
+.top_btn {
+  margin-top: 1rem;
+}
+
+.top_btn p {
+  margin: 0 auto;
+  width: 26px;
+  height: 26px;
+  background-image: url(../common/images/top_btn.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
+@media (hover: hover) {
+  .info_item:hover .info_tit::before{
+    opacity: 1;
+  }
+
+  .info_item:hover .info_tit::after,
+  .contact_address:hover .contact_tit::after {
+    transform: translateX(10px);
+  }
+
+  .info_item:hover .info_tit_front,
+  .info_item:hover .info_tit_back,
+  .contact_address:hover .contact_tit_front,
+  .contact_address:hover .contact_tit_back {
+    transform: translateY(-100%);
+  }
+
+  .contact_address:hover {
+    background-color: #f2f5f7;
+  }
+
+  .footer_link a:hover {
+    text-decoration: underline;
+  }
+
+  .dark_btn:hover,
+  .top_btn:hover {
+    background-color: #111;
+    transform: translateY(-5px);
+  }
+
+  .dark_btn:hover p {
+    margin: 0 auto;
+    width: 26px;
+    height: 26px;
+    background-position: -26px 0;
+  }
+
+  .top_btn:hover p {
+    background-position: -26px 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .info_txt h2 {
+    font-size: 7rem;
+    line-height: 7.6rem;
+  }
+
+  .info_item .info_tit {
+    height: 4.4rem;
+  }
+
+  .info_item h3 {
+    font-size: 3.4rem;
+    line-height: 4.4rem;
+  }
+
+  .contact_container {
+    flex-direction: row;
+  }
+
+  .contact_address {
+    width: 50%;
+  }
+
+  .contact_address:first-child {
+    border-right: 1px solid #ccc;
+  }
+
+  .work_wrap {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .work_arrow {
+    display: flex;
+  }
+
+  .work_index {
+    top: 0;
+    left: 0;
+  }
+
+  .work_slide {
+    margin-left: 4rem;
+    padding: 4rem 0 0;
+    overflow: hidden;
+  }
+
+  .work_slide li {
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: center; */
+  }
+
+  .work_img {
+    /* padding: 0 10rem; */
+    /* width: 39.063vw;
+    height: 39.063vw; */
+    width: 400px;
+    height: 400px;
+    min-height: auto;
+  }
+
+  .work_img a {
+    /* width: 100%; */
+  }
+
+  .work_txt {
+    position: static;
+    /* margin: 0 0 2rem 2rem; */
+    margin-left: 2rem;
+  }
+
+  .work_txt strong {
+    font-size: 1.6rem;
+  }
+
+  .work_txt .txt_etc {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
+  
+
+  .contact_txt h2 {
+    font-size: 11rem;
+  }
+  .contact_tit {
+    font-size: 3.4rem;
+    line-height: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .contact_tit::before {
+    bottom: 8.4rem;
+  }
+  
+  footer {
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  .footer_link {
+    margin-top: 0;
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 6rem;
+  }
+
+  .info_wrap {
+    flex-direction: row;
+    /* border-bottom: 1px solid #ccc; */
+  }
+
+  .info_txt {
+    margin: 0 0 6rem;
+    padding-left:6rem;
+    padding-right: 0;
+    align-self: flex-end;
+  }
+
+  .info_item a {
+    padding: 3rem;
+  }
+
+  .info_tit::after {
+    right: 3rem;
+    bottom: 3rem;
+  }
+
+  .info_txt h2 {
+    /* font-size: 9rem; */
+  }
+
+  .info_grid {
+    width: 50%;
+    height: 100%;
+    grid-auto-rows: 50% 50%
+  }
+
+  .info_item:nth-child(odd) {
+    border-left: 1px solid #ccc;
+  }
+
+  .work_slide {
+    padding: 6rem 0 0;
+    margin-left: 6rem;
+  }
+
+  .work_img {
+    width: 60%;
+    height: auto;
+  }
+
+  .work_prev {
+    left: -80px;
+  }
+
+  .work_next {
+    right: -80px;
+  }
+
+  .contact_txt {
+    padding: 0 6rem;
+  }
+
+  .contact_tit::before {
+    left: 6rem;
+    bottom: 10.4rem;
+  }
+
+  .contact_tit::after{
+    right: 6rem;
+    bottom: 5rem;
+  }
+
+  .contact_address {
+    height: 39.063vw;
+    max-height: 400px;
+  }
+  .contact_address a {
+    padding: 5rem 6rem;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  .header {
+    padding: 6rem 12rem;
+  }
+
+  .info_txt {
+    padding-left: 12rem;
+  }
+
+  .info_txt h2 {
+    font-size: 11rem;
+    line-height: 11.6rem;
+  }
+}
