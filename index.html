@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="./common/css/font.css">
   <!-- style css -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./common/css/hover.css">
+  <link rel="stylesheet" href="./css/dark.css">
 </head>
 <body>
   <!-- skip navigation -->
@@ -52,26 +54,26 @@
         <span class="blind">메뉴</span>
       </em>
     </div>
-    <!-- side nav -->
-    <nav class="side">
-      <ul class="gnb">
-        <li><a href="#">work</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">github</a></li>
-      </ul>
-      <div class="side_info">
-        <div class="side_email">
-          <strong>Email</strong>
-          <p>shape1026@naver.com</p>
-        </div>
-        <div class="side_phone">
-          <strong>Phone</strong>
-          <p>010-6621-8939</p>
-        </div>
-      </div>
-    </nav> 
   </header>
+  <!-- side nav -->
+  <nav class="side">
+    <ul class="side_gnb">
+      <li class="side_item"><a href="#">work</a></li>
+      <li class="side_item"><a href="#">about</a></li>
+      <li class="side_item"><a href="#">blog</a></li>
+      <li class="side_item"><a href="#">github</a></li>
+    </ul>
+    <div class="side_info">
+      <div class="side_email">
+        <strong>Email</strong>
+        <p>shape1026@naver.com</p>
+      </div>
+      <div class="side_phone">
+        <strong>Phone</strong>
+        <p>010-6621-8939</p>
+      </div>
+    </div>
+  </nav> 
 
   <!-- main -->
   <main class="main">
@@ -127,12 +129,16 @@
     <!-- section2 work -->
     <section class="work" id="work">
       <h2 class="blind">작업리스트</h2>
+        
+
       <div class="work_wrap">
-        <!-- 화살표 버튼 -->
-        <div class="work_arrow">
-          <button class="work_prev"><span class="blind">이전</span></button>
-          <button class="work_next"><span class="blind">다음</span></button>
-        </div>
+
+          <!-- 화살표 버튼 -->
+          <div class="work_arrow">
+            <button class="work_prev"><span class="blind">이전</span></button>
+            <button class="work_next"><span class="blind">다음</span></button>
+          </div>
+
         <!-- slide main contents -->
         <ul class="work_slide">
           <li>
@@ -154,6 +160,9 @@
             </div>
           </li>
         </ul>
+
+      
+
         <!-- slide_index -->
         <div class="work_index">
           <div class="work_index_num first">
@@ -232,15 +241,19 @@
   </footer>
   
   <div class="btn_wrap">
+    <!-- go to up -->
+    <button type="button" class="top_btn" id="goToTop">
+      <p><span class="blind">위로가기</span></p>
+    </button>
+
     <!-- dark mode -->
     <button type="button" class="dark_btn" id="dark_btn">
       <p><span class="blind">다크모드</span></p>
     </button>
 
-    <!-- go to up -->
-    <button type="button" class="top_btn" id="goToTop">
-      <p><span class="blind">위로가기</span></p>
-    </button>
   </div>
+
+  <script src="./js/basic.js"></script>
+  <script src="./js/darkMode.js"></script>
 </body>
 </html>
