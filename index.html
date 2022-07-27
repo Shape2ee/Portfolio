@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" data-dark="N">
+<html lang="ko" data-dark="false">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,6 @@
   <title>Dohyoung_Portfolio</title>
   <meta name="description" content="이도형 포트폴리오 사이트입니다">
   <meta name="keywords" content="포트폴리오, 프론트엔드, 개발자, DH, 이도형">
-  <meta name="aut">
-
-  <!-- favicon -->
-  <link rel="icon" href="./common/favicon/favicon.ico" sizes="any">
-  <link rel="icon" href="./common/favicon/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./common/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="./common/favicon/site.webmanifest">
 
   <!-- og -->
   <meta property="og:title" content="Dohyoung_Portfolio">
@@ -29,13 +22,25 @@
   <!-- <meta name="twitter:image" content="https://shape2ee.github.io/Portfolio/common/images/"> -->
   <meta name="twitter:description" content="이도형 포트폴리오 사이트입니다">
 
+  <!-- favicon -->
+  <link rel="icon" href="./common/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="./common/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./common/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="./common/favicon/site.webmanifest">
+
   <!-- reset css -->
   <link rel="stylesheet" href="./common/css/minireset.css">
   <!-- font -->
   <link rel="stylesheet" href="./common/css/font.css">
+  <!-- 공통스타일 -->
+  <link rel="stylesheet" href="./common/css/basic.css">
   <!-- style css -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./common/css/hover.css">
+  <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/style_tablet.css">
+  <link rel="stylesheet" media="screen and (min-width: 1400px)" href="./css/style_pc.css">
+  <!-- hover css -->
+  <link rel="stylesheet" href="./css/hover.css">
+  <!-- dark mode -->
   <link rel="stylesheet" href="./css/dark.css">
 </head>
 <body>
@@ -46,7 +51,7 @@
   <!-- header -->
   <header class="header">
     <h1 class="header_logo"><a href="#">
-      <img src="./common/images/logo.svg" alt="Dohyoung">
+      <span class="blind">Dohyoung_Portfolio</span>
     </a></h1>
     <p>Portfolio</p>
     <div class="header_menu">
@@ -58,7 +63,7 @@
   <!-- side nav -->
   <nav class="side">
     <ul class="side_gnb">
-      <li class="side_item"><a href="#">work</a></li>
+      <li class="side_item"><a href="./work/index.html">work</a></li>
       <li class="side_item"><a href="#">about</a></li>
       <li class="side_item"><a href="#">blog</a></li>
       <li class="side_item"><a href="#">github</a></li>
@@ -92,7 +97,7 @@
         <!-- info_grid -->
         <div class="info_grid">
           <div class="info_item">
-            <a href="#">
+            <a href="./work/index.html">
               <div class="info_tit">
                 <h3 class="info_tit_front">Work</h3>
                 <h3 class="info_tit_back">view</h3>
@@ -133,33 +138,54 @@
 
       <div class="work_wrap">
 
-          <!-- 화살표 버튼 -->
-          <div class="work_arrow">
-            <button class="work_prev"><span class="blind">이전</span></button>
-            <button class="work_next"><span class="blind">다음</span></button>
-          </div>
+        <!-- 화살표 버튼 -->
+        <div class="work_arrow">
+          <button class="work_prev"><span class="blind">이전</span></button>
+          <button class="work_next"><span class="blind">다음</span></button>
+        </div>
 
         <!-- slide main contents -->
-        <ul class="work_slide">
-          <li>
-            <div class="work_img">
-              <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
-            </div>
-            <div class="work_txt">
-              <h3><a href="#">lotte<span class="block">cinema</span></a></h3>
-              <strong>롯데시네마 웹사이트</strong>
-              <p>속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
-              새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
-              무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
-              <div class="txt_etc">
-                <a href="#">github</a>
-                <p>html</p>
-                <p>css</p>
-                <p>javascript</p>
+        <div class="work_slide_container">
+
+          <ul class="work_slide" data-position="0">
+            <li>
+              <div class="work_img">
+                <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
               </div>
-            </div>
-          </li>
-        </ul>
+              <div class="work_txt">
+                <h3><a href="#">lotte<span class="block">cinema</span></a></h3>
+                <strong>롯데시네마 웹사이트</strong>
+                <p>속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
+                새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
+                무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
+                <div class="txt_etc">
+                  <a href="#">github</a>
+                  <p>html</p>
+                  <p>css</p>
+                  <p>javascript</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="work_img">
+                <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
+              </div>
+              <div class="work_txt">
+                <h3><a href="#">2222lotte<span class="block">cinema</span></a></h3>
+                <strong>22롯데시네마 웹사이트</strong>
+                <p>속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
+                새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
+                무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
+                <div class="txt_etc">
+                  <a href="#">github</a>
+                  <p>html</p>
+                  <p>css</p>
+                  <p>javascript</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
 
       
 
@@ -243,17 +269,18 @@
   <div class="btn_wrap">
     <!-- go to up -->
     <button type="button" class="top_btn" id="goToTop">
-      <p><span class="blind">위로가기</span></p>
+      <em><span class="blind">위로가기</span></em>
     </button>
 
     <!-- dark mode -->
     <button type="button" class="dark_btn" id="dark_btn">
-      <p><span class="blind">다크모드</span></p>
+      <em><span class="blind">다크모드</span></em>
     </button>
 
   </div>
-
-  <script src="./js/basic.js"></script>
-  <script src="./js/darkMode.js"></script>
+  <!-- script -->
+  <script src="./common/js/basic.js"></script>
+  <script src="./common/js/darkMode.js"></script>
+  <script src="./js/slide.js"></script>
 </body>
 </html>

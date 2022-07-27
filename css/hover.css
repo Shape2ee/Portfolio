@@ -20,46 +20,18 @@
     background-color: #f2f5f7;
   }
 
-  .work_prev:hover,
-  .work_next:hover {
+  .work_prev-hover:hover,
+  .work_next-hover:hover {
     opacity: 1;
   }
 
-  .footer_link a:hover {
-    text-decoration: underline;
-  }
-
-  .dark_btn:hover,
-  .top_btn:hover {
-    background-color: #111;
-    transform: translateY(-5px);
-  }
-
-  .dark_btn:hover p {
-    margin: 0 auto;
-    width: 26px;
-    height: 26px;
-    background-position: -26px 0;
-  }
-
-  .top_btn:hover p {
-    background-position: -26px 0;
-  }
-
-  .side_gnb li:hover a {
-    background: linear-gradient(91.75deg, #12C2E9 0%, #C471ED 43.58%, #F64F59 99.36%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transform: translateX(5%);
-  }
 
   /* darkmode */
   html[data-dark=true] .dark_btn:hover {
     background-color: #53575c;
   }
 
-  html[data-dark=true] .dark_btn:hover p {
+  html[data-dark=true] .dark_btn:hover em {
     background-position: -26px -26px;
   }
 

@@ -1,6 +1,6 @@
 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M23.08 17.2C16.25 17.2 10.71 11.79 10.71 5.13C10.71 3.68 10.97 2.29 11.45 1C5.53 1.9 1 6.9 1 12.93C1 19.59 6.54 25 13.37 25C18.72 25 23.27 21.69 25 17.05C24.37 17.15 23.73 17.2 23.08 17.2Z" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M49.08 17.2C42.25 17.2 36.71 11.79 36.71 5.13C36.71 3.68 36.97 2.29 37.45 1C31.53 1.9 27 6.9 27 12.93C27 19.59 32.54 25 39.37 25C44.72 25 49.27 21.69 51 17.05C50.37 17.15 49.73 17.2 49.08 17.2Z" fill="#12C2E9" stroke="#12C2E9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.08 17.2C42.25 17.2 36.71 11.79 36.71 5.13C36.71 3.68 36.97 2.29 37.45 1C31.53 1.9 27 6.9 27 12.93C27 19.59 32.54 25 39.37 25C44.72 25 49.27 21.69 51 17.05C50.37 17.15 49.73 17.2 49.08 17.2Z" fill="#12C2E9"/>
 <path d="M13.0001 44.9C16.2586 44.9 18.9001 42.2585 18.9001 39C18.9001 35.7415 16.2586 33.1 13.0001 33.1C9.74162 33.1 7.1001 35.7415 7.1001 39C7.1001 42.2585 9.74162 44.9 13.0001 44.9Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M13 30V27" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M6.6 32.6L4.5 30.5" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -10,7 +10,7 @@
 <path d="M19.3999 45.4L21.4999 47.5" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M22 39H25" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M19.3999 32.6L21.4999 30.5" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M39.0001 44.9C42.2586 44.9 44.9001 42.2585 44.9001 39C44.9001 35.7415 42.2586 33.1 39.0001 33.1C35.7416 33.1 33.1001 35.7415 33.1001 39C33.1001 42.2585 35.7416 44.9 39.0001 44.9Z" fill="#12C2E9" stroke="#12C2E9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M39.0001 44.9C42.2586 44.9 44.9001 42.2585 44.9001 39C44.9001 35.7415 42.2586 33.1 39.0001 33.1C35.7416 33.1 33.1001 35.7415 33.1001 39C33.1001 42.2585 35.7416 44.9 39.0001 44.9Z" fill="#12C2E9"/>
 <path d="M39 30V27" stroke="#12C2E9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M32.6 32.6L30.5 30.5" stroke="#12C2E9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M30 39H27" stroke="#12C2E9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>

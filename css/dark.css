@@ -27,7 +27,6 @@ html[data-dark=true] .skip_nav a {
   color: #000;
 }
 
-html[data-dark=true] .header p,
 html[data-dark=true] .contact_txt p,
 html[data-dark=true] footer {
   color: #d9d9d9;
@@ -38,17 +37,6 @@ html[data-dark=true] .work_txt > p {
   color: #969696;
 }
 
-html[data-dark=true] .header_menu em,
-html[data-dark=true] .header_menu em::before,
-html[data-dark=true] .header_menu em::after  {
-  background-color: #fff;
-}
-
-html[data-dark=true] .side {
-  background-color: #000;
-}
-
-html[data-dark=true] .side_info,
 html[data-dark=true] .info_wrap,
 html[data-dark=true] .info_item,
 html[data-dark=true] .contact_container,
@@ -73,12 +61,26 @@ html[data-dark=true] .footer_link {
 html[data-dark=true] .top_btn,
 html[data-dark=true] .dark_btn {
   background-color: rgba(58, 59, 61, 0.7);
+  box-shadow: none;
 }
 
-html[data-dark=true] .dark_btn p {
+html[data-dark=true] .dark_btn em {
   background-position: 0 -26px;
 }
 
-html[data-dark=true] .top_btn p {
+html[data-dark=true] .top_btn em {
   background-position: -26px 0;
+}
+
+html[data-dark=true] .info_tit::after,
+html[data-dark=true] .contact_tit::after {
+  background-position: -16px 0;
+}
+
+html[data-dark=true] .work_prev {
+  background-image: url(../images/prev_arrow_w.svg);
+}
+
+html[data-dark=true] .work_next {
+  background-image: url(../images/next_arrow_w.svg);
 }
