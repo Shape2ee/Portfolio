@@ -56,87 +56,83 @@ if(slideWrap.clientWidth < liIndex * liList[0].clientWidth) {
   next.classList.add("work_next-hover");
 } 
 /*----------------------------------------------*/
-let touchstartX = 0;
+let touchStartX = 0;
 let mouseStart = false;
 let currentTarget = "";
-let currentActiveLi;
-let nowAcriveLi;
+let transPos = 0;
 let currentClassList;
+let swipeStartTime = 0;
+let swipeEndTime = 0;
+let currentIndex = 1;
 
 
-const processTouchEnd = (e) => {
-  if(mouseStart === true) {
-    currentTarget.removeEventListener('mousemove', processTouchMove);
-    currentTarget.removeEventListener('mouseup', processTouchEnd);
+const touchEnd = () => {
+  mouseStart = false;
+  dataPosition = slideWrap.getAttribute("data-position");
+  console.log(slideWrap.clientWidth / 2)
+  console.log(dataPosition)
+  
+  if(mouseStart === false) {
+    slideWrap.removeEventListener('mousemove', touchMove);
+    slideWrap.removeEventListener('mouseup', touchEnd);
 
-    currentTarget.removeEventListener('touchmove', processTouchMove);
-    currentTarget.removeEventListener('touchend', processTouchEnd);  
-
+    slideWrap.removeEventListener('touchmove', touchMove);
+    slideWrap.removeEventListener('touchend', touchEnd);  
+   
+    console.log(mouseStart)
   }
 }
 
-const processTouchMove = (e) => {
+let transValue = 0;
+
+const touchMove = (e) => {
+  e.preventDefault();
+  console.log(dataPosition)
+
+  if(mouseStart) {
+    let currentX = e.clientX || e.touches[0].screenX;
+    console.log(currentX, touchStartX)
+    console.log(transPos);
+    transPos = Number(dataPosition) + Number(currentX) - Number(touchStartX);
+    
+    // transValue += transPos;
+    console.log(transPos);
+  }
+
+  slideWrap.setAttribute("data-position", transPos)    
+  
+  slideWrap.style.transform = "translateX(" + transPos + "px)"
+  // slideWrap.style.transition = "transform 0s linear"
+
+}
+
+const touchStart = (e) => {
   e.preventDefault();
 
-  let currentX = e.clientX || e.touches[0].screenX;
-  nowAcriveLi = (Number(currentX) - Number(touchstartX));
-  console.log(nowAcriveLi, currentActiveLi, currentX, touchstartX)
-
-  slideWrap.style.transition = 'transform 0s linear';
-  slideWrap.style.transform = "translateX(" + nowAcriveLi + "px)"
-}
-
-const processTouchStart = (e) => {
   mouseStart = true;
-
-  e.preventDefault()
-
-  touchstartX = e.clientX || e.touches[0].screenX;
-  currentTarget = e.target
-
-  currentTarget.addEventListener('mousemove', processTouchMove);
-  currentTarget.addEventListener('mouseup', processTouchEnd);
-
-  currentTarget.addEventListener('touchmove', processTouchMove);
-  currentTarget.addEventListener('touchend', processTouchEnd);  
-
-  currentActiveLi = dataPosition;
+  touchStartX = e.clientX || e.touches[0].screenX;
+  dataPosition = slideWrap.getAttribute("data-position");
+  console.log(touchStartX);
+  
+  slideWrap.addEventListener('mousemove', touchMove);
+  slideWrap.addEventListener('mouseup', touchEnd);
+  
+  slideWrap.addEventListener('touchmove', touchMove);
+  slideWrap.addEventListener('touchend', touchEnd);  
 }
 
-liList.forEach( item => {
-  item.addEventListener("mousedown", processTouchStart);
-  item.addEventListener("touchstart", processTouchStart);
-});
+liList.forEach( slide => {
+  slide.addEventListener("mousedown", touchStart);  
+})
 
-window.addEventListener('dragend', processTouchEnd);
-window.addEventListener('mouseup', processTouchEnd);
-// if(Number(positionValue) !== 0) {
-//   prev.addEventListener('click', transPrev);
-//   prev.classList.add("work_prev-hover");
-// } else {
-//   prev.removeEventListener('click', transPrev);
-//   prev.classList.remove("work_prev-hover");
-// }
-
-// else if (positionValue === -(liIndex - 1) * 100) {
-//   next.removeEventListener('click', transNext);
-//   next.classList.remove("work_next-hover"); 
-// }
-
-// if(slideWrap.clientWidth < liIndex * liList[0].clientWidth + positionValue) {
-  
-// }
+window.addEventListener('dragend', touchEnd);
+window.addEventListener('mouseup', touchEnd);
 
 
-// const slide = () => {
-//   let getTransformValue = slideWrap.getAttribute("data-position");
-//   console.log(getTransformValue);
 
-//     getTransformValue += 100
 
-//     slideWrap.style.transform = "translateX(-" + getTransformValue + "%)";
-//     slideWrap.style.transition = "transform 1s";
-//     slideWrap.setAttribute("data-position", getTransformValue);
-// }
-
-// prev.addEventListener('click', slide)
+function tranSlide () {
+    slideWrap.style.transform = "translateX(" + currentIndex * 100 + "%)"
+    slideWrap.style.transition = "transform 1s"
+    slideWrap.setAttribute("data-position", currentIndex * 100)    
+}

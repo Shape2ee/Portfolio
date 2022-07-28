@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .gird {
   margin-top: 15rem;
 }
@@ -8,33 +14,75 @@
   margin: 0 2.4rem;
 }
 
+.grid_head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+}
+
 .grid_tit {
   font-size: 11rem;
   font-family: "Bebas Neue", "Pretendard", -apple-system, BlinkMacSystemFont,
   system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
   "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol", sans-serif;
+  line-height: 11rem;
+}
+
+.grid_tab {
+  margin-left: -2rem;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.grid_tab li {
+  margin-right: 0.5rem;
+  padding: 2rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.grid_tab li.active {
+  color: #000;
 }
 
 .grid_container {
+  margin-top: 4rem;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   grid-template-columns: 1fr;
   grid-auto-rows: 600px;
 }
 
 .grid_item {
   position: relative;
+  overflow: hidden;
 }
 
 .grid_item a {
   display: block;
+  height: 100%;
 }
 
-.grid_img img {
+.grid_item .pg {
+  position: absolute;
+  top: 0;
+  left: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  transition: left 0.4s;
+}
+
+.grid_item h3 {
+  font-size: 3rem;
+  font-family: 'Bebas Neue', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.grid_img {
+  height: 100%;
+  transition: all 0.5s;
 }
 
 .grid_txt {
@@ -43,16 +91,27 @@
   left: 2rem;
 }
 
-.grid_item .pg {
-  position: absolute;
-  top: 0;
+.grid_item:hover .grid_img{
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.grid_item:hover .pg {
   left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .grid_item .pg1 {
-  background-color: #ddd;
+  background-color: #111;
+}
+
+.grid_item .pg2 {
+  background-color: #12C2E9;
+  transition-delay: 0.1s;
+}
+
+.grid_item .pg3 {
+  /* background-color: #f55; */
+  transition-delay: 0.2s;
 }
 
 .grid_item .pg3 .grid_txt-center {
@@ -67,6 +126,22 @@
   .grid_container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .grid_head {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .grid_tab {
+    margin-left: 0;
+    margin-right: -2rem;
+  }
+
+  .grid_tab li {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
