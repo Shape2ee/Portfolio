@@ -24,14 +24,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 2.4rem;
   width: 100%;
-  /* height: 90px; */
-  display: flex;
-  align-items: center;
-  padding: 2rem 2.4rem;
   z-index: 9999;
-  transition: padding 0.5s, border 1s;
   border-bottom: 1px solid transparent;
+  transition: padding 0.5s, border 1s, background 0.5s;
 }
 
 .header.bg {
@@ -39,10 +36,26 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.header_wrap {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  transition: width 0.5s, padding 0.5s;
+}
+
+.header_wrap.change {
+  padding: 1rem 0;
+}
+
 .header_logo {
   width: 66px;
   height: 50px;
   background: url(../images/logo.svg) no-repeat 50% / contain;
+  transition: width 0.5s;
+}
+
+.header.change .header_logo {
+  width: 56px;
 }
 
 .header_logo a {
@@ -57,6 +70,10 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   color: #555;
+}
+
+.header_wrap.change p {
+  display: none;
 }
 
 .header_menu {
@@ -190,12 +207,15 @@ body {
 
 /****** footer ******/
 footer {
+  border-top: 1px solid #ccc;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.footer_wrap {
+  padding: 2.4rem;
   display: flex;
   flex-direction: column;
-  padding: 2.4rem;
-  font-size: 1.4rem;
-  /* font-weight: 300; */
-  color: #555;
 }
 
 .footer_link {
@@ -285,13 +305,13 @@ html[data-dark=true] .header p {
 
 html[data-dark=true] .header_menu em,
 html[data-dark=true] .header_menu em::before,
-html[data-dark=true] .header_menu em::after  {
+html[data-dark=true] .header_menu em::after {
   background-color: #fff;
 }
 
 /****** side menu ******/
 html[data-dark=true] .side {
-  background-color: #000;
+  background-color: #111;
 }
 
 html[data-dark=true] .side_info {
@@ -303,7 +323,30 @@ html[data-dark=true] .side_phone p {
   color: #d9d9d9;
 }
 
+/****** footer ******/
+html[data-dark=true] footer {
+  color: #d9d9d9;
+  border-color: #3a3b3d;
+}
 
+html[data-dark=true] .footer_link {
+  color: #fff;
+}
+
+/****** btn ******/
+html[data-dark=true] .top_btn,
+html[data-dark=true] .dark_btn {
+  background-color: rgba(58, 59, 61, 0.7);
+  box-shadow: none;
+}
+
+html[data-dark=true] .dark_btn em {
+  background-position: 0 -26px;
+}
+
+html[data-dark=true] .top_btn em {
+  background-position: -26px 0;
+}
 
 @media screen and (min-width: 768px) {
   /****** side menu ******/
@@ -326,16 +369,34 @@ html[data-dark=true] .side_phone p {
   .side_email {
     margin-bottom: 4rem;
   }
-}
-
-@media screen and (min-width: 1024) {
-  /****** header ******/
-  .header {
-    padding: 6rem;
+  
+  .footer_wrap {
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
   }
 
-  .header.change {
-    padding: 2rem 6rem;
+  .footer_link {
+    margin-top: 0;
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /****** header ******/  
+  .header {
+    padding: 0;
+  }
+
+  .header_wrap {
+    margin: 0 auto;
+    padding: 6rem 0;
+    width: 90%;
+    max-width: 1800px;
+  }
+
+  .header_wrap.change p {
+    display: block;
   }
 
   /****** side menu ******/
@@ -346,18 +407,17 @@ html[data-dark=true] .side_phone p {
   .side_info {
     padding: 16rem 12rem;
   }
+
+  /****** footer ******/
+  .footer_wrap {
+    margin: 0 auto;
+    padding: 6rem 0;
+    width: 90%;
+    max-width: 1800px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
-  /****** header ******/
-  .header {
-    padding: 6rem 12rem;
-  }
-
-  .header.change {
-    padding: 2rem 12rem;
-  }
-
   /****** side menu ******/
   .side {
     padding: 0 12rem;
@@ -367,6 +427,9 @@ html[data-dark=true] .side_phone p {
     font-size: 14rem;
     line-height: 14rem;
   }
+  
+  
+
 }
 
 @media(hover: hover) {
@@ -396,4 +459,20 @@ html[data-dark=true] .side_phone p {
     background-position: -26px 0;
   }
 
+  /* darkmode */
+  html[data-dark=true] .dark_btn:hover {
+    background-color: #53575c;
+  }
+
+  html[data-dark=true] .dark_btn:hover em {
+    background-position: -26px -26px;
+  }
+
+  html[data-dark=true] .top_btn:hover{
+    background-color: #12C2E9;
+  }
+
+  html[data-dark=true] .contact_address:hover {
+    background-color: #3a3b3d;
+  }
 }

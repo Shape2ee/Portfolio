@@ -99,6 +99,8 @@ goToTop.addEventListener('click', moveScroll);
 // header 높이값 변경
 
 const header = document.querySelector(".header");
+const headerWrap = document.querySelector(".header_wrap");
+const infoTitle = document.querySelector(".info_txt")
 
 const changeHeader = () => {
   // console.log(window.pageYOffset)
@@ -106,18 +108,18 @@ const changeHeader = () => {
     header.classList.remove("bg");
     
     if(window.pageYOffset !== 0) {
-      header.classList.add("change");
+      headerWrap.classList.add("change");
     } else {
-      header.classList.remove("change");
+      headerWrap.classList.remove("change");
     }
     
   } else {
     if(window.pageYOffset !== 0) {
       header.classList.add("bg");
-      header.classList.add("change");
+      headerWrap.classList.add("change");
     } else {
       header.classList.remove("bg");
-      header.classList.remove("change");
+      headerWrap.classList.remove("change");
     }
   }
     return;

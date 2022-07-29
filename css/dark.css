@@ -27,8 +27,7 @@ html[data-dark=true] .skip_nav a {
   color: #000;
 }
 
-html[data-dark=true] .contact_txt p,
-html[data-dark=true] footer {
+html[data-dark=true] .contact_txt p {
   color: #d9d9d9;
 }
 
@@ -53,23 +52,9 @@ html[data-dark=true] .work_pagination .page_btn {
 html[data-dark=true] .work_pagination .page_btn.select {
   background-color: #12C2E9;
 }
-html[data-dark=true] .contact_txt strong,
-html[data-dark=true] .footer_link {
+
+html[data-dark=true] .contact_txt strong {
   color: #fff;
-}
-
-html[data-dark=true] .top_btn,
-html[data-dark=true] .dark_btn {
-  background-color: rgba(58, 59, 61, 0.7);
-  box-shadow: none;
-}
-
-html[data-dark=true] .dark_btn em {
-  background-position: 0 -26px;
-}
-
-html[data-dark=true] .top_btn em {
-  background-position: -26px 0;
 }
 
 html[data-dark=true] .info_tit::after,

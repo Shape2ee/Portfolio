@@ -24,22 +24,5 @@
   .work_next-hover:hover {
     opacity: 1;
   }
-
-
-  /* darkmode */
-  html[data-dark=true] .dark_btn:hover {
-    background-color: #53575c;
-  }
-
-  html[data-dark=true] .dark_btn:hover em {
-    background-position: -26px -26px;
-  }
-
-  html[data-dark=true] .top_btn:hover{
-    background-color: #12C2E9;
-  }
-
-  html[data-dark=true] .contact_address:hover {
-    background-color: #3a3b3d;
-  }
+  
 }
