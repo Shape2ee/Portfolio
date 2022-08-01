@@ -102,24 +102,27 @@ const header = document.querySelector(".header");
 const headerWrap = document.querySelector(".header_wrap");
 const infoTitle = document.querySelector(".info_txt")
 
+const HEADER_CHANGE = "change";
+const HEADER_BG = "bg";
+
 const changeHeader = () => {
   // console.log(window.pageYOffset)
   if(sideMenu.classList.contains("active")) {
-    header.classList.remove("bg");
+    header.classList.remove(HEADER_BG);
     
     if(window.pageYOffset !== 0) {
-      headerWrap.classList.add("change");
+      header.classList.add(HEADER_CHANGE);
     } else {
-      headerWrap.classList.remove("change");
+      header.classList.remove(HEADER_CHANGE);
     }
     
   } else {
     if(window.pageYOffset !== 0) {
-      header.classList.add("bg");
-      headerWrap.classList.add("change");
+      header.classList.add(HEADER_BG);
+      header.classList.add(HEADER_CHANGE);
     } else {
-      header.classList.remove("bg");
-      headerWrap.classList.remove("change");
+      header.classList.remove(HEADER_BG);
+      header.classList.remove(HEADER_CHANGE);
     }
   }
     return;
@@ -127,13 +130,45 @@ const changeHeader = () => {
   
 const toggleBg = () => {
   if(sideMenu.classList.contains("active")) {
-    header.classList.remove("bg");
+    header.classList.remove(HEADER_BG);
   } else if( window.pageYOffset > 0) {
-    header.classList.add("bg");
+    header.classList.add(HEADER_BG);
   } else {
-    header.classList.remove("bg");
+    header.classList.remove(HEADER_BG);
   }
 }
 
 sideBtn.addEventListener("click", toggleBg);
 window.addEventListener("scroll", changeHeader);
+
+/*----------------------------------------------------------*/
+// cursor custom
+const cursor = document.querySelector("#cursor");
+const aAll = document.querySelectorAll("a");
+const buttonAll = document.querySelectorAll("button");
+
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.pageX;
+  const mouseY = e.pageY;
+  cursor.style.left = mouseX + 'px';
+  cursor.style.top = mouseY + 'px';
+})
+
+function cursorToggleClass(item) {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("on");
+  })
+  item.addEventListener("mouseout", () => {
+    cursor.classList.remove("on");
+  })
+}
+
+aAll.forEach(item => {
+  cursorToggleClass(item)
+})
+
+buttonAll.forEach(item => {
+  cursorToggleClass(item)
+})
+
+cursorToggleClass(sideBtn);

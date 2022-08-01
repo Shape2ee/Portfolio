@@ -1,236 +1,334 @@
 <!DOCTYPE html>
 <html lang="ko" data-dark="false">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work | Dohyoung_Portfolio</title>
-  <meta name="description" content="이도형 포트폴리오 사이트의 작업물 페이지입니다">
-  <meta name="keywords" content="포트폴리오, 프론트엔드, 개발자, DH, 이도형, work, 작업물">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work | Dohyoung_Portfolio</title>
+    <meta
+      name="description"
+      content="이도형 포트폴리오 사이트의 작업물 페이지입니다"
+    />
+    <meta
+      name="keywords"
+      content="포트폴리오, 프론트엔드, 개발자, DH, 이도형, work, 작업물"
+    />
 
-  <!-- og -->
-  <meta property="og:title" content="Work | Dohyoung_Portfolio">
-  <meta property="og:url" content="https://shape2ee.github.io/Portfolio/work/">
-  <!-- <meta property="og:image" content="https://shape2ee.github.io/Portfolio/common/images/"> -->
-  <meta property="og:description" content="이도형 포트폴리오 사이트의 작업물 페이지입니다">
-  <meta property="og:type" content="website">
-  
-  <!-- twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Work | Dohyoung_Portfolio">
-  <meta name="twitter:url" content="https://shape2ee.github.io/Portfolio/work/">
-  <!-- <meta name="twitter:image" content="https://shape2ee.github.io/Portfolio/common/images/"> -->
-  <meta name="twitter:description" content="이도형 포트폴리오 사이트의 작업물 페이지입니다">
+    <!-- og -->
+    <meta property="og:title" content="Work | Dohyoung_Portfolio" />
+    <meta
+      property="og:url"
+      content="https://shape2ee.github.io/Portfolio/work/"
+    />
+    <meta
+      property="og:image"
+      content="https://shape2ee.github.io/Portfolio/common/images/ogImage.png"
+    />
+    <meta
+      property="og:description"
+      content="이도형 포트폴리오 사이트의 작업물 페이지입니다"
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- favicon -->
-  <link rel="icon" href="../common/favicon/favicon.ico" sizes="any">
-  <link rel="icon" href="../common/favicon/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../common/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="../common/favicon/site.webmanifest">
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Work | Dohyoung_Portfolio" />
+    <meta
+      name="twitter:url"
+      content="https://shape2ee.github.io/Portfolio/work/"
+    />
+    <meta
+      name="twitter:image"
+      content="https://shape2ee.github.io/Portfolio/common/images/ogImage.png"
+    />
+    <meta
+      name="twitter:description"
+      content="이도형 포트폴리오 사이트의 작업물 페이지입니다"
+    />
 
-  <!-- reset css -->
-  <link rel="stylesheet" href="../common/css/minireset.css">
-  <!-- font -->
-  <link rel="stylesheet" href="../common/css/font.css">
-  <!-- 공통스타일 -->
-  <link rel="stylesheet" href="../common/css/basic.css">
-  <!-- style css -->
-  <link rel="stylesheet" href="./css/style_work.css">
-  <link rel="stylesheet" href="./css/dark_work.css">
-</head>
-<body>
-<!-- header -->
-<header class="header">
-  <div class="header_wrap">
-    <h1 class="header_logo"><a href="./">
-      <span class="blind">Dohyoung_Portfolio</span>
-    </a></h1>
-    <p>Portfolio</p>
-    <div class="header_menu">
-      <em>
-        <span class="blind">메뉴</span>
-      </em>
-    </div>
-  </div>
-</header>
-  <!-- side nav -->
-  <nav class="side">
-    <ul class="side_gnb">
-      <li class="side_item"><a href="./work/index.html">work</a></li>
-      <li class="side_item"><a href="#">about</a></li>
-      <li class="side_item"><a href="#">blog</a></li>
-      <li class="side_item"><a href="#">github</a></li>
-    </ul>
-    <div class="side_info">
-      <div class="side_email">
-        <strong>Email</strong>
-        <p>shape1026@naver.com</p>
+    <!-- favicon -->
+    <link rel="icon" href="../common/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      href="../common/favicon/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../common/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../common/favicon/site.webmanifest" />
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="../common/css/minireset.css" />
+    <!-- font -->
+    <link rel="stylesheet" href="../common/css/font.css" />
+    <!-- 공통스타일 -->
+    <link rel="stylesheet" href="../common/css/basic.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/style_work.css" />
+    <link rel="stylesheet" href="./css/dark_work.css" />
+  </head>
+  <body>
+    <!-- custom cursor -->
+    <div id="cursor" class="cursor"></div>
+    <!-- header -->
+    <header class="header">
+      <div class="header_wrap">
+        <h1 class="header_logo">
+          <a href="../">
+            <span class="blind">Dohyoung_Portfolio</span>
+          </a>
+        </h1>
+        <p>Portfolio</p>
+        <div class="header_menu">
+          <em>
+            <span class="blind">메뉴</span>
+          </em>
+        </div>
       </div>
-      <div class="side_phone">
-        <strong>Phone</strong>
-        <p>010-6621-8939</p>
+    </header>
+    <!-- side nav -->
+    <nav class="side">
+      <ul class="side_gnb">
+        <li class="side_item"><a href="./">work</a></li>
+        <li class="side_item"><a href="../about/index.html">about</a></li>
+        <li class="side_item"><a href="#">blog</a></li>
+        <li class="side_item"><a href="#">github</a></li>
+      </ul>
+      <div class="side_info">
+        <div class="side_email">
+          <strong>Email</strong>
+          <p>shape1026@naver.com</p>
+        </div>
+        <div class="side_phone">
+          <strong>Phone</strong>
+          <p>010-6621-8939</p>
+        </div>
       </div>
-    </div>
-  </nav> 
-  <!-- main -->
-  <main>
-    <section class="gird">
-      <div class="grid_wrap">
-        <!-- gird title -->
-        <div class="grid_head">
-          <h2 class="grid_tit">work</h2>
-          <ul class="grid_tab">
-            <li class="active">전체보기</li>
-            <li>웹사이트</li>
-            <li>디자인</li>
+    </nav>
+    <!-- main -->
+    <main>
+      <section class="gird">
+        <div class="grid_wrap">
+          <!-- gird title -->
+          <div class="grid_head">
+            <h2 class="grid_tit">work</h2>
+            <ul class="grid_tab">
+              <li class="active">전체보기</li>
+              <li>웹사이트</li>
+              <li>디자인</li>
+            </ul>
+          </div>
+          <!-- 작업물 모음 -->
+          <ul class="grid_container">
+            <li class="grid_item design">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img2"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item cording">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item cording">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item cording">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item cording">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item design">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item design">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
+            <li class="grid_item cording">
+              <a href="#">
+                <div class="grid_img">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <div class="grid_txt">
+                    <h3>lotte cinema</h3>
+                  </div>
+                </div>
+                <div class="pg pg1"></div>
+                <div class="pg pg2"></div>
+                <div class="pg pg3">
+                  <img
+                    src="https://via.placeholder.com/460x600/ddd/eee?text=img1"
+                    alt=""
+                  />
+                  <h3 class="grid_txt-center">lotte cinema</h3>
+                </div>
+              </a>
+            </li>
           </ul>
         </div>
-        <!-- 작업물 모음 -->
-        <ul class="grid_container">
-          <li class="grid_item design"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img2" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item cording"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item cording"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item cording"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item cording"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item design"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item design"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          <li class="grid_item cording"><a href="#">
-            <div class="grid_img">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <div class="grid_txt">
-                <h3>lotte cinema</h3>
-              </div>
-            </div>
-            <div class="pg pg1"></div>
-            <div class="pg pg2"></div>
-            <div class="pg pg3">
-              <img src="https://via.placeholder.com/460x600/ddd/eee?text=img1" alt="">
-              <h3 class="grid_txt-center">lotte cinema</h3>
-            </div>
-          </a></li>
-          
-        </ul>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- footer -->
-  <footer>
-    <div class="footer_wrap">
-      <p>©2022 DoHyoung. All rights reserved</p>
-      <div class="footer_link">
-        <a href="#">GitHub</a>
-        <a href="#">Blog</a>
+    <!-- footer -->
+    <footer>
+      <div class="footer_wrap">
+        <p>©2022 DoHyoung. All rights reserved</p>
+        <div class="footer_link">
+          <a href="#">GitHub</a>
+          <a href="#">Blog</a>
+        </div>
       </div>
+    </footer>
+
+    <div class="btn_wrap">
+      <!-- go to up -->
+      <button type="button" class="top_btn" id="goToTop">
+        <em><span class="blind">위로가기</span></em>
+      </button>
+
+      <!-- dark mode -->
+      <button type="button" class="dark_btn" id="dark_btn">
+        <em><span class="blind">다크모드</span></em>
+      </button>
     </div>
-  </footer>
 
-  <div class="btn_wrap">
-    <!-- go to up --> 
-    <button type="button" class="top_btn" id="goToTop">
-      <em><span class="blind">위로가기</span></em>
-    </button>
-
-    <!-- dark mode -->
-    <button type="button" class="dark_btn" id="dark_btn">
-      <em><span class="blind">다크모드</span></em>
-    </button>
-  </div>
-
-  <!-- script -->
-  <script src="../common/js/basic.js"></script>
-  <script src="../common/js/darkMode.js"></script>
-  <script src="./js/work.js"></script>
-</body>
+    <!-- script -->
+    <script src="../common/js/basic.js"></script>
+    <script src="../common/js/darkMode.js"></script>
+    <script src="./js/work.js"></script>
+  </body>
 </html>
