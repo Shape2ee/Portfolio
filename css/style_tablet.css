@@ -29,8 +29,6 @@
 
 .work_wrap {
   margin: 0 auto;
-  width: 90%;
-  max-width: 1800px;
 }
 
 .work_arrow {
@@ -43,27 +41,17 @@
 }
 
 .work_slide_container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.work_slide {
-  width: 100%;
+  width: 80%;
+  padding: 6rem 0;
 }
 
 .work_slide li {
   width: 100%;
-  padding: 6rem 4rem 0;
-  margin: 0 auto;
   display: flex;
   align-items: flex-end;
-  /* justify-content: center; */
 }
 
 .work_img {
-  /* padding: 0 10rem; */
-  /* width: 39.063vw;
-    height: 39.063vw; */
   width: 400px;
   height: 400px;
   min-height: auto;
@@ -71,7 +59,6 @@
 
 .work_txt {
   position: static;
-  /* margin: 0 0 2rem 2rem; */
   margin-left: 2rem;
 }
 
@@ -83,6 +70,10 @@
 .work_txt .txt_etc {
   margin-top: 3rem;
   font-size: 1.8rem;
+}
+
+.swiper-button-disabled {
+display: none;
 }
 
 .contact_txt h2 {

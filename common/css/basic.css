@@ -309,13 +309,15 @@ footer {
   /* mix-blend-mode: difference; */
   border-radius: 50%;
   z-index: 99999;
-  transition: width 0.3s, height 0.3s, background 0.5s;
+  transition: width 0.3s, height 0.3s, background 0.5s, position 0.3s;
   pointer-events: none;
 }
 
 .cursor.on {
   width: 60px;
   height: 60px;
+  /* top: -30px;
+  left: -30px; */
 }
 /****** dark mode ******/
 /****** header ******/

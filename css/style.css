@@ -154,21 +154,22 @@
 .work_wrap {
   position: relative;
   margin: 0 2.4rem;
-  /* overflow: hidden; */
 }
 
+/****** slide main contents ******/
 .work_slide_container {
   overflow: hidden;
-}
-
-.work_slide {
-  display: flex; 
+  --swiper-pagination-bullet-width: 40px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-color: #12C2E9;
+  --swiper-theme-color: #12C2E9;
+  --swiper-pagination-bullet-inactive-color: #000;
 }
 
 .work_slide li {
   position: relative;
-  flex-shrink: 0;
-  width: 100%;
+  /* flex-shrink: 0; */
+  /* width: 100%; */
 }
 
 /* 화살표 버튼 */
@@ -191,15 +192,16 @@
   background: no-repeat 50% / cover;
   cursor: pointer;
   opacity: 0.3;
+  transition: opacity 0.3s;
 }
 
 .work_prev {
-  left: 0;
+  left: 10px;
   background-image: url(../images/prev_arrow.svg);
 }
 
 .work_next {
-  right: 0;
+  right: 10px;
   background-image: url(../images/next_arrow.svg);
 }
 
@@ -258,7 +260,6 @@
 
 /* slide_index */
 .work_index {
-  display: flex;
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -269,33 +270,13 @@
   overflow: hidden;
 }
 
-.work_index_num {
-  transition: transform 0.5s;
-}
-
-.work_index .second {
-  transform: translateY(-14rem);
-}
-
 /* slide_pagination */
-.work_pagination {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+.work_slide_container .swiper-pagination {
+  bottom: 0;
 }
 
-.work_pagination .page_btn {
-  margin: 0 0.25rem;
-  width: 40px;
-  height: 10px;
+.work_slide_container .swiper-pagination-bullet {
   border-radius: 0;
-  background-color: #eee;
-}
-
-.work_pagination .page_btn.select {
-  background-color: #12C2E9;
 }
 
 /****** contact ******/

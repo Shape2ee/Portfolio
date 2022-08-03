@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Dohyoung_Portfolio">
   <meta name="twitter:url" content="https://shape2ee.github.io/Portfolio/">
-  <meta name="twitter:image" content="https://shape2ee.github.io/Portfolio/common/images/">
+  <meta name="twitter:image" content="https://shape2ee.github.io/Portfolio/common/images/ogImage.png">
   <meta name="twitter:description" content="이도형 포트폴리오 사이트입니다">
 
   <!-- favicon -->
@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="./common/css/font.css">
   <!-- 공통스타일 -->
   <link rel="stylesheet" href="./common/css/basic.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="./common/js/swiper-bundle.min.css">
   <!-- style css -->
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/style_tablet.css">
@@ -149,84 +151,64 @@
         </div>
 
         <!-- slide main contents -->
-        <div class="work_slide_container">
+        <div class="swiper work_slide_container">
+          <ul class="swiper-wrapper work_slide" data-position="0">
+            <li class="swiper-slide">
+              <div class="work_img">
+                <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
+              </div>
+              <div class="work_txt" data-swiper-parallax="-300">
+                <h3 data-swiper-parallax="-500"><a href="#">lotte<span class="block">cinema</span></a></h3>
+                <strong data-swiper-parallax="-300">롯데시네마 웹사이트</strong>
+                <p data-swiper-parallax="-100">속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
+                새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
+                무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
+                <div class="txt_etc">
+                  <a href="#">github</a>
+                  <p>html</p>
+                  <p>css</p>
+                  <p>javascript</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="work_img">
+                <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
+              </div>
+              <div class="work_txt" data-swiper-parallax="-300">
+                <h3 data-swiper-parallax="-500"><a href="#">lotte<span class="block">cinema</span></a></h3>
+                <strong data-swiper-parallax="-300">롯데시네마 웹사이트</strong>
+                <p data-swiper-parallax="-100">속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
+                새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
+                무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
+                <div class="txt_etc">
+                  <a href="#">github</a>
+                  <p>html</p>
+                  <p>css</p>
+                  <p>javascript</p>
+                </div>
+              </div>
+            </li>
 
-          <ul class="work_slide" data-position="0">
-            <li>
-              <div class="work_img">
-                <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
-              </div>
-              <div class="work_txt">
-                <h3><a href="#">lotte<span class="block">cinema</span></a></h3>
-                <strong>롯데시네마 웹사이트</strong>
-                <p>속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
-                새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
-                무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
-                <div class="txt_etc">
-                  <a href="#">github</a>
-                  <p>html</p>
-                  <p>css</p>
-                  <p>javascript</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="work_img">
-                <a href="#"><img src="https://via.placeholder.com/560x560/aaa/bbb?text=img1" alt=""></a>
-              </div>
-              <div class="work_txt">
-                <h3><a href="#">2222lotte<span class="block">cinema</span></a></h3>
-                <strong>22롯데시네마 웹사이트</strong>
-                <p>속잎나고, 피가 것이다.보라, 열락의 오아이스도 소금이라 가치를 능히 꽃이 칼이다.
-                새 우리 천자만홍이 목숨이 되는 풀이 그들을 더운지라 위하여서. 온갖 놀이 이상 않는 같이 설산에서 있다.
-                무엇이 곳으로 이 것이다. 발휘하기 가는 그들은 뜨고, 있는가?</p>
-                <div class="txt_etc">
-                  <a href="#">github</a>
-                  <p>html</p>
-                  <p>css</p>
-                  <p>javascript</p>
-                </div>
-              </div>
-            </li>
           </ul>
+          <!-- slide_pagination -->
+          <div class="swiper-pagination"></div> 
         </div>
-
-      
-
         <!-- slide_index -->
-        <div class="work_index">
-          <div class="work_index_num first">
-            <p>0</p>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-          </div>
-          <div class="work_index_num second">
-            <p>0</p>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
+        <div class="swiper work_index">
+          <div class="swiper-wrapper work_index_wrap">
+            <p class="swiper-slide">01</p>
+            <p class="swiper-slide">02</p>
+            <!-- <p class="swiper-slide">03</p>
+            <p class="swiper-slide">04</p>
+            <p class="swiper-slide">05</p>
+            <p class="swiper-slide">06</p> -->
+            <!-- <p class="swiper-slide">07</p>
+            <p class="swiper-slide">08</p>
+            <p class="swiper-slide">09</p>
+            <p class="swiper-slide">10</p> -->
           </div>
         </div>
-
-        <!-- slide_pagination -->
-        <ul class="work_pagination">
-          <li><button type="button" class="page_btn select"></button></li>
-          <li><button type="button" class="page_btn"></button></li>
-          <li><button type="button" class="page_btn"></button></li>
-        </ul> 
       </div>
     </section>
 
@@ -287,6 +269,8 @@
   <!-- script -->
   <script src="./common/js/basic.js"></script>
   <script src="./common/js/darkMode.js"></script>
+  <!-- swiper -->
+  <script src="./common/js/swiper-bundle.min.js"></script>
   <script src="./js/slide.js"></script>
 </body>
 </html>

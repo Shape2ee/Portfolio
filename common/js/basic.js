@@ -147,18 +147,20 @@ const cursor = document.querySelector("#cursor");
 const aAll = document.querySelectorAll("a");
 const buttonAll = document.querySelectorAll("button");
 
-document.addEventListener("mousemove", (e) => {
+addEventListener("mousemove", (e) => {
   const mouseX = e.pageX;
   const mouseY = e.pageY;
-  cursor.style.left = mouseX + 'px';
+
   cursor.style.top = mouseY + 'px';
+  cursor.style.left = mouseX + 'px';
 })
 
+
 function cursorToggleClass(item) {
-  item.addEventListener("mouseover", () => {
+  item.addEventListener("mouseenter", () => {
     cursor.classList.add("on");
   })
-  item.addEventListener("mouseout", () => {
+  item.addEventListener("mouseleave", () => {
     cursor.classList.remove("on");
   })
 }

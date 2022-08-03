@@ -45,14 +45,6 @@ html[data-dark=true] .info_item:nth-child(odd) {
   border-color: #3a3b3d;
 }
 
-html[data-dark=true] .work_pagination .page_btn {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-html[data-dark=true] .work_pagination .page_btn.select {
-  background-color: #12C2E9;
-}
-
 html[data-dark=true] .contact_txt strong {
   color: #fff;
 }
@@ -68,4 +60,8 @@ html[data-dark=true] .work_prev {
 
 html[data-dark=true] .work_next {
   background-image: url(../images/next_arrow_w.svg);
+}
+
+html[data-dark=true] .work_slide_container {
+  --swiper-pagination-bullet-inactive-color: #fff;
 }

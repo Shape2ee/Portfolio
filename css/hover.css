@@ -20,8 +20,8 @@
     background-color: #f2f5f7;
   }
 
-  .work_prev-hover:hover,
-  .work_next-hover:hover {
+  .work_prev:hover,
+  .work_next:hover {
     opacity: 1;
   }
 }

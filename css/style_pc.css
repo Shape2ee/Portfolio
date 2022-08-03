@@ -13,18 +13,16 @@
   font-size: 1.8rem;
 }
 
-.work_slide_container {
-  margin: 0 auto;
-  max-width: 1400px;
+.work_wrap {
+  max-width: 1800px;
 }
 
-.work_slide li {
-  /* max-width: 1400px; */
-  padding: 8rem 8rem 0;
+.work_slide_container {
+  max-width: 1280px;
 }
 
 .work_index {
-  left: 13.542vw;
+  left: 11.542vw;
 }
 
 .work_img {
@@ -33,7 +31,7 @@
 }
 
 .work_txt {
-  width: 50%;
+  width: 40%;
   margin-left: 5rem;
 }
 
@@ -53,10 +51,6 @@
   font-size: 1.6rem;
   line-height: 2.6rem;
   color: #767676;
-}
-
-.work_pagination {
-  bottom: -8rem;
 }
 
 .work_prev,
