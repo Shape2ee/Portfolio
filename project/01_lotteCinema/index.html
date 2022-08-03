@@ -40,12 +40,6 @@
     <link rel="stylesheet" href="../../common/css/basic.css">
     <!-- style css -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/style_tablet.css">
-    <link rel="stylesheet" media="screen and (min-width: 1400px)" href="./css/style_pc.css"> -->
-    <!-- hover css -->
-    <!-- <link rel="stylesheet" href="./css/hover.css"> -->
-    <!-- dark mode -->
-    <!-- <link rel="stylesheet" href="./css/dark.css"> -->
   </head>
 <body>
   <!-- custom cursor -->
@@ -53,7 +47,7 @@
   <!-- header -->
   <header class="header">
     <div class="header_wrap">
-      <h1 class="header_logo"><a href="./">
+      <h1 class="header_logo"><a href="../../">
         <span class="blind">Dohyoung_Portfolio</span>
       </a></h1>
       <p>Portfolio</p>
@@ -67,8 +61,8 @@
   <!-- side nav -->
   <nav class="side">
     <ul class="side_gnb">
-      <li class="side_item"><a href="./work/index.html">work</a></li>
-      <li class="side_item"><a href="./about/index.html">about</a></li>
+      <li class="side_item"><a href="../../work/index.html">work</a></li>
+      <li class="side_item"><a href="../../about/index.html">about</a></li>
       <li class="side_item"><a href="#">blog</a></li>
       <li class="side_item"><a href="#">github</a></li>
     </ul>
@@ -203,11 +197,37 @@
             <h2 class="info_tit title-font">Review</h2>
             <ul class="info_review">
               <li>
-                <h2>BEM 도전! 첫 도전은 아쉬운법</h2>
+                <h2 class="info_summary">BEM 도전! 아쉬움이 남는 결과</h2>
                 <p>
-                  BEM방식의 네이밍 방식을 적용하겠다는 생각을 가지고 작업하였고,
-                  적용은 시켰지만 cSS에서의 사용이나 요소의 깊이 들어갔을때에 있어 완벽하게 하지는 못한거 같아,
-                  개인적으로는 아쉬움이 남기도 합니다. 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.
+                  <span class="block">BEM방식의 네이밍 방식을 적용하겠다는 생각을 가지고 작업하였고,</span>
+                  <span class="block">적용은 시켰지만 cSS에서의 사용이나 요소의 깊이 들어갔을때에 있어 완벽하게 하지는 못한거 같아,</span>
+                  <span class="block">개인적으로는 아쉬움이 남기도 합니다. 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.</span>
+                </p>
+              </li>
+              <li>
+                <h2 class="info_summary">기다려라, 터치와 드래그</h2>
+                <p>
+                  <span class="block">처음 작업한 사이트이다 보니, 지금까지 배운 html,css,javaScript만을 이용해서 플러그인이 없이</span>
+                  <span class="block">작업을 해보고 싶어서 배너 슬라이드를 오로지 javascript로 작업해보았습니다. 다만 아직 마우스 드래그와</span>
+                  <span class="block">터치로는 작동이 되도록 하지 못하여 아쉬운 부분입니다. 추후 공부해서 등록할 예정입니다.</span>
+                </p>
+              </li>
+              <li>
+                <h2 class="info_summary">Dropdown Custom</h2>
+                <p>
+                  <span class="block">브라우저 기본 스타일의 dropdown 메뉴 말고 직접 만들고 싶어서 스타일을 만들고 javascript로 작업을 하였는데,</span>
+                  <span class="block">메뉴들이 클릭이 되지 않는 문제가 발생했고, blur 이벤트에 대한 이해가 부족하다고 생각하여 서치를 통해</span>
+                  <span class="block">찾아보았지만 해결하지 못하였고, 다시 처음으로 돌아가 전체 코드를 분석해 보았더니 menu에</span>
+                  <span class="block">overflow:hidden 때문이었다는 것을 발견하여 해당 코드를 지우는 것으로 문제를 해결하였습니다.</span>
+                </p>
+              </li>
+              <li>
+                <h2 class="info_summary">단위마다 다른 레이아웃으로 인한 문제</h2>
+                <p>
+                  <span class="block">예매하기 페이지에서 “.tiketing-container”의 높이를 tablet 이상의 사이즈일 때는 화면에 헤더 영역과</span>
+                  <span class="block">예매하기가 가득 보이게 만드려고 100vh를 이용해서 헤더 영역을 빼주고 grid-template-rows를 이용해서</span>
+                  <span class="block">1fr과 select존의 높이로 주려고 했는데 레이아웃이 계속 틀어졌지만, 결국 1fr아닌 %로 변경해서 작업하면서</span>
+                  <span class="block">문제를 해결했습니다.</span>
                 </p>
               </li>
             </ul>
@@ -218,22 +238,55 @@
   </main>
 
   <article class="worklist">
+    <h2 class="blind">다른 프로젝트 보기</h2>
     <div class="worklist_pagemove">
       <div class="worklist_prev">
-        <span class="worklist_small-txt">prev</span>
-        <p class="worklist_tit">Project01</p>
+        <a href="#">
+          <span class="worklist_small-txt">prev</span>
+          <p class="worklist_tit">Project01</p>
+        </a>
       </div>
       <div class="worklist_next">
-        <span class="worklist_small-txt">next</span>
-        <p class="worklist_tit">Project02</p>
+        <a href="#">
+          <span class="worklist_small-txt">next</span>
+          <p class="worklist_tit">Project02</p>
+        </a>
       </div>
     </div>
     <div class="worklist_back-page">
-      <p>Work 목록으로 돌아가기</p>
+      <a href="#">Work 목록으로 돌아가기</a>
     </div>
   </article>
 
+<!-- contact -->
+<article class="contact">
+  <div class="contact_txt">
+    <h2>contact</h2>
+    <p>디자이너에서 개발자로 새로운 도전!</p>
+    <p>끝없이 조건하고, 공부하는,</p>
+    <p><strong>조화로운 개발자 이도형</strong>입니다.</p>
+  </div>
 
+  <div class="contact_container">
+    <div class="contact_address ">
+      <a href="#">
+        <div class="contact_tit email">
+          <h3 class="contact_tit_front">Email</h3>
+          <h3 class="contact_tit_back">
+            shape1026@naver.com</h3>
+        </div>
+      </a>
+    </div>
+    <div class="contact_address ">
+      <a href="#">
+        <div class="contact_tit phone">
+          <h3 class="contact_tit_front">Phone</h3>
+          <h3 class="contact_tit_back">010.6621.8939</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</article>
   <!-- footer -->
   <footer>
     <div class="footer_wrap">
