@@ -127,7 +127,14 @@ img {
 .grid_item.design {
   color:  #12C2E9;
 }
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 768px) {
+  .grid_wrap {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
   .grid_container {
     grid-template-columns: 1fr 1fr;
   }
@@ -152,12 +159,6 @@ img {
 @media screen and (min-width: 1024px) {
   .gird {
     margin-top: 20rem;
-  }
-
-  .grid_wrap {
-    width: 90%;
-    max-width: 1800px;
-    margin: 0 auto;
   }
 
   .grid_tit {

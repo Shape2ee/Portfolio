@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+/* header */
+/****** header ******/
+.header_logo {
+  background-image: url(../images/logo_w.svg);
+}
+
+.header.bg {
+  background-color: #111;
+  border-color: #3a3b3d;
+} 
+
+.header p {
+  color: #969696;
+}
+
+.header_menu em,
+.header_menu em::before,
+.header_menu em::after {
+  background-color: #fff;
+}
+
+.header.on {
+  background-color: #fff;
+}
+
+
 /****** main visual ******/
 .visual {
   position: fixed;
@@ -94,13 +120,14 @@
     top: 6px;
   }
 }
+
 /****** main ******/
-
-
 main {
   margin-top: 100vh;
   position: relative;
   background-color: #fff;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 /****** 공통 스타일 ******/
@@ -121,26 +148,28 @@ main {
 
 .overview_main-tit {
   margin: 8rem 0 4rem;
-  font-size: 2.8rem;
 }
 
 .overview_tit {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   font-size: 1.8rem;
   font-weight: 700;
 }
 
+.overview_tit .block {
+  display: inline-block;
+}
+
 .overview_txt {
   margin: 2rem 0 4rem;
-  font-size: 1.4rem;
-  line-height: 2rem;
   color: #555;
 }
 
 .overview_btn {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
@@ -148,13 +177,14 @@ main {
 .overview_github {
   display: flex;
   align-items: center;
-  padding: 0 1.2rem;
-  width: calc(50% - 5px);
+  padding: 0 3rem;
   height: 60px;
+  border: 2px solid #000;
   border-radius: 4px;
   font-size: 1.4rem;
   color: #fff;
-  background: #000 url(../images/r_arrow_w.svg) no-repeat calc(100% - 1.2rem) 50%;
+  background: #000 url(../images/r_arrow_w.svg) no-repeat calc(100% - 3rem) 50%;
+  transition: background 0.5s, color 0.5s;
 }
 
 /* 프로젝트 정보 */
@@ -185,8 +215,25 @@ main {
   background-color: #f2f5f7;
 }
 
-.site-img .inner_wrapper {
-  margin: 0;
+.site-img_box {
+  margin: 0 auto;
+  position: relative;
+  width: 1240px;
+  height: 41.667vw;
+  background: url(../images/lotte.png) no-repeat 0 20px / cover;
+  border-radius: 20px;
+}
+
+.site-img_box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 100%;
+  border-radius: 40px;
+  border: 20px solid #000;
 }
 
 /****** info ******/
@@ -197,8 +244,8 @@ main {
   grid-template-columns: 1fr;
   padding: 6rem 0;
   border-bottom: 1px solid #ccc;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  /* font-size: 1.4rem;
+  line-height: 2rem; */
 }
 
 .info_item:last-child {
@@ -236,8 +283,6 @@ main {
 
 /* publishing */
 .info_list {
-  font-size: 1.4rem;
-  line-height: 2rem;
   color: #555;
 }
 
@@ -261,12 +306,20 @@ main {
 /* review */
 .info_review li {
   margin-bottom: 3rem;
+  color: #555;
+}
+
+.info_review .block mark {
+  background-color: rgba(18, 194, 233, 0.3);
+  /* color: #fff; */
+  padding: 0.3rem;
 }
 
 .info_summary {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 700;
+  color: #000;
 }
 
 /****** worklist ******/
@@ -289,25 +342,78 @@ main {
 
 .worklist_prev a,
 .worklist_next a {
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 2.4rem;
+  color: #fff;
+}
+
+.worklist_prev a::after,
+.worklist_next a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s;
 }
 
 .worklist_prev {
-  background-image: url(https://via.placeholder.com/800x400/f8a/000?text=prev);
+  background-image: url(../images/prev.png);
+}
+
+.worklist_next {
+  background-image: url(../images/next.png);
+}
+
+.worklist_txt {
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s;
 }
 
 .worklist_small-txt {
   font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .worklist_tit {
+  position: relative;
+  margin-top: 1rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+.worklist_tit::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: no-repeat 50% / contain;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.worklist_prev .worklist_tit::after {
+  background-image: url(../images/arrow.svg);
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.worklist_next .worklist_tit::after {
+  background-image: url(../images/arrow.svg);
 }
 
 .worklist_back-page {
@@ -322,8 +428,8 @@ main {
   place-items: center;
   width: 100%;
   height: 100%;
+  transition: transform 0.3s;
 }
-
 
 /****** contact ******/
 .contact {
@@ -422,4 +528,302 @@ main {
 footer {
   position: relative;
   background-color: #fff;
+}
+
+@media only screen and (min-width:768px) {
+  /****** main visual ******/
+  .visual {
+    padding: 0;
+  }
+
+  .visual_text {
+    width: 90%;
+    left: 50%;
+    bottom: 15rem;
+    transform: translateX(-50%);
+  }
+
+  .visual_title {
+    font-size: 14rem;
+    line-height: 12rem;
+  }
+
+  .visual_sub-title {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+  .visual_tag {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  /****** main ******/
+  main {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .inner_wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  
+  .title-font {
+    font-size: 3.2rem;
+  }
+
+  /****** overview *******/
+  .overview_tit {
+    /* width: 80%; */
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .overview_main-tit {
+    margin-top: 15rem;
+  }
+
+  .overview_txt {
+    font-size: 1.6rem;
+  }
+
+  .overview_txt .block{
+    display: block;
+  }
+
+  .overview_btn {
+    gap: 2rem;
+    grid-template-columns: 240px 240px;
+  }
+  
+  .overview_site,
+  .overview_github {
+    font-size: 1.6rem;
+  }
+
+  .overview_project {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8rem 0 15rem;
+  }
+
+  .overview_project li {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+
+  .overview_project li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+  }
+
+  .overview_project li:last-child:after {
+    display: none;
+  }
+
+  .overview_project li p {
+    margin-top: 1rem;
+    width: auto;
+  }
+
+  /****** imgBox ******/
+  .site-img {
+    margin: 0 auto 9rem;
+    width: 90%;
+    padding: 6rem;
+    max-width: 1400px;
+  }
+
+  /****** info ******/
+  .info_item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .info_tag,
+  .info_summary {
+    font-size: 2rem;
+  }
+
+  .info_review .block {
+    display: block;
+  }
+
+  /****** worklist ******/
+  .worklist_prev,
+  .worklist_next,
+  .worklist_back-page {
+    height: 20.833vw;
+  }
+
+  .worklist_prev,
+  .worklist_next{
+    max-height: 40rem;
+  }
+
+  .worklist_back-page {
+    max-height: 20rem
+  }
+
+  .worklist_small-txt {
+    font-size: 1.8rem;
+  }
+
+  .worklist_tit,
+  .worklist_back-page {
+    font-size: 2.4rem;
+  }
+
+  .worklist_prev a,
+  .worklist_next a {
+    padding: 6rem;
+  }
+
+  /****** contact ******/
+  .contact_container {
+    margin-top: 8rem;
+    flex-direction: row;
+  }
+
+  .contact_address {
+    width: 50%;
+  }
+
+  .contact_address:first-child {
+    border-right: 1px solid #ccc;
+  }
+
+  .contact_txt {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1800px;
+  }
+
+  .contact_txt h2 {
+    font-size: 11rem;
+    line-height: 10rem;
+  }
+
+  .contact_tit {
+    font-size: 3.4rem;
+    line-height: 4.4rem;
+    height: 4.4rem;
+  }
+
+
+  .contact_tit::before {
+    left: 6rem;
+    bottom: 10.4rem;
+  }
+
+  .contact_tit::after {
+    right: 6rem;
+    bottom: 5rem;
+  }
+
+  .contact_address {
+    height: 39.063vw;
+    max-height: 400px;
+  }
+
+  .contact_address a {
+    padding: 5rem 6rem;
+  }
+
+  .contact_txt p:nth-of-type(2),
+  .contact_txt p:last-child {
+    display: inline-block;
+  }
+  /****** footer ******/
+}
+
+@media only screen and (min-width:1024px) {
+  .visual_title {
+    font-size: 18rem;
+    line-height: 15rem;
+  }
+
+  .visual_title .block {
+    display: inline-block;
+  }
+
+  .visual_tag {
+    margin-top: 6rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  /****** main ******/
+  main {
+    line-height: 3rem;
+  }
+  /****** overview ******/
+  .overview_project {
+    justify-content: flex-start;
+  }
+
+  .overview_project li {
+    width: 24rem;
+  }
+
+  /****** info ******/
+  .info_item {
+    padding: 10rem 0;
+  }
+
+  .info_font {
+    flex-direction: row;
+    margin-top: 10rem;
+  }
+
+  .info_font-style {
+    margin: 0 0 0 10rem;
+  }
+  .info_list li::before {
+    top: 1.2rem;
+  }
+
+  /****** worklist ******/
+  .worklist_prev a,
+  .worklist_next a {
+    padding: 10rem;
+  }
+
+  .worklist_small-txt {
+    font-size: 2rem;
+  }
+
+  .worklist_tit,
+  .worklist_back-page {
+    font-size: 3.2rem;
+  }
+
+  /****** contact ******/
+  .contact_address a {
+    padding: 5rem 10rem;
+  }
+
+  .contact_tit::before {
+    left: 10rem;
+  }
+
+  .contact_tit::after {
+    right: 10rem;
+  }
+
+  .contact_txt p {
+    font-size: 1.8rem;
+  }
+  
+
 }

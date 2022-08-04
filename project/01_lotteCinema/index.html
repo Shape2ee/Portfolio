@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-dark="false">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +40,10 @@
     <link rel="stylesheet" href="../../common/css/basic.css">
     <!-- style css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- hover css -->
+    <link rel="stylesheet" href="./css/hover.css">
+    <!-- dark mode -->
+    <link rel="stylesheet" href="./css/dark.css">
   </head>
 <body>
   <!-- custom cursor -->
@@ -104,10 +108,13 @@
       <section class="overview">
         <div class="inner_wrapper">
           <h2 class="overview_main-tit title-font">overview</h2>
-          <h3 class="overview_tit">롯데시네마는 ‘HAPPY MEMORIES’ 라는
-            <span class="block">슬로건을 가지고 있는,</span>
-            <span class="block">롯데컬처웍스가 운영하는</span>
-            <span class="block"> 멀티플렉스 영화관 브랜드입니다.</span>
+          <h3 class="overview_tit">
+            <span class="overview_tit-block">
+              롯데시네마는 ‘HAPPY MEMORIES’ 라는 슬로건을 가지고 있는,
+            </span>
+            <span class="overview_tit-block">
+              롯데컬처웍스가 운영하는 멀티플렉스 영화관 브랜드입니다.
+            </span>
           </h3>
           <p class="overview_txt">기존 롯데시네마가 다른 영화관 브랜드 사이트보다 올드한 느낌이 강하다고 느껴져서 리디자인하였습니다.
           <span class="block">롯데시네마가 주장하는 '백화점 속 영화관'이라는 기본 전략을 사이트에서도 느낄 수 있도록 하려고 영화관이지만</span>
@@ -141,9 +148,8 @@
       <!-- imgBox -->
       <section class="site-img">
         <h2 class="blind">웹사이트 디자인</h2>
-        <div class="inner_wrapper">
           <div class="site-img_box">
-            <img src="https://via.placeholder.com/1200x700/51f/ddd?text=img1" alt="롯데시네마 사이트 이미지">
+            <!-- <img src="https://via.placeholder.com/1200x700/51f/ddd?text=img1" alt="롯데시네마 사이트 이미지"> -->
           </div>
         </div>
       </section>
@@ -199,34 +205,34 @@
               <li>
                 <h2 class="info_summary">BEM 도전! 아쉬움이 남는 결과</h2>
                 <p>
-                  <span class="block">BEM방식의 네이밍 방식을 적용하겠다는 생각을 가지고 작업하였고,</span>
-                  <span class="block">적용은 시켰지만 cSS에서의 사용이나 요소의 깊이 들어갔을때에 있어 완벽하게 하지는 못한거 같아,</span>
-                  <span class="block">개인적으로는 아쉬움이 남기도 합니다. 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.</span>
+                  <span class="block">처음부터 BEM 방식에 도전한다는 생각으로 작업을 했으나,</span>
+                  <span class="block">첫 시도이다보니 헷갈리는 부분이 있어 개인적으로는 아쉬움이 남기도 합니다.</span>
+                  <span class="block"> 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.</span>
                 </p>
               </li>
               <li>
-                <h2 class="info_summary">기다려라, 터치와 드래그</h2>
+                <h2 class="info_summary">기다려라, 터치 & 드래그 이벤트</h2>
                 <p>
-                  <span class="block">처음 작업한 사이트이다 보니, 지금까지 배운 html,css,javaScript만을 이용해서 플러그인이 없이</span>
-                  <span class="block">작업을 해보고 싶어서 배너 슬라이드를 오로지 javascript로 작업해보았습니다. 다만 아직 마우스 드래그와</span>
+                  <span class="block"><mark>처음 작업은 플러그인의 도움없이 지금까지 배운 HTML, CSS,javaScript만을 이용해서</mark></span>
+                  <span class="block">작업을 해보고 싶어서 배너 슬라이드를 작업을 도전했지만 아직 마우스 드래그와</span>
                   <span class="block">터치로는 작동이 되도록 하지 못하여 아쉬운 부분입니다. 추후 공부해서 등록할 예정입니다.</span>
                 </p>
               </li>
               <li>
                 <h2 class="info_summary">Dropdown Custom</h2>
                 <p>
-                  <span class="block">브라우저 기본 스타일의 dropdown 메뉴 말고 직접 만들고 싶어서 스타일을 만들고 javascript로 작업을 하였는데,</span>
-                  <span class="block">메뉴들이 클릭이 되지 않는 문제가 발생했고, blur 이벤트에 대한 이해가 부족하다고 생각하여 서치를 통해</span>
-                  <span class="block">찾아보았지만 해결하지 못하였고, 다시 처음으로 돌아가 전체 코드를 분석해 보았더니 menu에</span>
-                  <span class="block">overflow:hidden 때문이었다는 것을 발견하여 해당 코드를 지우는 것으로 문제를 해결하였습니다.</span>
+                  <span class="block">브라우저 기본 스타일의 dropdown 메뉴 말고 스타일을 만들려고 JavaScript로 작업을 하였는데,</span>
+                  <span class="block"><mark>메뉴들이 클릭 되지 않는 문제가 있었고,</mark> 서치를 통해 해결하려고 했지만 못하였습니다.</span>
+                  <span class="block">그래서 처음으로 돌아가 전체 코드를 분석해 보았더니 <mark>menu에 overflow:hidden 때문이라는 것을</mark></span>
+                  <span class="block">발견하여 해당 코드를 지우는 것으로 문제를 해결하였습니다.</span>
                 </p>
               </li>
               <li>
-                <h2 class="info_summary">단위마다 다른 레이아웃으로 인한 문제</h2>
+                <h2 class="info_summary">비슷한 듯 다른 단위의 세계</h2>
                 <p>
                   <span class="block">예매하기 페이지에서 “.tiketing-container”의 높이를 tablet 이상의 사이즈일 때는 화면에 헤더 영역과</span>
-                  <span class="block">예매하기가 가득 보이게 만드려고 100vh를 이용해서 헤더 영역을 빼주고 grid-template-rows를 이용해서</span>
-                  <span class="block">1fr과 select존의 높이로 주려고 했는데 레이아웃이 계속 틀어졌지만, 결국 1fr아닌 %로 변경해서 작업하면서</span>
+                  <span class="block"><mark>예매하기가 가득 보이게 만드려고 100vh를 이용해서</mark>헤더 영역을 빼주고 <mark>grid-template-rows를 이용해서</mark></span>
+                  <span class="block"><mark>1fr과 select존의 높이로 주려고 했는데</mark> 레이아웃이 계속 틀어졌지만, <mark>결국 1fr아닌 %로 변경</mark>해서 작업하면서</span>
                   <span class="block">문제를 해결했습니다.</span>
                 </p>
               </li>
@@ -242,14 +248,18 @@
     <div class="worklist_pagemove">
       <div class="worklist_prev">
         <a href="#">
-          <span class="worklist_small-txt">prev</span>
-          <p class="worklist_tit">Project01</p>
+          <div class="worklist_txt">
+            <span class="worklist_small-txt">prev</span>
+            <p class="worklist_tit">Project01</p>
+          </div>
         </a>
       </div>
       <div class="worklist_next">
         <a href="#">
-          <span class="worklist_small-txt">next</span>
-          <p class="worklist_tit">Project02</p>
+          <div class="worklist_txt">
+            <span class="worklist_small-txt">next</span>
+            <p class="worklist_tit">Project02</p>
+          </div>
         </a>
       </div>
     </div>
@@ -311,7 +321,10 @@
 
   </div>
   <!-- script --> 
-  <script src="../../common/js/basic.js"></script>
+  <!-- <script src="../../common/js/basic.js"></script> -->
   <script src="../../common/js/darkMode.js"></script>
+  <script src="../../common/js/side.js"></script>
+  <script src="./js/header.js"></script>
+  <script></script>
 </body>
 </html>

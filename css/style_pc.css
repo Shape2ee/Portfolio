@@ -1,80 +1,131 @@
 @charset "utf-8";
+.info_wrap {
+  flex-direction: row;
+}
 
 .info_txt {
-  padding-left: 10rem;
+  width: 50%;
+  margin: 0 0 6rem;
+  padding-left: 6rem;
+  padding-right: 0;
+  align-self: flex-end;
 }
 
-.info_txt h2 {
-  font-size: 11rem;
-  line-height: 11.6rem;
+.info_item a {
+  padding: 3rem;
 }
 
-.info_txt p {
-  font-size: 1.8rem;
+.info_tit::after {
+  right: 3rem;
+  bottom: 3rem;
 }
 
-.work_wrap {
-  max-width: 1800px;
+.info_grid {
+  width: 50%;
+  height: 100%;
+  grid-auto-rows: 50% 50%;
 }
 
-.work_slide_container {
-  max-width: 1280px;
+.info_item:nth-child(odd) {
+  border-left: 1px solid #ccc;
 }
 
-.work_index {
-  left: 11.542vw;
+.info_item:nth-child(1),
+.info_item:nth-child(2) {
+  border-top: none;
+}
+
+.work {
+  margin-top: 17rem;
 }
 
 .work_img {
-  max-width: 600px;
-  max-height: 600px;
+  width: 60%;
+  height: auto;
 }
 
-.work_txt {
-  width: 40%;
-  margin-left: 5rem;
+.contact {
+  margin-top: 30rem;
 }
 
-.work_txt h3 {
-  font-size: 14rem;
-  line-height: 12rem;
-}
+@media screen and (min-width: 1400px) {
+  .info_txt {
+    padding-left: 10rem;
+  }
 
-.work_txt strong {
-  font-size: 1.8rem;
-  margin: 2rem 0 1rem;
-  /* display: block; */
-}
+  .info_txt h2 {
+    font-size: 11rem;
+    line-height: 11.6rem;
+  }
 
-.work_txt > p {
-  display: block;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  color: #767676;
-}
+  .info_txt p {
+    font-size: 1.8rem;
+  }
 
-.work_prev,
-.work_next {
-  width: 100px;
-  height: 200px;
-}
+  .work_wrap {
+    max-width: 1800px;
+  }
 
-.contact_address a {
-  padding: 5rem 10rem;
-}
+  .work_slide_container {
+    max-width: 1280px;
+  }
 
-.contact_tit::before {
-  left: 10rem;
-}
+  .work_index {
+    left: 11.542vw;
+  }
 
-.contact_tit::after {
-  right: 10rem;
-}
+  .work_img {
+    max-width: 600px;
+    max-height: 600px;
+  }
 
-.contact_txt p {
-  font-size: 1.8rem;
-}
-.contact_txt p:nth-of-type(2),
-.contact_txt p:last-child {
-  display: inline-block;
+  .work_txt {
+    width: 40%;
+    margin-left: 5rem;
+  }
+
+  .work_txt h3 {
+    font-size: 14rem;
+    line-height: 12rem;
+  }
+
+  .work_txt strong {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    /* display: block; */
+  }
+
+  .work_txt > p {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: #767676;
+  }
+
+  .work_prev,
+  .work_next {
+    width: 100px;
+    height: 200px;
+  }
+
+  .contact_address a {
+    padding: 5rem 10rem;
+  }
+
+  .contact_tit::before {
+    left: 10rem;
+  }
+
+  .contact_tit::after {
+    right: 10rem;
+  }
+
+  .contact_txt p {
+    font-size: 1.8rem;
+  }
+
+  .contact_txt p:nth-of-type(2),
+  .contact_txt p:last-child {
+    display: inline-block;
+  }
 }

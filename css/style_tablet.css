@@ -1,4 +1,9 @@
 @charset "utf-8";
+.info_txt {
+  width: 90%;
+  margin: 23.2227vh auto 2rem;
+  padding: 0;
+}
 
 .info_txt h2 {
   font-size: 7rem;
@@ -76,6 +81,27 @@
 display: none;
 }
 
+/****** contact ******/
+.contact_container {
+  margin-top: 8rem;
+  flex-direction: row;
+}
+
+.contact_address {
+  width: 50%;
+}
+
+.contact_address:first-child {
+  border-right: 1px solid #ccc;
+}
+
+.contact_txt {
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1800px;
+}
+
 .contact_txt h2 {
   font-size: 11rem;
   line-height: 10rem;
@@ -88,83 +114,25 @@ display: none;
 }
 
 .contact_tit::before {
-  bottom: 8.4rem;
+  left: 6rem;
+  bottom: 10.4rem;
 }
 
-@media screen and (min-width: 1024px) {
+.contact_tit::after {
+  right: 6rem;
+  bottom: 5rem;
+}
 
-  .info_wrap {
-    flex-direction: row;
-    /* border-bottom: 1px solid #ccc; */
-  }
+.contact_address {
+  height: 39.063vw;
+  max-height: 400px;
+}
 
-  .info_txt {
-    margin: 0 0 6rem;
-    padding-left: 6rem;
-    padding-right: 0;
-    align-self: flex-end;
-  }
+.contact_address a {
+  padding: 5rem 6rem;
+}
 
-  .info_item a {
-    padding: 3rem;
-  }
-
-  .info_tit::after {
-    right: 3rem;
-    bottom: 3rem;
-  }
-
-  .info_grid {
-    width: 50%;
-    height: 100%;
-    grid-auto-rows: 50% 50%;
-  }
-
-  .info_item:nth-child(odd) {
-    border-left: 1px solid #ccc;
-  }
-
-  .info_item:nth-child(1),
-  .info_item:nth-child(2) {
-    border-top: none;
-  }
-
-  .work {
-    margin-top: 17rem;
-  }
-
-  .work_img {
-    width: 60%;
-    height: auto;
-  }
-
-  .contact {
-    margin-top: 30rem;
-  }
-
-  .contact_txt {
-    margin: 0 auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1800px;
-  }
-
-  .contact_tit::before {
-    left: 6rem;
-    bottom: 10.4rem;
-  }
-
-  .contact_tit::after {
-    right: 6rem;
-    bottom: 5rem;
-  }
-
-  .contact_address {
-    height: 39.063vw;
-    max-height: 400px;
-  }
-
-  .contact_address a {
-    padding: 5rem 6rem;
-  }
+.contact_txt p:nth-of-type(2),
+.contact_txt p:last-child {
+  display: inline-block;
 }
