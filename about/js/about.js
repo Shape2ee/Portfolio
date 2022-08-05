@@ -17,6 +17,7 @@ function scorllCheck(offsetTop, item) {
     item.classList.remove("on")
   }
 }
+
 const toggleClass = () => {
   myScorll = window.scrollY
   if(myScorll !== 0) {

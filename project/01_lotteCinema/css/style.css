@@ -2,29 +2,24 @@
 
 /* header */
 /****** header ******/
-.header_logo {
-  background-image: url(../images/logo_w.svg);
+.header.project .header_logo {
+  background-image: url(../../../common/images/logo_w.svg);
 }
 
-.header.bg {
-  background-color: #111;
-  border-color: #3a3b3d;
-} 
-
-.header p {
+.header.project p {
   color: #969696;
 }
 
-.header_menu em,
-.header_menu em::before,
-.header_menu em::after {
+.header.project .header_menu em,
+.header.project .header_menu em::before,
+.header.project .header_menu em::after {
   background-color: #fff;
 }
 
 .header.on {
   background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
-
 
 /****** main visual ******/
 .visual {

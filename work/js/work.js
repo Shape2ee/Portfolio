@@ -3,6 +3,35 @@ const tabList = tab.querySelectorAll("li");
 const workItem = document.querySelectorAll(".grid_item");
 let selectTab = "";
 
+const workCategory = (selectTab) => {
+  console.log(selectTab)
+  let txtData = selectTab.textContent;
+  // console.log(workItem[0].classList.contains('web'))
+  switch(txtData){
+    case "전체보기":
+      workItem.forEach(item => {
+        item.classList.remove('none');
+      })
+      break;
+    case "웹사이트":
+      workItem.forEach(item => {
+        item.classList.remove('none')
+        if(item.classList.contains('web') === false){
+          item.classList.add('none')
+        }
+      })
+      break;
+    case "디자인":
+      workItem.forEach(item => {
+        item.classList.remove('none')
+        if(item.classList.contains('design') === false){
+          item.classList.add('none')
+        }
+      })
+      break;
+  }
+}
+
 const toggleClass = (e) => {
   selectTab = e.target;
   console.log(selectTab)
@@ -13,15 +42,7 @@ const toggleClass = (e) => {
 
   selectTab.classList.add("active");
 
-  workCategory()
-}
-
-const workCategory = (e) => {
-  let tabText = selectTab.textContent;
-
-  if(tabText === "디자인") {
-    grid_item.classList.con
-  }
+  workCategory(selectTab)
 }
 
 tabList.forEach( item => {
