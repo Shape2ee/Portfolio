@@ -8,10 +8,10 @@ const skillItem3 = document.querySelector('.skill__item:nth-child(3)');
 const skillItem4 = document.querySelector('.skill__item:nth-child(4)');
 
 const h2offsetTop = h2.offsetTop;
-let myScorll = 0;
+let myScroll = 0;
 
 function scorllCheck(offsetTop, item) {
-  if(myScorll > offsetTop) {
+  if(myScroll > offsetTop) {
     item.classList.add("on")
   } else {
     item.classList.remove("on")
@@ -19,8 +19,8 @@ function scorllCheck(offsetTop, item) {
 }
 
 const toggleClass = () => {
-  myScorll = window.scrollY
-  if(myScorll !== 0) {
+  myScroll = window.scrollY
+  if(myScroll !== 0) {
     infoTxt.classList.add("on")
   } else {
     infoTxt.classList.remove("on")
@@ -28,7 +28,7 @@ const toggleClass = () => {
 };
 
 const toggleClass1 = () => {
-  myScorll = window.scrollY;
+  myScroll = window.scrollY;
   scorllCheck(h2offsetTop, infoImg);
   scorllCheck(infoImg.offsetTop, skill);
   const skillTop = skill.offsetTop - 300;
@@ -42,5 +42,6 @@ const toggleClass1 = () => {
   scorllCheck(skillTop + 900, skillItem4);
 };
 
-addEventListener("scroll", toggleClass);
-addEventListener("scroll", toggleClass1);
+window.addEventListener("scroll", toggleClass);
+window.addEventListener("scroll", toggleClass1);
+window.addEventListener("load", toggleClass1);

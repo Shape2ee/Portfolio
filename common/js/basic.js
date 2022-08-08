@@ -1,8 +1,9 @@
-// go to top
+/*********** go to top ***********/
+
 const goToTop = document.getElementById("goToTop");
 
-const moveScroll = () => {
-  if(window.pageYOffset > 0) {
+const topMove = () => {
+  if(window.scrollY > 0) {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
@@ -11,39 +12,41 @@ const moveScroll = () => {
 }
 
 const scrollCheck = () => {
-  let pageYOffset = window.pageYOffset;
+  let windowScroll = window.scrollY;
 
-  if(pageYOffset !== 0) {
+  if(windowScroll !== 0) {
     goToTop.classList.add('show');
   } else {
     goToTop.classList.remove('show');
   }
 }
 
-window.addEventListener('scroll', scrollCheck);
-goToTop.addEventListener('click', moveScroll);
+window.addEventListener("scroll", scrollCheck);
+goToTop.addEventListener("click", topMove);
+
 
 /*----------------------------------------------------------*/
 // cursor custom
-const cursor = document.querySelector("#cursor");
+const cursor1 = document.querySelector("#cursor1");
+const cursor2 = document.querySelector("#cursor2");
 const aAll = document.querySelectorAll("a");
 const buttonAll = document.querySelectorAll("button");
 
 addEventListener("mousemove", (e) => {
-  const mouseX = e.pageX;
-  const mouseY = e.pageY;
-
-  cursor.style.top = mouseY + 'px';
-  cursor.style.left = mouseX + 'px';
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  cursor1.style.transform = `translate3d(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%), 0)`;
+  
+  cursor2.style.left = mouseX + 'px';
+  cursor2.style.top = mouseY + 'px';
 })
-
 
 function cursorToggleClass(item) {
   item.addEventListener("mouseenter", () => {
-    cursor.classList.add("on");
+    cursor1.classList.add("on");
   })
   item.addEventListener("mouseleave", () => {
-    cursor.classList.remove("on");
+    cursor1.classList.remove("on");
   })
 }
 

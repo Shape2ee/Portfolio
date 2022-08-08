@@ -38,16 +38,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- 공통스타일 -->
     <link rel="stylesheet" href="../../common/css/basic.css">
+    <link rel="stylesheet" href="../common/css/style.css">
     <!-- style css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/project01.css">
     <!-- hover css -->
-    <link rel="stylesheet" href="./css/hover.css">
+    <link rel="stylesheet" href="../common/css/hover.css">
     <!-- dark mode -->
-    <link rel="stylesheet" href="./css/dark.css">
+    <link rel="stylesheet" href="../common/css/dark.css">
   </head>
 <body>
   <!-- custom cursor -->
-  <div id="cursor" class="cursor"></div>
+  <div id="cursor1" class="cursor1"></div>
+  <div id="cursor2" class="cursor2"></div>
   <!-- header -->
   <header class="header project">
     <div class="header_wrap">
@@ -149,7 +151,7 @@
       <section class="site-img">
         <h2 class="blind">웹사이트 디자인</h2>
           <div class="site-img_box">
-            <!-- <img src="https://via.placeholder.com/1200x700/51f/ddd?text=img1" alt="롯데시네마 사이트 이미지"> -->
+            <img id="siteImg" src="../01_lotteCinema/images/lotte_m.gif" alt="롯데시네마">
           </div>
         </div>
       </section>
@@ -205,34 +207,33 @@
               <li>
                 <h2 class="info_summary">BEM 도전! 아쉬움이 남는 결과</h2>
                 <p>
-                  <span class="block">처음부터 BEM 방식에 도전한다는 생각으로 작업을 했으나,</span>
-                  <span class="block">첫 시도이다보니 헷갈리는 부분이 있어 개인적으로는 아쉬움이 남기도 합니다.</span>
-                  <span class="block"> 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.</span>
+                  <span class="block">BEM 방식에 도전한다는 생각으로 작업을 했으나, 첫 시도이다보니</span>
+                  <span class="block">헷갈리는 부분이 있었고, 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.</span>
                 </p>
               </li>
               <li>
                 <h2 class="info_summary">기다려라, 터치 & 드래그 이벤트</h2>
                 <p>
-                  <span class="block"><mark>처음 작업은 플러그인의 도움없이 지금까지 배운 HTML, CSS,javaScript만을 이용해서</mark></span>
-                  <span class="block">작업을 해보고 싶어서 배너 슬라이드를 작업을 도전했지만 아직 마우스 드래그와</span>
-                  <span class="block">터치로는 작동이 되도록 하지 못하여 아쉬운 부분입니다. 추후 공부해서 등록할 예정입니다.</span>
+                  <span class="block"><mark>처음 작업은 플러그인의 도움없이 지금까지 배운것만을 이용해서 작업을 해보고 싶어서 </mark></span>
+                  <span class="block">슬라이드를 작업을 도전했지만 드래그와 터치로는 작동을 시키지 못하여 아쉬운 부분입니다.</span>
+                  <span class="block"> 추후 공부해서 등록할 예정입니다.</span>
                 </p>
               </li>
               <li>
                 <h2 class="info_summary">Dropdown Custom</h2>
                 <p>
-                  <span class="block">브라우저 기본 스타일의 dropdown 메뉴 말고 스타일을 만들려고 JavaScript로 작업을 하였는데,</span>
-                  <span class="block"><mark>메뉴들이 클릭 되지 않는 문제가 있었고,</mark> 서치를 통해 해결하려고 했지만 못하였습니다.</span>
-                  <span class="block">그래서 처음으로 돌아가 전체 코드를 분석해 보았더니 <mark>menu에 overflow:hidden 때문이라는 것을</mark></span>
+                  <span class="block">브라우저 기본 스타일의 메뉴 말고 스타일을 만들려고 JavaScript로 작업을 하였는데,</span>
+                  <span class="block"><mark>메뉴들이 클릭 되지 않는 문제가 있었고,</mark>해결하려고 여러시도를 했지만 해결을 못하였습니다.</span>
+                  <span class="block">그러다 마지막으로 전체 코드를 보던 중 <mark>menu에 overflow:hidden 때문이라는 것을</mark></span>
                   <span class="block">발견하여 해당 코드를 지우는 것으로 문제를 해결하였습니다.</span>
                 </p>
               </li>
               <li>
                 <h2 class="info_summary">비슷한 듯 다른 단위의 세계</h2>
                 <p>
-                  <span class="block">예매하기 페이지에서 “.tiketing-container”의 높이를 tablet 이상의 사이즈일 때는 화면에 헤더 영역과</span>
-                  <span class="block"><mark>예매하기가 가득 보이게 만드려고 100vh를 이용해서</mark>헤더 영역을 빼주고 <mark>grid-template-rows를 이용해서</mark></span>
-                  <span class="block"><mark>1fr과 select존의 높이로 주려고 했는데</mark> 레이아웃이 계속 틀어졌지만, <mark>결국 1fr아닌 %로 변경</mark>해서 작업하면서</span>
+                  <span class="block">예매하기에서 “.tiketing-container”의 높이를 일정 사이즈일 때는 화면에 헤더 영역과</span>
+                  <span class="block"><mark>예매하기가 가득 보이게 만드려고 헤더를 뺀 100vh를 이용해서 만들고</mark><mark>grid-template-rows를</mark></span>
+                  <span class="block"><mark>1fr과 select존의 높이로 했는데</mark> 레이아웃이 계속 틀어졌고, <mark>결국 1fr 아닌 %로 변경</mark>해서 작업하면서</span>
                   <span class="block">문제를 해결했습니다.</span>
                 </p>
               </li>
@@ -325,6 +326,9 @@
   <script src="../../common/js/side.js"></script>
   <script src="../../common/js/basic.js"></script>
   <script src="../../common/js/darkMode.js"></script>
-  <script src="../common/header_project.js"></script>
+  <script src="../common/js/header_project.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/resize.js"></script>
+  
 </body>
 </html>
