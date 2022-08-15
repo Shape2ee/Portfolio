@@ -19,19 +19,6 @@
   line-height: 4.4rem;
 }
 
-.contact_container {
-  margin-top: 8rem;
-  flex-direction: row;
-}
-
-.contact_address {
-  width: 50%;
-}
-
-.contact_address:first-child {
-  border-right: 1px solid #ccc;
-}
-
 .work_wrap {
   margin: 0 auto;
 }
@@ -79,60 +66,4 @@
 
 .swiper-button-disabled {
 display: none;
-}
-
-/****** contact ******/
-.contact_container {
-  margin-top: 8rem;
-  flex-direction: row;
-}
-
-.contact_address {
-  width: 50%;
-}
-
-.contact_address:first-child {
-  border-right: 1px solid #ccc;
-}
-
-.contact_txt {
-  margin: 0 auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1800px;
-}
-
-.contact_txt h2 {
-  font-size: 11rem;
-  line-height: 10rem;
-}
-
-.contact_tit {
-  font-size: 3.4rem;
-  line-height: 4.4rem;
-  height: 4.4rem;
-}
-
-.contact_tit::before {
-  left: 6rem;
-  bottom: 10.4rem;
-}
-
-.contact_tit::after {
-  right: 6rem;
-  bottom: 5rem;
-}
-
-.contact_address {
-  height: 39.063vw;
-  max-height: 400px;
-}
-
-.contact_address a {
-  padding: 5rem 6rem;
-}
-
-.contact_txt p:nth-of-type(2),
-.contact_txt p:last-child {
-  display: inline-block;
 }

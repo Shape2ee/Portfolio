@@ -36,7 +36,7 @@
     transform: translateY(-100%);
   }
 
-  .contact_address:hover {
+  .contact_address:hover::after {
     background-color: #f2f5f7;
   }
   

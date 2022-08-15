@@ -44,10 +44,6 @@
   height: auto;
 }
 
-.contact {
-  margin-top: 30rem;
-}
-
 @media screen and (min-width: 1400px) {
   .info_txt {
     padding-left: 10rem;
@@ -106,26 +102,5 @@
   .work_next {
     width: 100px;
     height: 200px;
-  }
-
-  .contact_address a {
-    padding: 5rem 10rem;
-  }
-
-  .contact_tit::before {
-    left: 10rem;
-  }
-
-  .contact_tit::after {
-    right: 10rem;
-  }
-
-  .contact_txt p {
-    font-size: 1.8rem;
-  }
-
-  .contact_txt p:nth-of-type(2),
-  .contact_txt p:last-child {
-    display: inline-block;
   }
 }
