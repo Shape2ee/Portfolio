@@ -1,11 +1,12 @@
 @charset "utf-8";
 
 @media (hover: hover) {
-  .info_item:hover .info_tit::before{
+  .info_item:hover .info_tit::before {
     opacity: 1;
+    /* transform: scale(1.1); */
   }
 
-  .info_item:hover .info_tit::after{
+  .info_item:hover .info_tit::after {
     transform: translateX(10px);
   }
 

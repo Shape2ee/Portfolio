@@ -6,7 +6,10 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -206,13 +209,16 @@ body {
   display: block;
   padding-left: 2.6rem;
   margin-bottom: 1rem;
-  background: url(../../images/mail.svg) no-repeat 0 50% / contain;
+  background: no-repeat 0 50% / contain;
+}
+
+.side_email strong {
+  background-image: url(../images/mail.svg);
 }
 
 .side_phone strong {
-  background-image: url(../../images/phone.svg);
+  background-image: url(../images/phone.svg);
 }
-
 
 /****** footer ******/
 footer {
@@ -252,7 +258,7 @@ footer {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 6px 12px 0 rgb(63 65 80 / 30%);
   cursor: pointer;
 }
@@ -268,7 +274,7 @@ footer {
   margin: 0 auto;
   width: 26px;
   height: 26px;
-  background-image: url(../images/dark_mode.svg); 
+  background-image: url(../images/dark_mode.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -330,10 +336,10 @@ footer {
   position: fixed;
   width: 10px;
   height: 10px;
-  background-color: #12C2E9;
+  background-color: #12c2e9;
   border-radius: 100%;
   transform: translate(-50%, -50%);
-  transition: width .3s, height .3s, opacity .3s;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
   opacity: 0.3;
   pointer-events: none;
   z-index: 99999;
@@ -342,76 +348,76 @@ footer {
 .cursor1.on {
   width: 10px;
   height: 10px;
-  background-color: #12C2E9;
+  background-color: #12c2e9;
 }
 
 /****** dark mode ******/
 /****** header ******/
-html[data-dark=true] .header_logo {
+html[data-dark="true"] .header_logo {
   background-image: url(../images/logo_w.svg);
 }
 
-html[data-dark=true] .header.bg {
+html[data-dark="true"] .header.bg {
   background-color: #111;
   border-color: #3a3b3d;
-} 
+}
 
-html[data-dark=true] .header p {
+html[data-dark="true"] .header p {
   color: #969696;
 }
 
-html[data-dark=true] .header_menu em,
-html[data-dark=true] .header_menu em::before,
-html[data-dark=true] .header_menu em::after {
+html[data-dark="true"] .header_menu em,
+html[data-dark="true"] .header_menu em::before,
+html[data-dark="true"] .header_menu em::after {
   background-color: #fff;
 }
 
 /****** side menu ******/
-html[data-dark=true] .side {
+html[data-dark="true"] .side {
   background-color: #111;
 }
 
-html[data-dark=true] .side_info {
+html[data-dark="true"] .side_info {
   border-color: #3a3b3d;
 }
 
-html[data-dark=true] .side_email p,
-html[data-dark=true] .side_phone p {
+html[data-dark="true"] .side_email p,
+html[data-dark="true"] .side_phone p {
   color: #d9d9d9;
 }
 
 /****** footer ******/
-html[data-dark=true] footer {
+html[data-dark="true"] footer {
   color: #d9d9d9;
   border-color: #3a3b3d;
 }
 
-html[data-dark=true] .footer_link {
+html[data-dark="true"] .footer_link {
   color: #fff;
 }
 
 /****** btn ******/
-html[data-dark=true] .top_btn,
-html[data-dark=true] .dark_btn {
+html[data-dark="true"] .top_btn,
+html[data-dark="true"] .dark_btn {
   background-color: rgba(58, 59, 61, 0.7);
   box-shadow: none;
 }
 
-html[data-dark=true] .dark_btn em {
+html[data-dark="true"] .dark_btn em {
   background-position: 0 -26px;
 }
 
-html[data-dark=true] .top_btn em {
+html[data-dark="true"] .top_btn em {
   background-position: -26px 0;
 }
 
 @media screen and (min-width: 768px) {
-  .header{
+  .header {
     padding: 0;
     height: 170px;
   }
 
-  /****** header ******/  
+  /****** header ******/
   .header_wrap {
     margin: 0 auto;
     width: 90%;
@@ -422,7 +428,7 @@ html[data-dark=true] .top_btn em {
     display: block;
   }
 
-  /****** side menu ******/  
+  /****** side menu ******/
   .side {
     flex-direction: row;
     justify-content: space-between;
@@ -443,7 +449,7 @@ html[data-dark=true] .top_btn em {
   .side_email {
     margin-bottom: 4rem;
   }
-  
+
   .footer_link {
     margin-top: 0;
     margin-left: 4rem;
@@ -478,9 +484,14 @@ html[data-dark=true] .top_btn em {
   }
 }
 
-@media(hover: hover) {
+@media (hover: hover) {
   .side_gnb li:hover a {
-    background: linear-gradient(91.75deg, #12C2E9 0%, #C471ED 43.58%, #F64F59 99.36%);
+    background: linear-gradient(
+      91.75deg,
+      #12c2e9 0%,
+      #c471ed 43.58%,
+      #f64f59 99.36%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -506,19 +517,19 @@ html[data-dark=true] .top_btn em {
   }
 
   /* darkmode */
-  html[data-dark=true] .dark_btn:hover {
+  html[data-dark="true"] .dark_btn:hover {
     background-color: #53575c;
   }
 
-  html[data-dark=true] .dark_btn:hover em {
+  html[data-dark="true"] .dark_btn:hover em {
     background-position: -26px -26px;
   }
 
-  html[data-dark=true] .top_btn:hover{
-    background-color: #12C2E9;
+  html[data-dark="true"] .top_btn:hover {
+    background-color: #12c2e9;
   }
 
-  html[data-dark=true] .contact_address:hover {
+  html[data-dark="true"] .contact_address:hover {
     background-color: #3a3b3d;
   }
 }

@@ -311,6 +311,7 @@ main {
 .info_review li {
   margin-bottom: 3rem;
   color: #555;
+  line-height: 3rem;
 }
 
 .info_review .block mark {
