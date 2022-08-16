@@ -3,7 +3,8 @@
 @media (hover: hover) {
   .overview_site:hover,
   .overview_github:hover {
-    background: transparent url(../images/r_arrow.svg) no-repeat calc(100% - 2rem) 50%;
+    background: transparent url(../images/r_arrow.svg) no-repeat
+      calc(100% - 2rem) 50%;
     color: #000;
   }
 
@@ -16,7 +17,7 @@
     transform: translateY(-20px);
   }
 
-  .worklist_next:hover .worklist_txt{
+  .worklist_next:hover .worklist_txt {
     transform: translateY(-20px);
   }
 
@@ -26,9 +27,14 @@
     visibility: visible;
   }
 
+  .worklist_back-page:hover,
+  html[data-dark="true"] .worklist_back-page:hover {
+    background-color: #12c2e9;
+  }
+
   .worklist_back-page:hover a {
-    transform: translateY(-10px);
-    color: #12C2E9;
+    padding-bottom: 10px;
+    color: #fff;
   }
 
   .contact_address:hover .contact_tit_front,
@@ -39,16 +45,15 @@
   .contact_address:hover::after {
     background-color: #f2f5f7;
   }
-  
+
   .contact_address:hover .contact_tit::after {
     transform: translateX(10px);
   }
 
-  
-  html[data-dark=true] .overview_site:hover,
-  html[data-dark=true] .overview_github:hover {
-    background: transparent url(../images/r_arrow_w.svg) no-repeat calc(100% - 2rem) 50%;
+  html[data-dark="true"] .overview_site:hover,
+  html[data-dark="true"] .overview_github:hover {
+    background: transparent url(../images/r_arrow_w.svg) no-repeat
+      calc(100% - 2rem) 50%;
     color: #fff;
   }
-
 }
