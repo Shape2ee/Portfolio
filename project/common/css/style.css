@@ -219,7 +219,7 @@ main {
   width: 100%;
   max-width: 1240px;
   background: no-repeat 0 20px / cover;
-  /* border-radius: 20px; */
+  /* transition: background-position 10s; */
 }
 
 .site-img_box::after {
@@ -237,6 +237,16 @@ main {
 .site-img_box img {
   margin-top: 2rem;
   width: 100%;
+}
+/* img animation */
+@keyframes move-down {
+  100%{ 
+    background-position-y: 100%;
+  }
+}
+
+.site-img_box.move {
+  animation: move-down 10s;
 }
 
 /****** info ******/

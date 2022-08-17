@@ -119,9 +119,10 @@ body {
   margin-top: 3rem;
 }
 
-.skill__list{
+.skill__list {
   font-size: 1.4rem;
   line-height: 2.4rem;
+  color: #555;
 }
 
 /****** JS animation ******/
@@ -129,17 +130,17 @@ body {
 .about__img,
 .skill,
 .skill__item {
-  opacity: 0;
-  transform: translateY(50px);
+  opacity: 1;
+  transform: translateY(0);
   transition: transform 1s, opacity 1s;;
 }
 
-.about__txt.on,
-.about__img.on,
-.skill.on,
-.skill__item.on {
-  opacity: 1;
-  transform: translateY(0);
+.about__txt.hide,
+.about__img.hide,
+.skill.hide,
+.skill__item.hide {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 @media screen and (min-width:768px) {
@@ -232,7 +233,8 @@ body {
 
   .skill__grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 270px);
+    /* grid-template-rows: repeat(5, 270px); */
+    grid-auto-rows: 270px;
     padding-right: 0;
     width: 60%;
   }
@@ -243,7 +245,9 @@ body {
 
   .skill__item:nth-child(1),
   .skill__item:nth-child(3),
-  .skill__item:nth-child(4) {
+  .skill__item:nth-child(4),
+  .skill__item:nth-child(5),
+  .skill__item:nth-child(6) {
     grid-row: span 2;
   }
 
