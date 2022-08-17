@@ -141,8 +141,6 @@ body {
 .about__img.hide,
 .skill.hide,
 .skill__item.hide {
-  /* color: tomato; */
-  background-color: aqua;
   /* opacity: 0; */
   transform: translateY(50px);
 }
