@@ -64,9 +64,12 @@ html[data-dark="true"] .overview_github {
   border-color: #12c2e9;
 }
 
-html[data-dark="true"] .site-img,
-html[data-dark="true"] .worklist_back-page {
+html[data-dark="true"] .site-img {
   background-color: #53575c;
+}
+
+html[data-dark="true"] .worklist_back-page {
+  background-color: #222;
 }
 
 /* border-color */
