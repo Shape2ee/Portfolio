@@ -33,10 +33,8 @@ const toggleClass1 = () => {
 
   skillItemList.forEach((item) => {
     item.style.backgroundColor = "red";
-
     // let num = skill.offsetTop + item.offsetTop;
     // let total = num - item.clientHeight * 0.8;
-
     // scorllCheck(total, item);
   });
 };
