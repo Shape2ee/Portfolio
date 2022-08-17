@@ -8,7 +8,7 @@ const h2offsetTop = h2.offsetTop;
 let myScroll = 0;
 
 function scorllCheck(offsetTop, item) {
-  if (myScroll > offsetTop) {
+  if (window.scrollY > offsetTop) {
     item.classList.remove("hide");
   } else {
     item.classList.add("hide");
