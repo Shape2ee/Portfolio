@@ -32,7 +32,7 @@ body {
   align-items: center;
   padding: 0 2.4rem;
   width: 100%;
-  height: 100px;
+  height: 10rem;
   z-index: 9999;
   border-bottom: 1px solid transparent;
   transition: height 0.5s, border 1s, background 0.5s;
@@ -151,11 +151,11 @@ body {
 .side {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   right: -100%;
-  padding: 0 2.4rem;
+  padding: 11rem 2.4rem 0;
   width: 100%;
   height: 100%;
   min-height: 600px;
@@ -169,12 +169,12 @@ body {
 }
 
 .side_gnb {
-  font-size: 10rem;
+  font-size: 8rem;
   font-family: "Bebas Neue", "Pretendard", -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
-  line-height: 10rem;
+  line-height: 8rem;
 }
 
 .side_gnb li {
@@ -304,20 +304,6 @@ footer {
 }
 
 /****** cursor ******/
-/* .cursor {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%,-50%);
-  background-color: rgba(18, 194, 233, 0.3);
-  border-radius: 50%;
-  z-index: 99999;
-  transition: width 0.3s, height 0.3s, background 0.5s, position 0.3s;
-  pointer-events: none;
-} */
-
 .cursor1 {
   position: fixed;
   left: 0;
