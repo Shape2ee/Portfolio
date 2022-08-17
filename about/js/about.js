@@ -8,38 +8,37 @@ const h2offsetTop = h2.offsetTop;
 let myScroll = 0;
 
 function scorllCheck(offsetTop, item) {
-  if(myScroll > offsetTop) {
-    item.classList.remove("hide")
+  if (myScroll > offsetTop) {
+    item.classList.remove("hide");
   } else {
-    item.classList.add("hide")
+    item.classList.add("hide");
   }
 }
 
 const toggleClass = () => {
-  myScroll = window.scrollY
-  if(myScroll !== 0) {
-    infoTxt.classList.remove("hide")
+  myScroll = window.scrollY;
+  if (myScroll !== 0) {
+    infoTxt.classList.remove("hide");
   } else {
-    infoTxt.classList.add("hide")
+    infoTxt.classList.add("hide");
   }
 };
 
 const toggleClass1 = () => {
   myScroll = window.scrollY;
-  console.log(myScroll)
+  console.log(myScroll);
 
   scorllCheck(h2offsetTop, infoImg);
   scorllCheck(infoImg.offsetTop, skill);
 
-  skillItemList.forEach( item => {
-    let num =  skill.offsetTop + item.offsetTop;
+  skillItemList.forEach((item) => {
+    let num = skill.offsetTop + item.offsetTop;
     let total = num - item.clientHeight * 0.8;
 
-    scorllCheck(total, item);  
+    scorllCheck(total, item);
   });
 };
 
 window.addEventListener("scroll", toggleClass);
 window.addEventListener("scroll", toggleClass1);
 window.addEventListener("load", toggleClass1);
-

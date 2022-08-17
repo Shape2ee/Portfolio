@@ -19,6 +19,7 @@ const moveImg = () => {
 function stopImg() {
   img.style.animationPlayState = "paused";
 }
+let startY = 0;
 
 function clickImg(e) {
   mouseClick = true;
@@ -27,31 +28,46 @@ function clickImg(e) {
   img.addEventListener("mousemove", dragImg)
   img.addEventListener("mouseup", outImg)
   img.addEventListener("mouseleave", outImg)
+
+  startY = e.pageY;
+
+  // let active = e.offsetY
+  
+  // img.style.backgroundPositionY = `${imgPosition - active}px`;
 }
+
 let position = 0
 let activePositioin = 0;
 function dragImg(e) {
   // console.log(e);
   if(mouseClick) {
-    let mouseY = e.offsetY;
-    let imgHeight = img.clientHeight / 2;
-
-    let imgPosition = img.getAttribute("data-position");    
-
-    position = mouseY - imgHeight;
-    activePositioin = Number(imgPosition) + position;
-    img.style.backgroundPositionY = `${activePositioin * 0.1}px`;
-    // console.log(position, imgPosition, imgHeight);
+    let mouseY = startY - e.pageY;
+    let imgPosition = img.getAttribute("data-position");  
     
+    // console.log(mouseY)
+    let imgHeight = img.clientHeight / 2;
+    // console.log(imgHeight)
+    // console.log(mouseY - imgHeight);
+    // console.log(mouseY + imgHeight);
+    // position = mouseY  imgHeight;
+    activePositioin = Number(imgPosition) + mouseY;
+    img.style.backgroundPositionY = `${-activePositioin}px`;
+    console.log(activePositioin)
+    // console.log(position, imgPosition, imgHeight);
   }
-
-  img.setAttribute("data-position", activePositioin)
 }
 
 function outImg() {
   mouseClick = false;
-  // img.setAttribute("data-position", position)
+  img.setAttribute("data-position", activePositioin)
+  
+  if(activePositioin <= 0) {
+    img.style.backgroundPositionY = "20px";
+    img.setAttribute("data-position", 0)
+  }
 
+  // console.log(img.style.height)
+  console.dir((img.clientHeight - activePositioin) / img.clientHeight)
 }
 
 window.addEventListener("scroll", moveImg)
@@ -59,3 +75,9 @@ window.addEventListener("scroll", moveImg)
 img.addEventListener("mouseover", stopImg);
 img.addEventListener("mousedown", clickImg);
 // img.addEventListener("")
+
+const defalutUrl = document.defaultView.getComputedStyle(img).backgroundImage;
+
+let url = defalutUrl.substring(4, defalutUrl.length - 1);
+console.dir(url)
+
