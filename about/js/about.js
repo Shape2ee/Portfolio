@@ -24,6 +24,8 @@ const toggleClass = () => {
   }
 };
 
+console.log(infoImg.offsetTop);
+
 const toggleClass1 = () => {
   myScroll = window.scrollY;
   console.log(myScroll);
@@ -35,9 +37,13 @@ const toggleClass1 = () => {
     // item.style.backgroundColor = "red";
     let num = skill.offsetTop + item.offsetTop;
     let total = num - item.clientHeight * 0.8;
-    // item.innerText = `${total}`;
+    item.innerText = `${total}`;
 
-    scorllCheck(total, item);
+    if (window.scrollY > total) {
+      item.classList.remove("hide");
+    } else {
+      item.classList.add("hide");
+    }
   });
 };
 
