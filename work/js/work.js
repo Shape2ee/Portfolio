@@ -8,12 +8,12 @@ const workCategory = (selectTab) => {
   let txtData = selectTab.textContent;
   // console.log(workItem[0].classList.contains('web'))
   switch(txtData){
-    case "전체보기":
+    case "ALL":
       workItem.forEach(item => {
         item.classList.remove('none');
       })
       break;
-    case "웹사이트":
+    case "WEBSITE":
       workItem.forEach(item => {
         item.classList.remove('none')
         if(item.classList.contains('web') === false){
@@ -21,10 +21,18 @@ const workCategory = (selectTab) => {
         }
       })
       break;
-    case "디자인":
+    case "DESIGN":
       workItem.forEach(item => {
         item.classList.remove('none')
         if(item.classList.contains('design') === false){
+          item.classList.add('none')
+        }
+      })
+      break;
+    case "TOY":
+      workItem.forEach(item => {
+        item.classList.remove('none')
+        if(item.classList.contains('toy') === false){
           item.classList.add('none')
         }
       })
@@ -33,8 +41,7 @@ const workCategory = (selectTab) => {
 }
 
 const toggleClass = (e) => {
-  selectTab = e.target;
-  console.log(selectTab)
+  selectTab = e.currentTarget;
 
   tabList.forEach( item => {
     item.classList.remove("active");

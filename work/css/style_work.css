@@ -31,34 +31,39 @@ img {
 }
 
 .grid_tab {
-  margin-left: -2rem;
+  /* margin-left: -2rem; */
   display: flex;
-  font-size: 1.8rem;
-  font-weight: 500;
+  justify-content: space-between;
+  
 }
 
 .grid_tab li {
-  position: relative;
-  margin-right: 0.5rem;
-  padding: 1rem 2rem;
   cursor: pointer;
+}
+
+.grid_tab li button {
+  position: relative;
+  padding: 1rem 0;
+  background-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 500;
   color: #999;
 }
 
-.grid_tab li:not(.active)::after {
+.grid_tab li.active button {
+  color: #000;
+}
+
+.grid_tab li:not(.active) button::after {
   content: "";
   display: block;
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 1px;
   background-color: #12c2e9;
-  transition: width 0.5s;
-}
-
-.grid_tab li.active {
-  color: #000;
+  transition: width 0.3s;
 }
 
 .grid_container {
@@ -115,8 +120,18 @@ img {
 }
 
 .grid_item .pg3 {
-  /* background-color: #f55; */
   transition-delay: 0.2s;
+}
+
+.grid_item .pg3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .grid_item .pg3 .grid_txt-center {
@@ -125,6 +140,7 @@ img {
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
+  z-index: 9;
 }
 
 .grid_item .pg3 .grid_txt-center span {
@@ -132,7 +148,7 @@ img {
   margin-bottom: 1rem;
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #ccc;
+  color: #12c2e9;
 }
 
 .grid_item.none {
@@ -157,12 +173,11 @@ img {
 
   .grid_tab {
     margin: 0 -2rem 1rem 0;
-    /* margin-left: 0;
-    margin-right: -2rem; */
+    justify-content: flex-start;
   }
 
-  .grid_tab li {
-    margin-right: 0;
+  .grid_tab li button {
+    padding: 1rem 2rem;
     margin-left: 0.5rem;
   }
 }
@@ -189,11 +204,11 @@ img {
 }
 
 @media (hover: hover) {
-  .grid_tab li:not(.active):hover {
+  .grid_tab li:not(.active) button:hover {
     color: #12c2e9;
   }
 
-  .grid_tab li:hover::after {
+  .grid_tab li:hover button::after {
     width: 100%;
   }
 

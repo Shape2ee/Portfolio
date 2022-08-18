@@ -14,11 +14,6 @@
   background-image: url(../images/next.png);
 }
 
-.site-img_box {
-  height: 864px;
-  background-image: url(../images/lotte_m.png);
-}
-
 /****** JS animation ******/
 .site-img,
 .info_item {
@@ -31,11 +26,4 @@
 .info_item.on {
   opacity: 1;
   transform: translateY(0);
-}
-
-@media screen and (min-width: 1024px) {
-  .site-img_box {
-    height: calc(49.323vw - 17rem);
-    background-image: url(../images/lotte.png);
-  }
 }

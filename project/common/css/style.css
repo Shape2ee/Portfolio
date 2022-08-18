@@ -213,40 +213,36 @@ main {
   background-color: #f2f5f7;
 }
 
-.site-img_box {
-  margin: 0 auto;
+.site-img_wrap {
+  overflow: hidden;
   position: relative;
+  margin: 0 auto;
   width: 100%;
+  height: calc(90vh - 7rem);
   max-width: 1240px;
-  background: no-repeat 0 20px / cover;
-  /* transition: background-position 10s; */
+  border: 20px solid #000;;
+  border-radius: 40px;
+  cursor: grab;
 }
 
-.site-img_box::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -2rem;
-  width: calc(100% + 4rem);
-  height: 100%;
-  border-radius: 40px;
-  border: 20px solid #000;
+.site-img_wrap:active {
+  cursor: grabbing;
 }
 
 .site-img_box img {
-  margin-top: 2rem;
   width: 100%;
 }
+
 /* img animation */
 @keyframes move-down {
   100% {
-    background-position-y: 100%;
+    transform: translateY(calc(-100%));
   }
 }
 
 .site-img_box.move {
-  animation: move-down 10s;
+  animation: move-down 10s forwards;
+  transition: transform 10s;
 }
 
 /****** info ******/
@@ -569,11 +565,11 @@ footer {
     padding: 6rem;
     max-width: 1400px;
   }
-  .site-img_box::after {
-    width: calc(100% + 40px);
-    height: calc(100% + 20px);
-  }
 
+  .site-img_wrap {
+    height: 49.323vw;
+  }
+  
   /****** info ******/
   .info_item {
     grid-template-columns: 1fr 1fr;
@@ -673,5 +669,12 @@ footer {
   .worklist_tit,
   .worklist_back-page {
     font-size: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+   /****** site ******/
+   .site-img_wrap {
+    height: calc(49.323vw - 17rem);
   }
 }

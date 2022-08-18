@@ -59,11 +59,26 @@ buttonAll.forEach((item) => {
 
 cursorToggleClass(sideBtn);
 
-if (
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
-) {
-  cursor1.style.display = "none";
-  cursor2.style.display = "none";
+// cursor 모바일에서 지우기
+
+let timer = null;
+const mobileCheck = () => {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    cursor1.style.display = "none";
+    cursor2.style.display = "none";
+  } else {
+    cursor1.style.display = "block";
+    cursor2.style.display = "block";
+  }
 }
+
+window.addEventListener("resize", () => {
+  clearTimeout(timer);
+  timer = setTimeout(mobileCheck, 300);
+}, )
+
+window.addEventListener("load", mobileCheck)

@@ -4,6 +4,7 @@ body {
   line-height: 1;
 }
 
+/****** about ******/
 .about {
   margin-top: 15rem;
   padding: 0 2.4rem;
@@ -59,6 +60,7 @@ body {
   display: none;
 }
 
+/****** skill ******/
 .skill {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
