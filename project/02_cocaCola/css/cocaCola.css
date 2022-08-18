@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* main image */
+.visual {
+  background-image: url(../images/bg1.png);
+}
+
+/* 목록 이동 */
+.worklist_prev {
+  background-image: url(../images/prev.png);
+}
+
+.worklist_next {
+  background-image: url(../images/next.png);
+}
+
+/****** JS animation ******/
+.site-img,
+.info_item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s, opacity 1s;;
+}
+
+.site-img.on,
+.info_item.on {
+  opacity: 1;
+  transform: translateY(0);
+}

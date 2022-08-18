@@ -27,9 +27,34 @@
   display: block;
 }
 
+.work_txt {
+  position: static;
+  margin-left: 2rem;
+}
+
+.work_txt strong {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.work_txt .txt_etc {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+.work_txt h3,
+.work_txt .txt_etc > * {
+  color: #000;
+}
+
+.work_txt .txt_etc p {
+  color: #767676;
+}
+
 .work_index {
   top: 0;
   left: 5.859vw;
+  color: #000;
 }
 
 .work_slide_container {
@@ -47,21 +72,6 @@
   width: 400px;
   height: 400px;
   min-height: auto;
-}
-
-.work_txt {
-  position: static;
-  margin-left: 2rem;
-}
-
-.work_txt strong {
-  display: block;
-  font-size: 1.6rem;
-}
-
-.work_txt .txt_etc {
-  margin-top: 3rem;
-  font-size: 1.8rem;
 }
 
 .swiper-button-disabled {

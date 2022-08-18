@@ -20,11 +20,11 @@ html[data-dark=true] body {
   color: #fff;
 }
 
-html[data-dark=true] .grid_tab li {
+html[data-dark=true] .grid_tab li button {
   color: #53575c;
 }
 
-html[data-dark=true] .grid_tab li.active {
+html[data-dark=true] .grid_tab li.active button {
   color: #fff;
 }
 

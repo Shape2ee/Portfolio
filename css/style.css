@@ -241,7 +241,8 @@
 .work_txt {
   position: absolute;
   left: 2rem;
-  bottom: 2rem;
+  bottom: 4rem;
+  
 }
 
 .work_txt h3 {
@@ -250,7 +251,8 @@
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
-  line-height: 7rem;
+    line-height: 7rem;
+  color: #fff;
 }
 
 .work_txt h3 .block {
@@ -275,10 +277,11 @@
 
 .work_txt .txt_etc > * {
   margin-right: 2rem;
+  color: #fff;
 }
 
 .work_txt .txt_etc p {
-  color: #767676;
+  color: #969696;
 }
 
 /* slide_index */
@@ -291,11 +294,12 @@
   line-height: 14rem;
   height: 14rem;
   overflow: hidden;
+  color: #fff;
 }
 
 /* slide_pagination */
 .work_slide_container .swiper-pagination {
-  bottom: 0;
+  bottom: 1rem;
 }
 
 .work_slide_container .swiper-pagination-bullet {

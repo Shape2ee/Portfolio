@@ -15,6 +15,11 @@
     transform: translateY(-100%);
   }
 
+  .work_txt .txt_etc a:hover,
+  html[data-dark=true] .work_txt .txt_etc a:hover {
+    color: #12c2e9;
+  }
+
   .work_prev:hover,
   .work_next:hover {
     opacity: 1;

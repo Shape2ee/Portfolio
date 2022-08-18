@@ -143,7 +143,7 @@ body {
 .about__img.hide,
 .skill.hide,
 .skill__item.hide {
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateY(50px);
 }
 

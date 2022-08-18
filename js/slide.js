@@ -21,3 +21,17 @@ const indexSwiper = new Swiper(".work_index", {
 
 mainSwiper.controller.control = indexSwiper;
 indexSwiper.controller.control = mainSwiper;
+
+const paginationBtn = document.querySelectorAll(".swiper-pagination-bullet");
+
+paginationBtn.forEach( btn => {
+  btn.addEventListener("mouseenter", () => {
+    const cursor = document.getElementById("cursor1");
+
+    cursor.classList.add("on");
+
+    btn.addEventListener("mouseleave", () => {
+      cursor.classList.remove("on");
+    })
+  })
+});

@@ -28,6 +28,12 @@ html[data-dark=true] .work_txt > p {
   color: #969696;
 }
 
+html[data-dark=true] .work_txt h3,
+html[data-dark=true] .work_txt .txt_etc > *,
+html[data-dark=true] .work_index {
+  color: #fff;
+}   
+
 html[data-dark=true] .info_wrap,
 html[data-dark=true] .info_item,
 html[data-dark=true] .info_item:nth-child(odd) {
