@@ -9,18 +9,18 @@ let myScroll = 0;
 
 function scorllCheck(offsetTop, item) {
   if (window.scrollY > offsetTop) {
-    item.classList.remove("hide");
+    item.classList.add("show");
   } else {
-    item.classList.add("hide");
+    item.classList.remove("show");
   }
 }
 
 const toggleClass = () => {
   myScroll = window.scrollY;
   if (myScroll !== 0) {
-    infoTxt.classList.remove("hide");
+    infoTxt.classList.add("show");
   } else {
-    infoTxt.classList.add("hide");
+    infoTxt.classList.remove("show");
   }
 };
 

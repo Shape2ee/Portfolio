@@ -387,6 +387,7 @@ main {
 .worklist_small-txt {
   font-size: 1.4rem;
   text-transform: uppercase;
+  color: #a8a8a8;
 }
 
 .worklist_tit {

@@ -54,12 +54,12 @@ function createImage() {
 
   const imgList = [
     {
-      src: "../01_lotteCinema/images/lotte_m.png",
-      alt: "lotte cinema mobile"
+      src: "./images/lotte_m.png",
+      alt: "coca-cola mobile"
     },
     {
-      src: "../01_lotteCinema/images/lotte.png",
-      alt: "lotte cinema pc"
+      src: "./images/lotte.png",
+      alt: "coca-cola pc"
     }
   ]
   const imgTag = document.createElement("img");

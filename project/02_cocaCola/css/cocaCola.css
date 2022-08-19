@@ -11,7 +11,12 @@
 }
 
 .worklist_next {
-  background-image: url(../images/next.png);
+  background-image: url(../images/next_lotteCinema.png);
+}
+
+/* font */
+.info_font {
+  font-family: "Montserrat";
 }
 
 /****** JS animation ******/

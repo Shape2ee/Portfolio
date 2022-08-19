@@ -14,10 +14,11 @@ function clickImg(e) {
   mouseClick = true;
 
   imgContianer.addEventListener("mousemove", dragImg)
-  imgContianer.addEventListener("touchmove", dragImg)
   imgContianer.addEventListener("mouseup", outImg)
-  imgContianer.addEventListener("touchend", outImg)
   imgContianer.addEventListener("mouseleave", outImg)
+  
+  imgContianer.addEventListener("touchmove", dragImg)
+  imgContianer.addEventListener("touchend", outImg)
 
   startY = e.clientY;
 }

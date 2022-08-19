@@ -35,7 +35,7 @@
     <!-- webfont -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- 공통스타일 -->
     <link rel="stylesheet" href="../../common/css/basic.css">
     <link rel="stylesheet" href="../../common/css/contact.css">
@@ -121,8 +121,9 @@
               전 세계 200여 개국 이상에 진출해있는 글로벌 종합 음료회사입니다.
             </span>
           </h3>
-          <p class="overview_txt">전세계인이 사랑하는 브랜드인 코카콜라 컴퍼니지만 코카콜라의 상품에 대한 안내사이트를 만들어보고자 했습니다.
-          <span class="block">전체적인 컨셉을 코카콜라의 탄산처럼 강렬하고 화려하게 잡고 작업을 진행하였습니다.</span>
+          <p class="overview_txt">전세계인이 사랑하는 브랜드인 코카콜라의 콜라만을 위한 사이트를 만들어보고자 했습니다.
+          <span class="block">전체적인 컨셉을 코카콜라의 탄산처럼 강렬하고 화려하게 잡고 코카콜라의 </span>
+          <span class="block">메인 컬러를 이용하여 작업을 진행하였습니다.</span>
           </p>
           <div class="overview_btn">
             <a href="https://shape2ee.github.io/coca-cola/" target="_blank" class="overview_site">사이트 바로가기</a>
@@ -153,9 +154,7 @@
       <section class="site-img">
         <h2 class="blind">웹사이트 디자인</h2>
         <div class="site-img_wrap">
-          <div class="site-img_box" data-position="0">
-
-          </div>
+          <div class="site-img_box" data-position="0"></div>
         </div>
         </div>
       </section>
@@ -166,10 +165,11 @@
           <div class="info_item">
             <h2 class="info_tit title-font">Keywords</h2>
             <ul class="info_tag">
-              <li>#vanilla JavaScript</li>
+              <li>#JavaScript Animation</li>
+              <li>#Scroll Animation</li>
               <li>#웹표준</li>
-              <li>#반응형 웹</li>
-              <li>#mediaQueries</li>
+              <li>#SCSS</li>
+              <li>#가로스크롤</li>
             </ul>
           </div>
           <!-- item2 design -->
@@ -181,11 +181,11 @@
                 <img src="./images/colorPalette.png" alt="color palette">
               </div>
               <div class="info_font">
-                <h3>Noto Sans KR</h3>
+                <h3>Montserrat</h3>
                 <ul class="info_font-style">
-                  <li>가나다라마바사아자차카타파하</li>
-                  <li>ABCDEFGHIJKLNMOPQRSTUWXYZ</li>
-                  <li>ABCDEFGHIJKLNMOPQRSTUWXYZ</li>
+                  <!-- <li>가나다라마바사아자차카타파하</li> -->
+                  <li>ABCDEFGHIJKLNMOPQRSTUVWXYZ</li>
+                  <li>abcdefghijklnmopqrstuvwxyz</li>
                   <li>0123456789</li>
                 </ul>
               </div>
@@ -197,10 +197,11 @@
             <ul class="info_list">
               <li>Chrome 브라우저 최적화</li>
               <li>PC : 1920px / Tablet 1024px ~ 768px / Mobile :768px~</li>
+              <li>GSAP ScrollTrigger를 이용한 화려한 움직임</li>
+              <li>SCSS를 이용한 CSS 간략화 및 최적화</li>
               <li>flex와 grid를 이용한 웹페이지 레이아웃 제작/제어</li>
               <li>미디어 쿼리와 가변 단위 값, rem을 이용한 사용자별 환경, 디바이스 제약 해결</li>
               <li>pc에서의 사용자 접근성을 높이기 위해 일부 요소에 cursor: pointer 적용</li>
-              <li>Vanila JavaScript를 이용한 슬라이드</li>
               <li>Mobile퍼스트로 작업하여 mobile에서의 호버문제 해결</li>
             </ul>
           </div>
@@ -209,36 +210,37 @@
             <h2 class="info_tit title-font">Review</h2>
             <ul class="info_review">
               <li>
-                <h2 class="info_summary">BEM 도전! 아쉬움이 남는 결과</h2>
+                <h2 class="info_summary">CSS 인생은 전처리기를 도입하기 전과 후로 나뉜다</h2>
                 <p>
-                  <span class="block">BEM 방식에 도전한다는 생각으로 작업을 했으나, 첫 시도이다보니</span>
-                  <span class="block">헷갈리는 부분이 있었고, 쉽게 생각했지만 신경쓸게 많아 공부를 더 해야할 것 같습니다.</span>
+                  <span class="block">한참 공부를 하던 중 한 블로그에서 본 글인데, SCSS를 공부하고 공감을 했습니다.</span>
+                  <span class="block">점점 방대해지는 CSS를 조금 더 가독성이 좋고 효율적으로 작성하고 싶었고,</span>
+                  <span class="block">이번 프로젝트에 SCSS를 도입하여 작업을 해보았습니다.</span>
                 </p>
               </li>
               <li>
-                <h2 class="info_summary">기다려라, 터치 & 드래그 이벤트</h2>
+                <h2 class="info_summary">인터랙티브 웹을 위한 첫걸음</h2>
                 <p>
-                  <span class="block"><mark>처음 작업은 플러그인의 도움없이 지금까지 배운것만을 이용해서 작업을 해보고 싶어서 </mark></span>
-                  <span class="block">슬라이드를 작업을 도전했지만 드래그와 터치로는 작동을 시키지 못하여 아쉬운 부분입니다.</span>
-                  <span class="block"> 추후 공부해서 등록할 예정입니다.</span>
+                  <span class="block">학원 선생님께서 이번에는 화려한 움직임의 작업을 권유해주셔서 작업을 하였고,</span>
+                  <span class="block"><mark>GSAP ScrollTrigger Plugin</mark>을 이용하여 작업을 하였습니다.</span>
+                  <span class="block">처음 사용하다 보니 코드를 깔끔하고 정리되게 사용하지 못한것 같아 아쉬웠지만,</span>
+                  <span class="block">더욱 공부하고 싶어지는 분야가 되었습니다.</span>
                 </p>
               </li>
               <li>
-                <h2 class="info_summary">Dropdown Custom</h2>
+                <h2 class="info_summary">Mobile과 PC의 세계는 다르다</h2>
                 <p>
-                  <span class="block">브라우저 기본 스타일의 메뉴 말고 스타일을 만들려고 JavaScript로 작업을 하였는데,</span>
-                  <span class="block"><mark>메뉴들이 클릭 되지 않는 문제가 있었고,</mark>해결하려고 여러시도를 했지만 해결을 못하였습니다.</span>
-                  <span class="block">그러다 마지막으로 전체 코드를 보던 중 <mark>menu에 overflow:hidden 때문이라는 것을</mark></span>
-                  <span class="block">발견하여 해당 코드를 지우는 것으로 문제를 해결하였습니다.</span>
+                  <span class="block">반응형 작업을 위해 Plugin을 선택하여 작업을 한 것 이었는데,</span>
+                  <span class="block">처음 사용하다보니 디테일한 부분까지 터득하지 못하여 브라우저를 조절하면</span>
+                  <span class="block">레이아웃이 약간 틀어지는 현상있었고, 이 문제를 해결하기 위하여</span>
+                  <span class="block"><mark>'resize'이벤트를 이용하여 새로고침</mark>이 되도록 하였습니다.</span>
                 </p>
               </li>
               <li>
-                <h2 class="info_summary">비슷한 듯 다른 단위의 세계</h2>
+                <h2 class="info_summary">나도 할 수 있다! 가로스크롤</h2>
                 <p>
-                  <span class="block">예매하기에서 “.tiketing-container”의 높이를 일정 사이즈일 때는 화면에 헤더 영역과</span>
-                  <span class="block"><mark>예매하기가 가득 보이게 만드려고 헤더를 뺀 100vh를 이용해서 만들고</mark><mark>grid-template-rows를</mark></span>
-                  <span class="block"><mark>1fr과 select존의 높이로 했는데</mark> 레이아웃이 계속 틀어졌고, <mark>결국 1fr 아닌 %로 변경</mark>해서 작업하면서</span>
-                  <span class="block">문제를 해결했습니다.</span>
+                  <span class="block">화려한 움직임을 만들어내는 사이트들을 보면 가로스크롤을 이용한 페이지가 많아보였고,</span>
+                  <span class="block">바로 적용을 시켜보았습니다. <mark>position:sticky와 함께 간단하게 JavaScript 코드를</mark> 이용하여</span>
+                  <span class="block">작업을 하였습니다. 다만 모바일 환경에서 가로보다는 세로가 좋은거 같아 수정이 필요해 보입니다.</span>
                 </p>
               </li>
             </ul>
@@ -260,10 +262,10 @@
         </a>
       </div>
       <div class="worklist_next">
-        <a href="#">
+        <a href="../01_lotteCinema/">
           <div class="worklist_txt">
             <span class="worklist_small-txt">next</span>
-            <p class="worklist_tit">Project02</p>
+            <p class="worklist_tit">Lotte Cinema</p>
           </div>
         </a>
       </div>

@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+
 body {
   line-height: 1;
 }
@@ -134,17 +136,19 @@ body {
 .about__img,
 .skill,
 .skill__item {
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 1s, opacity 1s;
-}
-
-.about__txt.hide,
-.about__img.hide,
-.skill.hide,
-.skill__item.hide {
+  visibility: hidden;
   opacity: 0;
   transform: translateY(50px);
+  transition: transform 1s, opacity 1s, visibility 1s ;
+}
+
+.about__txt.show,
+.about__img.show,
+.skill.show,
+.skill__item.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 768px) {
