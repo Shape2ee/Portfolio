@@ -38,10 +38,10 @@ const toggleClass1 = () => {
     let num = skill.offsetTop + item.offsetTop;
     let total = num - item.clientHeight * 0.8;
 
-    if (window.scrollY > total) {
-      item.classList.remove("hide");
-    } else {
+    if (window.scrollY < total) {
       item.classList.add("hide");
+    } else {
+      item.classList.remove("hide");
     }
 
   });

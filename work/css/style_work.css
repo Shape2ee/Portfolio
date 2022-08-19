@@ -31,10 +31,8 @@ img {
 }
 
 .grid_tab {
-  /* margin-left: -2rem; */
   display: flex;
   justify-content: space-between;
-  
 }
 
 .grid_tab li {
