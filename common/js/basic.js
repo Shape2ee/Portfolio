@@ -62,17 +62,18 @@ cursorToggleClass(sideBtn);
 // cursor 모바일에서 지우기
 
 let timer = null;
+
+
+
 const mobileCheck = () => {
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    cursor1.style.display = "none";
-    cursor2.style.display = "none";
-  } else {
+  const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+
+  if (mobile === false) {
     cursor1.style.display = "block";
     cursor2.style.display = "block";
+  } else {
+    cursor1.style.display = "none";
+    cursor2.style.display = "none";
   }
 }
 

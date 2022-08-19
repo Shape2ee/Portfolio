@@ -7,6 +7,7 @@ const skillItemList = document.querySelectorAll(".skill__item");
 const h2offsetTop = h2.offsetTop;
 let myScroll = 0;
 
+
 function scorllCheck(offsetTop, item) {
   if (window.scrollY > offsetTop) {
     item.classList.add("show");
@@ -34,17 +35,15 @@ const toggleClass1 = () => {
   scorllCheck(infoImg.offsetTop, skill);
 
   skillItemList.forEach((item) => {
-    // item.style.backgroundColor = "red";
     let num = skill.offsetTop + item.offsetTop;
     let total = num - item.clientHeight * 0.8;
-    // item.innerText = `${total}`;
 
-    scorllCheck(total, item);
-    // if (window.scrollY > total) {
-    //   item.classList.remove("hide");
-    // } else {
-    //   item.classList.add("hide");
-    // }
+    if (window.scrollY > total) {
+      item.classList.remove("hide");
+    } else {
+      item.classList.add("hide");
+    }
+
   });
 };
 

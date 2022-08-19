@@ -1,8 +1,11 @@
-
+"use strict";
 // swiper js
+
+// main slide
 const mainSwiper = new Swiper(".work_slide_container", {
   speed: 1500,
   parallax: true,
+  spaceBetween: 20,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -13,15 +16,16 @@ const mainSwiper = new Swiper(".work_slide_container", {
   },
 })
 
+// index slide
 const indexSwiper = new Swiper(".work_index", {
   speed: 600,
-  // loop: true,
   direction: 'vertical',
 })
 
 mainSwiper.controller.control = indexSwiper;
 indexSwiper.controller.control = mainSwiper;
 
+// paginationBtn hover
 const paginationBtn = document.querySelectorAll(".swiper-pagination-bullet");
 
 paginationBtn.forEach( btn => {

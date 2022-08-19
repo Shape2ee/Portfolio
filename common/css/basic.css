@@ -315,6 +315,7 @@ footer {
 
 /****** cursor ******/
 .cursor1 {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -329,6 +330,7 @@ footer {
 }
 
 .cursor2 {
+  display: none;
   position: fixed;
   width: 10px;
   height: 10px;
