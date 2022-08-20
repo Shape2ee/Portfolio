@@ -7,11 +7,11 @@
 
 /* 목록 이동 */
 .worklist_prev {
-  background-image: url(../images/prev_coca-cola.png);
+  background-image: url(../../common/images/coca-cola.png);
 }
 
 .worklist_next {
-  background-image: url(../images/next.png);
+  background-image: url(../../common/images/kkk.png);
 }
 
 /****** JS animation ******/
