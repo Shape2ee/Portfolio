@@ -164,27 +164,6 @@ main {
   color: #555;
 }
 
-.overview_btn {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.overview_site,
-.overview_github {
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  height: 60px;
-  border: 2px solid #000;
-  border-radius: 4px;
-  font-size: 1.4rem;
-  color: #fff;
-  background: #000 url(../images/r_arrow_w.svg) no-repeat calc(100% - 1rem) 50%;
-  transition: background 0.5s, color 0.5s;
-}
-
 /* 프로젝트 정보 */
 .overview_project {
   display: flex;
@@ -220,7 +199,7 @@ main {
   width: 100%;
   height: calc(90vh - 7rem);
   max-width: 1240px;
-  border: 20px solid #000;;
+  border: 20px solid #000;
   border-radius: 40px;
   cursor: grab;
 }
@@ -331,6 +310,39 @@ main {
   font-size: 1.8rem;
   font-weight: 700;
   color: #000;
+}
+
+/****** url btn  ******/
+.url_btn_container {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0;
+}
+
+.url_btn_wrap {
+  margin: 0 2.4rem;
+  width: 100%;
+}
+
+.url_btn {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.btn_site,
+.btn_github {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #000 url(../images/r_arrow_w.svg) no-repeat calc(100% - 1rem) 50%;
+  transition: background 0.5s, color 0.5s;
 }
 
 /****** worklist ******/
@@ -513,18 +525,6 @@ footer {
     display: block;
   }
 
-  .overview_btn {
-    gap: 2rem;
-    grid-template-columns: 240px 240px;
-  }
-
-  .overview_site,
-  .overview_github {
-    padding: 0 3rem;
-    background-position: calc(100% - 3rem);
-    font-size: 1.6rem;
-  }
-
   .overview_project {
     flex-direction: row;
     justify-content: space-between;
@@ -570,7 +570,7 @@ footer {
   .site-img_wrap {
     height: 49.323vw;
   }
-  
+
   /****** info ******/
   .info_item {
     grid-template-columns: 1fr 1fr;
@@ -583,6 +583,28 @@ footer {
 
   .info_review .block {
     display: block;
+  }
+
+  /****** url btn  ******/
+  .url_btn_container {
+    padding-top: 0;
+  }
+
+  .url_btn_wrap {
+    margin: 0;
+    width: 50%;
+  }
+
+  .url_btn {
+    gap: 2rem;
+    grid-template-columns: 240px 240px;
+  }
+
+  .btn_site,
+  .btn_github {
+    padding: 0 3rem;
+    background-position: calc(100% - 3rem);
+    font-size: 1.6rem;
   }
 
   /****** worklist ******/
@@ -657,6 +679,11 @@ footer {
     margin: 0 0 0 10rem;
   }
 
+  /****** url btn  ******/
+  .url_btn_container {
+    padding-top: 0;
+  }
+
   /****** worklist ******/
   .worklist_prev a,
   .worklist_next a {
@@ -674,8 +701,8 @@ footer {
 }
 
 @media only screen and (min-width: 1400px) {
-   /****** site ******/
-   .site-img_wrap {
+  /****** site ******/
+  .site-img_wrap {
     height: calc(49.323vw - 17rem);
   }
 }

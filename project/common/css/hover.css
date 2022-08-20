@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 @media (hover: hover) {
-  .overview_site:hover,
-  .overview_github:hover {
+  .btn_site:hover,
+  .btn_github:hover {
     background: transparent url(../images/r_arrow.svg) no-repeat
       calc(100% - 2rem) 50%;
     color: #000;
@@ -50,8 +50,8 @@
     transform: translateX(10px);
   }
 
-  html[data-dark="true"] .overview_site:hover,
-  html[data-dark="true"] .overview_github:hover {
+  html[data-dark="true"] .btn_site:hover,
+  html[data-dark="true"] .btn_github:hover {
     background: transparent url(../images/r_arrow_w.svg) no-repeat
       calc(100% - 2rem) 50%;
     color: #fff;

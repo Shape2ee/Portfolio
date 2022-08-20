@@ -7,11 +7,11 @@
 
 /* 목록 이동 */
 .worklist_prev {
-  background-image: url(../images/prev.png);
+  background-image: url(../../common/images/prev.png);
 }
 
 .worklist_next {
-  background-image: url(../images/next_lotteCinema.png);
+  background-image: url(../../common/images/lotteCinema.png);
 }
 
 /* font */
@@ -24,7 +24,7 @@
 .info_item {
   opacity: 0;
   transform: translateY(50px);
-  transition: transform 1s, opacity 1s;;
+  transition: transform 1s, opacity 1s;
 }
 
 .site-img.on,
