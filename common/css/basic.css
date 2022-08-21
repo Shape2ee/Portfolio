@@ -397,7 +397,7 @@ html[data-dark="true"] .footer_link {
 /****** btn ******/
 html[data-dark="true"] .top_btn,
 html[data-dark="true"] .dark_btn {
-  background-color: rgba(58, 59, 61, 0.7);
+  background-color: rgba(58, 59, 61, 1);
   box-shadow: none;
 }
 

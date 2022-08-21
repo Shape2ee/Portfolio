@@ -176,13 +176,13 @@
             <a
               href="https://shape2ee.github.io/coca-cola/"
               target="_blank"
-              class="btn_site"
+              class="btn"
               >사이트 바로가기</a
             >
             <a
               href="https://github.com/Shape2ee/coca-cola"
               target="_blank"
-              class="btn_github"
+              class="btn"
               >GitHub 바로가기</a
             >
           </div>
@@ -350,25 +350,23 @@
                   >
                 </p>
               </li>
+              <li>
+                <div class="url_btn">
+                  <a
+                    href="https://shape2ee.github.io/coca-cola/"
+                    target="_blank"
+                    class="btn"
+                    >사이트 바로가기</a
+                  >
+                  <a
+                    href="https://github.com/Shape2ee/coca-cola"
+                    target="_blank"
+                    class="btn"
+                    >GitHub 바로가기</a
+                  >
+                </div>
+              </li>
             </ul>
-          </div>
-        </div>
-        <div class="info_item url_btn_container">
-          <div class="url_btn_wrap">
-            <div class="url_btn">
-              <a
-                href="https://shape2ee.github.io/coca-cola/"
-                target="_blank"
-                class="btn_site"
-                >사이트 바로가기</a
-              >
-              <a
-                href="https://github.com/Shape2ee/coca-cola"
-                target="_blank"
-                class="btn_github"
-                >GitHub 바로가기</a
-              >
-            </div>
           </div>
         </div>
       </section>
@@ -428,43 +426,6 @@
     <script src="../common/js/header_project.js"></script>
     <script src="../common/js/image.js"></script>
     <script src="../common/js/slideUP.js"></script>
-    <script>
-      let imgChange = null;
-
-      window.addEventListener("resize", () => {
-        clearTimeout(imgChange);
-        imgChange = setTimeout(() => {
-          console.log("resize");
-          document.querySelector(".site-img_box").children[0].remove();
-          createImage();
-        }, 300);
-      });
-
-      function createImage() {
-        const imgBox = document.querySelector(".site-img_box");
-
-        const imgList = [
-          {
-            src: "./images/coke_m.png",
-            alt: "lotte cinema mobile",
-          },
-          {
-            src: "./images/coke.png",
-            alt: "lotte cinema pc",
-          },
-        ];
-        const imgTag = document.createElement("img");
-
-        if (window.matchMedia("(min-width: 768px)").matches) {
-          imgTag.setAttribute("src", imgList[1].src);
-          imgTag.setAttribute("alt", imgList[1].alt);
-          imgBox.appendChild(imgTag);
-        } else {
-          imgTag.setAttribute("src", imgList[0].src);
-          imgTag.setAttribute("alt", imgList[0].alt);
-          imgBox.appendChild(imgTag);
-        }
-      }
-    </script>
+    <script src="./js/coca-cola.js"></script>
   </body>
 </html>

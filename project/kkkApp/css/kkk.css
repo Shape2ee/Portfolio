@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  src: url(../font/AppleSDGothicNeoR.woff2) format("woff2"),
+    url(../font/AppleSDGothicNeoR.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* main image */
 .visual {
   background-image: url(../images/bg1.png);
@@ -31,29 +40,26 @@
 /****** layout ******/
 .site-img_container {
   display: flex;
-  height: calc(70vh);
+  flex-direction: column;
+  width: 100%;
 }
 
 .site-img_wrap {
-  width: auto;
-  height: auto;
-  max-width: none;
-  border-width: 10px;
-  border-radius: 20px;
-  cursor: default;
+  margin-bottom: 6rem;
+  height: 70vh;
 }
 
-.site-img_box {
-  width: 100%;
-  height: 100%;
-}
-
-.site-img_box img {
-  width: 100%;
-  height: 100%;
+.site-img_wrap:last-child {
+  margin-bottom: 0;
 }
 
 /****** info ******/
+
+/* font */
+.info_font {
+  font-family: "AppleSDGothicNeo";
+}
+
 .info_uiux {
   display: flex;
   flex-direction: column;
@@ -61,7 +67,7 @@
 
 .info_design {
   margin-top: 4rem;
-  padding: 6rem 0;
+  padding: 4rem;
   background-color: #f2f5f7;
 }
 
@@ -76,6 +82,16 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .site-img_container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70vh;
+  }
+  .site-img_wrap {
+    margin: 0 1rem 0;
+    height: auto;
+  }
+
   .info_design {
     padding: 6rem;
   }

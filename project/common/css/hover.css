@@ -1,13 +1,6 @@
 @charset "utf-8";
 
 @media (hover: hover) {
-  .btn_site:hover,
-  .btn_github:hover {
-    background: transparent url(../images/r_arrow.svg) no-repeat
-      calc(100% - 2rem) 50%;
-    color: #000;
-  }
-
   .worklist_prev:hover a::after,
   .worklist_next:hover a::after {
     background-color: rgba(0, 0, 0, 0.9);
@@ -50,10 +43,21 @@
     transform: translateX(10px);
   }
 
-  html[data-dark="true"] .btn_site:hover,
-  html[data-dark="true"] .btn_github:hover {
+  .btn:hover {
+    background: transparent url(../images/r_arrow.svg) no-repeat
+      calc(100% - 1rem) 50%;
+    color: #000;
+  }
+
+  html[data-dark="true"] .btn:hover {
     background: transparent url(../images/r_arrow_w.svg) no-repeat
-      calc(100% - 2rem) 50%;
+      calc(100% - 1rem) 50%;
     color: #fff;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .btn:hover {
+      background-position: calc(100% - 2rem) 50%;
+    }
   }
 }

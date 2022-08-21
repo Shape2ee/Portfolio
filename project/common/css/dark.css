@@ -38,8 +38,7 @@ html[data-dark="true"] .info_list li::before {
   background-color: #a8a8a8;
 }
 
-html[data-dark="true"] .overview_site,
-html[data-dark="true"] .overview_github {
+html[data-dark="true"] .btn {
   background-color: #12c2e9;
   border-color: #12c2e9;
 }
