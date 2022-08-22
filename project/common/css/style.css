@@ -663,8 +663,12 @@ footer {
     margin-top: 10rem;
   }
 
+  .info_font h3 {
+    width: 20rem;
+  }
+
   .info_font-style {
-    margin: 0 0 0 10rem;
+    margin: 0;
   }
 
   /****** url btn  ******/

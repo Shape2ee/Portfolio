@@ -32,7 +32,7 @@ const toggleClass1 = () => {
   console.log(myScroll);
 
   scorllCheck(h2offsetTop, infoImg);
-  // scorllCheck(infoImg.offsetTop, skill);
+  scorllCheck(infoImg.offsetTop, skill);
   
   // let num = skill.offsetTop + item.offsetTop;
 
@@ -57,23 +57,14 @@ const toggleClass1 = () => {
     let total = 0;
 
     if(window.matchMedia("(min-width:768px)").matches) {
-      total = skill.offsetTop + (itemHeight * 0.3) * idx + 20;  
+      total = skill.offsetTop + (itemHeight * 0.4) * idx;  
       console.log(`true ${total}`)
-
-
     } else {
       total = skill.offsetTop + itemHeight * idx;
       console.log(`false ${total}`)
     }
 
-    if (window.scrollY > total) {
-      item.style.backgroundColor = "red"
-    } else {
-      item.style.backgroundColor = "blue"
-    }
-  
-      
-      // scorllCheck(total, item)
+      scorllCheck(total, item)
     });
 
   

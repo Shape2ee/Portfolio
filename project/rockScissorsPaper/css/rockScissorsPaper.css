@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'MaplestoryOTFBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* main image */
 .visual {
   background-image: url(../images/bg1.png);
@@ -11,7 +18,16 @@
 }
 
 .worklist_next {
-  background-image: url(../../common/images/kkk.png);
+  background-image: url(../../common/images/lotteCinema.png);
+}
+
+/* 폰트 */
+.info_font.nexon {
+  font-family: "MaplestoryOTFBold";
+}
+
+.info_font.pretendard {
+  font-family: "Pretendard";
 }
 
 /****** JS animation ******/
