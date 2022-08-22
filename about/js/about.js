@@ -32,7 +32,7 @@ const toggleClass1 = () => {
   console.log(myScroll);
 
   scorllCheck(h2offsetTop, infoImg);
-  scorllCheck(infoImg.offsetTop, skill);
+  // scorllCheck(infoImg.offsetTop, skill);
 
   /*
   skillItemList.forEach((item) => {
