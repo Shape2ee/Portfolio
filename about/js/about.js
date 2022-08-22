@@ -33,6 +33,9 @@ const toggleClass1 = () => {
 
   scorllCheck(h2offsetTop, infoImg);
   // scorllCheck(infoImg.offsetTop, skill);
+  
+  // let num = skill.offsetTop + item.offsetTop;
+
 
   /*
   skillItemList.forEach((item) => {
@@ -47,23 +50,33 @@ const toggleClass1 = () => {
   });
   */
 
-  skillItemList.forEach( item => {
-    skillItemList.forEach((item) => {
-      let num = skill.offsetTop + item.offsetTop;
-      let total = num - item.clientHeight * 0.8;
-  
-      if (window.scrollY > total) {
-        item.style.backgroundColor = "red"
-      }
-    });
-    
-    /*
-    let num = skill.offsetTop + item.offsetTop;
-    let total = num - item.clientHeight * 0.8;
 
-    scorllCheck(total, item)
-    */
-  })
+  
+ skillItemList.forEach((item ,idx) => {
+    let itemHeight = item.offsetHeight;
+    let total = 0;
+
+    if(window.matchMedia("(min-width:768px)").matches) {
+      total = skill.offsetTop + (itemHeight * 0.3) * idx + 20;  
+      console.log(`true ${total}`)
+
+
+    } else {
+      total = skill.offsetTop + itemHeight * idx;
+      console.log(`false ${total}`)
+    }
+
+    if (window.scrollY > total) {
+      item.style.backgroundColor = "red"
+    } else {
+      item.style.backgroundColor = "blue"
+    }
+  
+      
+      // scorllCheck(total, item)
+    });
+
+  
 };
 
 window.addEventListener("scroll", toggleClass);
