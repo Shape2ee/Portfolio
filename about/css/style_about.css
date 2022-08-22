@@ -73,8 +73,6 @@ body {
 }
 
 .skill__head {
-  position: sticky;
-  top: 7rem;
   display: flex;
   align-items: center;
   width: 100%;
@@ -134,7 +132,8 @@ body {
 /****** JS animation ******/
 .about__txt,
 .about__img,
-.skill {
+.skill,
+.skill__item {
   visibility: hidden;
   opacity: 0;
   transform: translateY(50px);
@@ -143,12 +142,13 @@ body {
 
 .about__txt.show,
 .about__img.show,
-.skill.show {
+.skill.show,
+.skill__item.show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
-
+/*
 .skill__item {
   visibility: visible;
   opacity: 1;
@@ -161,7 +161,7 @@ body {
   opacity: 0;
   transform: translateY(50px);
 }
-
+*/
 @media screen and (min-width: 768px) {
   /****** about ******/
   .about {
@@ -196,6 +196,7 @@ body {
   }
 
   .skill__head {
+    position: sticky;
     align-items: flex-start;
     top: 15rem;
     margin-top: 15rem;

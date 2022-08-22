@@ -190,7 +190,7 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 9rem;
-  padding: 6rem 4.4rem;
+  padding: 6rem;
   background-color: #f2f5f7;
 }
 
@@ -198,7 +198,7 @@ main {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  height: calc(90vh - 7rem);
+  /* height: calc(90vh - 7rem); */
   border: 10px solid #000;
   border-radius: 20px;
 }

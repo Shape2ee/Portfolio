@@ -28,15 +28,6 @@ const toggleClass1 = () => {
   infoList.forEach((item) => {
     scorllCheck(item.offsetTop + 300, item);
   });
-
-  /*
-  scorllCheck(infoList[0].offsetTop + 300, infoList[0]);
-  scorllCheck(infoList[1].offsetTop + 300, infoList[1]);
-  scorllCheck(infoList[2].offsetTop + 300, infoList[2]);
-  scorllCheck(infoList[3].offsetTop + 300, infoList[3]);
-  scorllCheck(infoList[4].offsetTop + 300, infoList[4]);
-  scorllCheck(infoList[5].offsetTop + 300, infoList[5]);
-  */
 };
 
 window.addEventListener("scroll", toggleClass1);

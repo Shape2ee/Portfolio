@@ -46,7 +46,7 @@
 
 .site-img_wrap {
   margin-bottom: 6rem;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 .site-img_wrap:last-child {
@@ -81,11 +81,16 @@
   margin-right: 6rem;
 }
 
+/* dark mode */
+html[data-dark="true"] .info_design {
+  background-color: #53575c;
+}
+
 @media only screen and (min-width: 768px) {
   .site-img_container {
     flex-direction: row;
     justify-content: space-between;
-    height: 70vh;
+    /* height: 70vh; */
   }
   .site-img_wrap {
     margin: 0 1rem 0;
