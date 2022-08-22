@@ -20,21 +20,7 @@
 }
 
 .worklist_next {
-  background-image: url(../../common/images/next.png);
-}
-
-/****** JS animation ******/
-.site-img,
-.info_item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 1s, opacity 1s;
-}
-
-.site-img.on,
-.info_item.on {
-  opacity: 1;
-  transform: translateY(0);
+  background-image: url(../../common/images/coca-cola.png);
 }
 
 /****** layout ******/
@@ -46,7 +32,6 @@
 
 .site-img_wrap {
   margin-bottom: 6rem;
-  /* height: 70vh; */
 }
 
 .site-img_wrap:last-child {

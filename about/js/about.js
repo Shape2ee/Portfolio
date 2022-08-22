@@ -1,3 +1,5 @@
+"use strict";
+
 const h2 = document.querySelector(".about__title h2");
 const infoTxt = document.querySelector(".about__txt");
 const infoImg = document.querySelector(".about__img");
@@ -49,8 +51,6 @@ const toggleClass1 = () => {
     }
   });
   */
-
-
   
  skillItemList.forEach((item ,idx) => {
     let itemHeight = item.offsetHeight;
@@ -66,11 +66,8 @@ const toggleClass1 = () => {
 
       scorllCheck(total, item)
     });
-
-  
 };
 
 window.addEventListener("scroll", toggleClass);
 window.addEventListener("scroll", toggleClass1);
-window.addEventListener("touchmove", toggleClass1);
 window.addEventListener("load", toggleClass1);

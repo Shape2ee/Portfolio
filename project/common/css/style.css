@@ -317,6 +317,20 @@ main {
   margin-top: 8rem;
 }
 
+/****** JS animation ******/
+.site-img,
+.info_item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s, opacity 1s;;
+}
+
+.site-img.show,
+.info_item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /****** url btn  ******/
 .url_btn {
   display: grid;

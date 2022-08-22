@@ -7,23 +7,9 @@
 
 /* 목록 이동 */
 .worklist_prev {
-  background-image: url(../../common/images/coca-cola.png);
+  background-image: url(../../common/images/rock_scisser_.paper.png);
 }
 
 .worklist_next {
   background-image: url(../../common/images/kkk.png);
-}
-
-/****** JS animation ******/
-.site-img,
-.info_item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 1s, opacity 1s;;
-}
-
-.site-img.on,
-.info_item.on {
-  opacity: 1;
-  transform: translateY(0);
 }

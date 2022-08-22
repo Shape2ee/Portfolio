@@ -1,4 +1,5 @@
 "use strict";
+
 const siteImgBox = document.querySelector(".site-img");
 const imgContianer = document.querySelector(".site-img_wrap");
 const img = document.querySelector(".site-img_box");

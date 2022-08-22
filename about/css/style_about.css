@@ -24,7 +24,7 @@ body {
 .about__title p {
   margin-top: -2rem;
   font-size: 4rem;
-  font-weight: 200;
+  font-weight: 100;
   color: #ccc;
 }
 
@@ -148,20 +148,7 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-/*
-.skill__item {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 1s, opacity 1s, visibility 1s ;
-}
 
-.skill__item.hide {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(50px);
-}
-*/
 @media screen and (min-width: 768px) {
   /****** about ******/
   .about {
@@ -217,9 +204,8 @@ body {
   }
 
   .about__title p {
-    font-size: 8rem;
     margin-top: -4rem;
-    color: #eee;
+    font-size: 8rem;
   }
 
   .about__txt {
@@ -253,7 +239,6 @@ body {
 
   .skill__grid {
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: repeat(5, 270px); */
     grid-auto-rows: 270px;
     padding-right: 0;
     width: 60%;

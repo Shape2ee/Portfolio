@@ -7,28 +7,14 @@
 
 /* 목록 이동 */
 .worklist_prev {
-  background-image: url(../../common/images/prev.png);
+  background-image: url(../../common/images/kkk.png);
 }
 
 .worklist_next {
-  background-image: url(../../common/images/lotteCinema.png);
+  background-image: url(../../common/images/rock_scisser_.paper.png);
 }
 
 /* font */
 .info_font {
   font-family: "Montserrat";
-}
-
-/****** JS animation ******/
-.site-img,
-.info_item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 1s, opacity 1s;
-}
-
-.site-img.on,
-.info_item.on {
-  opacity: 1;
-  transform: translateY(0);
 }

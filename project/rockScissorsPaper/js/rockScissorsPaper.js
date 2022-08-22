@@ -1,3 +1,5 @@
+"use strict";
+
 let imgChange = null;
 
 window.addEventListener("resize", () => {

@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 메이플스토리 서체 */
 @font-face {
   font-family: 'MaplestoryOTFBold';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
@@ -27,19 +28,6 @@
 }
 
 .info_font.pretendard {
+  margin-top: 6rem;
   font-family: "Pretendard";
-}
-
-/****** JS animation ******/
-.site-img,
-.info_item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 1s, opacity 1s;;
-}
-
-.site-img.on,
-.info_item.on {
-  opacity: 1;
-  transform: translateY(0);
 }
