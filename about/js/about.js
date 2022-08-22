@@ -34,6 +34,7 @@ const toggleClass1 = () => {
   scorllCheck(h2offsetTop, infoImg);
   scorllCheck(infoImg.offsetTop, skill);
 
+  /*
   skillItemList.forEach((item) => {
     let num = skill.offsetTop + item.offsetTop;
     let total = num - item.clientHeight * 0.8;
@@ -43,8 +44,15 @@ const toggleClass1 = () => {
     } else {
       item.classList.remove("show");
     }
-
   });
+  */
+
+  skillItemList.forEach( item => {
+    let num = skill.offsetTop + item.offsetTop;
+    let total = num - item.clientHeight * 0.8;
+
+    scorllCheck(total, item)
+  })
 };
 
 window.addEventListener("scroll", toggleClass);
