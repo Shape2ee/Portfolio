@@ -1,13 +1,5 @@
 @charset "utf-8";
 
-/* 메이플스토리 서체 */
-@font-face {
-  font-family: 'MaplestoryOTFBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* main image */
 .visual {
   background-image: url(../images/bg1.png);

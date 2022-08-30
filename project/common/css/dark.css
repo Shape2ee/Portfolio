@@ -31,9 +31,11 @@ html[data-dark="true"] .info_review .block mark {
 html[data-dark="true"] .overview_txt,
 html[data-dark="true"] .overview_project li p,
 html[data-dark="true"] .info_list,
-html[data-dark="true"] .info_review li {
+html[data-dark="true"] .info_review li,
+html[data-dark="true"] .info_font-style {
   color: #a8a8a8;
 }
+
 html[data-dark="true"] .info_list li::before {
   background-color: #a8a8a8;
 }

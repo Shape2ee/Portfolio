@@ -266,6 +266,10 @@ main {
   font-family: "Noto Sans KR";
 }
 
+.info_font h3 {
+  font-size: 2rem;
+}
+
 .info_font-style {
   margin-top: 1rem;
 }

@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: "AppleSDGothicNeo";
-  src: url(../font/AppleSDGothicNeoR.woff2) format("woff2"),
-    url(../font/AppleSDGothicNeoR.woff) format("woff");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 /* main image */
 .visual {
   background-image: url(../images/bg1.png);

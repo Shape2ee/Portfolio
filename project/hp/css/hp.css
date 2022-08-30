@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* main image */
+.visual {
+  background-image: url(../images/bg1.png);
+}
+
+/* 목록 이동 */
+.worklist_prev {
+  background-image: url(../../common/images/kkk.png);
+}
+
+.worklist_next {
+  background-image: url(../../common/images/coca-cola.png);
+}
+
+/* font */
+.info_font {
+  font-family: "Pretendard";
+}
