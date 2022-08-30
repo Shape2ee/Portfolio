@@ -15,12 +15,12 @@ function createImage() {
   const imgBox = document.querySelector(".site-img_box");
   const imgList = [
     {
-      src: "./images/lotteCinema_m.gif",
-      alt: "lotte cinema mobile",
+      src: "./images/minigame_rsp_m.gif",
+      alt: "Rock Scissers Paper Game mobile",
     },
     {
-      src: "./images/lotteCinema.gif",
-      alt: "lotte cinema pc",
+      src: "./images/minigame_rsp.gif",
+      alt: "Rock Scissers Paper Game",
     },
   ];
   const imgTag = document.createElement("img");
