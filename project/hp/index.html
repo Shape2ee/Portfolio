@@ -194,7 +194,7 @@
             </li>
             <li>
               <strong>작업기간</strong>
-              <p>22.08.23 ~ 22.08.29</p>
+              <p>22.08.23 ~ 22.08.31</p>
             </li>
           </ul>
         </div>
@@ -215,6 +215,7 @@
             <ul class="info_tag">
               <li># React</li>
               <li># React Hooks</li>
+              <li># React Router</li>
               <li># Styled-Components</li>
               <li># Pixabay API</li>
               <li># Axios</li>
@@ -244,8 +245,12 @@
             <h2 class="info_tit title-font">Publishing</h2>
             <ul class="info_list">
               <li>Chrome 브라우저 최적화</li>
-              <li>React Hooks를 이용한 동적 움직임</li>
-              <li>SCSS를 이용한 CSS 간략화 및 최적화</li>
+              <li>PC,Tablet : 1920px ~ 769px / Mobile :768px~</li>
+              <li>useState, useEffect, useRef를 이용한 동적 움직임</li>
+              <li>Styled-Components를 이용한 스타일 및 반응형 구현</li>
+              <li>React Router로 페이지 이동 구현</li>
+              <li>Pixabay API를 이용한 이미지 검색 기능 구현</li>
+              <li>Swiper.js로 Slide 구현</li>
             </ul>
           </div>
           <!-- item4 review -->
@@ -253,82 +258,72 @@
             <h2 class="info_tit title-font">Review</h2>
             <ul class="info_review">
               <li>
+                <h2 class="info_summary">React의 세계로 드디어 입장</h2>
+                <p>
+                  <span class="block"
+                    >이번 프로젝트는 오로지 React만을 이용하여
+                    구성하였습니다.</span
+                  >
+                  <span class="block"
+                    >처음 작업하다 보니 궁금한 점도 많고, 학원에서 배운 것은
+                    리액트의 일부여서</span
+                  >
+                  <span class="block"
+                    >CSS와 자바스크립트로 쉽게 구현하던 것들을, React에서는 어떤
+                    식으로 해야 할지 몰라</span
+                  >
+                  <span class="block"
+                    >막막함도 있었지만, 밤낮을 가리지 않고 따로 틈틈히 강의
+                    시청과 검색을 통해</span
+                  >
+                  <span class="block"
+                    >반응형과 서브페이지까지 사이트를 구현하였습니다.</span
+                  >
+                </p>
+              </li>
+              <li>
                 <h2 class="info_summary">
-                  CSS 인생은 전처리기를 도입하기 전과 후로 나뉜다
+                  하얀 도화지 같던 build 후 페이지...
                 </h2>
                 <p>
                   <span class="block"
-                    >한참 공부를 하던 중 한 블로그에서 본 글인데, SCSS를
-                    공부하고 공감을 했습니다.</span
+                    >npm run build를 통해 build를 하고 index.html 파일을 열면
+                    아무것도 없는</span
                   >
                   <span class="block"
-                    >점점 방대해지는 CSS를 조금 더 가독성이 좋고 효율적으로
-                    작성하고 싶었고,</span
+                    >하얀색으로 페이지가 나왔고, 이유가 build 후 경로의 문제라는
+                    것을 알게 되어</span
                   >
                   <span class="block"
-                    >이번 프로젝트에 SCSS를 도입하여 작업을 해보았습니다.</span
-                  >
-                </p>
-              </li>
-              <li>
-                <h2 class="info_summary">인터랙티브 웹을 위한 첫걸음</h2>
-                <p>
-                  <span class="block"
-                    >학원 선생님께서 이번에는 화려한 움직임의 작업을
-                    권유해주셔서 작업을 하였고,</span
+                    >경로를 수정하였지만,
+                    <mark>src 폴더에 넣어둔 이미지들은 보이지 않는 문제</mark>가
+                    있었습니다.</span
                   >
                   <span class="block"
-                    ><mark>GSAP ScrollTrigger Plugin</mark>을 이용하여 작업을
-                    하였습니다.</span
-                  >
-                  <span class="block"
-                    >처음 사용하다 보니 코드를 깔끔하고 정리되게 사용하지 못한것
-                    같아 아쉬웠지만,</span
-                  >
-                  <span class="block"
-                    >더욱 공부하고 싶어지는 분야가 되었습니다.</span
-                  >
-                </p>
-              </li>
-              <li>
-                <h2 class="info_summary">Mobile과 PC의 세계는 다르다</h2>
-                <p>
-                  <span class="block"
-                    >반응형 작업을 위해 Plugin을 선택하여 작업을 한 것
-                    이었는데,</span
-                  >
-                  <span class="block"
-                    >처음 사용하다보니 디테일한 부분까지 터득하지 못하여
-                    브라우저를 조절하면</span
-                  >
-                  <span class="block"
-                    >레이아웃이 약간 틀어지는 현상있었고, 이 문제를 해결하기
-                    위하여</span
-                  >
-                  <span class="block"
-                    ><mark>'resize'이벤트를 이용하여 새로고침</mark>이 되도록
-                    하였습니다.</span
-                  >
-                </p>
-              </li>
-              <li>
-                <h2 class="info_summary">나도 할 수 있다! 가로스크롤</h2>
-                <p>
-                  <span class="block"
-                    >화려한 움직임을 만들어내는 사이트들을 보면 가로스크롤을
-                    이용한 페이지가 많아보였고,</span
-                  >
-                  <span class="block"
-                    >바로 적용을 시켜보았습니다.
+                    >그래서 build 한 파일을 바로
                     <mark
-                      >position:sticky와 함께 간단하게 JavaScript 코드를</mark
-                    >
-                    이용하여</span
+                      >github 페이지로 deploy 하는것으로 문제를
+                      해결하였습니다.</mark
+                    ></span
+                  >
+                </p>
+              </li>
+              <li>
+                <h2 class="info_summary">API 연동은 조금 더 공부하는거로...</h2>
+                <p>
+                  <span class="block"
+                    >API를 이용한 기능을 넣어보라는 선생님의 권유로 Pixabay
+                    API를 이용하여</span
                   >
                   <span class="block"
-                    >작업을 하였습니다. 다만 모바일 환경에서 가로보다는 세로가
-                    좋은거 같아 수정이 필요해 보입니다.</span
+                    >검색한 이미지를 가져오는 기능을 추가하고, 구현이 잘
+                    되었지만,</span
                   >
+                  <span class="block"
+                    >아직 Axios의 정확한 사용법을 이해하지 못한 것 같아서 다음
+                    프로젝트에서</span
+                  >
+                  <span class="block">다시 사용하면서 공부할 예정입니다</span>
                 </p>
               </li>
               <li>
