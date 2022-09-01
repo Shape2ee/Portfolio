@@ -34,11 +34,8 @@ img {
   justify-content: space-between;
 }
 
-.grid_tab li {
-  cursor: pointer;
-}
-
 .grid_tab li button {
+  cursor: pointer;
   position: relative;
   padding: 1rem 0;
   background-color: transparent;
