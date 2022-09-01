@@ -6,7 +6,6 @@ const bgImg = document.querySelectorAll(".info_bg")
 
 itemBoxList.forEach((item, idx) => {
   item.addEventListener("mousemove", (e) => {
-    console.log(e)
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 

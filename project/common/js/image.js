@@ -32,7 +32,6 @@ function dragImg(e) {
     let imgPosition = img.getAttribute("data-position");  
     activePositioin = Number(imgPosition) + mouseY;
     img.style.transform = `translateY(-${activePositioin}px)`;
-    // console.log(Number(imgPosition), mouseY)
   }
   
 }
@@ -69,13 +68,3 @@ imgContianer.addEventListener("mouseenter", () => {
     cursor.classList.remove("on");
   })
 })
-
-function resetPosition() {
-  
-}
-
-let positionReset = null;
-// window.addEventListener("resize", () => {
-//   clearTimeout(positionReset);
-//   positionReset = setTimeout(resetPosition, 300)
-// })

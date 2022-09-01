@@ -60,10 +60,7 @@ buttonAll.forEach((item) => {
 cursorToggleClass(sideBtn);
 
 // cursor 모바일에서 지우기
-
 let timer = null;
-
-
 
 const mobileCheck = () => {
   const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)

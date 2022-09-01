@@ -10,7 +10,6 @@ let myScroll = 0;
 const toggleClass1 = () => {
   myScroll = window.scrollY;
   let overViewValue = main.offsetTop + overViewTitle.offsetTop;
-  // let siteImgValue = main.offsetTop + siteImg.offsetTop
 
   scorllCheck(overViewValue, siteImg);
 

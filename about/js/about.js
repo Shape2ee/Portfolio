@@ -27,30 +27,11 @@ const toggleClass = () => {
   }
 };
 
-console.log(infoImg.offsetTop);
-
 const toggleClass1 = () => {
   myScroll = window.scrollY;
-  console.log(myScroll);
 
   scorllCheck(h2offsetTop, infoImg);
   scorllCheck(infoImg.offsetTop, skill);
-  
-  // let num = skill.offsetTop + item.offsetTop;
-
-
-  /*
-  skillItemList.forEach((item) => {
-    let num = skill.offsetTop + item.offsetTop;
-    let total = num - item.clientHeight * 0.8;
-
-    if (window.scrollY > total) {
-      item.classList.add("show");
-    } else {
-      item.classList.remove("show");
-    }
-  });
-  */
   
  skillItemList.forEach((item ,idx) => {
     let itemHeight = item.offsetHeight;
@@ -58,13 +39,11 @@ const toggleClass1 = () => {
 
     if(window.matchMedia("(min-width:768px)").matches) {
       total = skill.offsetTop + (itemHeight * 0.4) * idx;  
-      console.log(`true ${total}`)
     } else {
       total = skill.offsetTop + itemHeight * idx;
-      console.log(`false ${total}`)
     }
 
-      scorllCheck(total, item)
+    scorllCheck(total, item)
     });
 };
 

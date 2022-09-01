@@ -4,7 +4,6 @@ const workItem = document.querySelectorAll(".grid_item");
 let selectTab = "";
 
 const workCategory = (selectTab) => {
-  console.log(selectTab)
   let txtData = selectTab.textContent;
   // console.log(workItem[0].classList.contains('web'))
   switch(txtData){

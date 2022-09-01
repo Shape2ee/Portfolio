@@ -34,15 +34,12 @@ const sideCheck = () => {
   }
 }
 
-// window.addEventListener("scroll", changeHeader);
-// window.addEventListener("scroll", headerChange);
 window.addEventListener("scroll", () => {
   changeHeader();
   headerChange();
 });
 
 sideBtn.addEventListener("click", sideCheck);
-
 
 window.addEventListener("load", () => {
   changeHeader();
