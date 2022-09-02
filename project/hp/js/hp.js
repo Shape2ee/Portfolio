@@ -13,12 +13,12 @@ function createImage() {
   const imgBox = document.querySelector(".site-img_box");
   const imgList = [
     {
-      src: "./images/coca_cola_m.gif",
-      alt: "coca-cola mobile",
+      src: "./images/hp_m.gif",
+      alt: "HP Korea mobile",
     },
     {
-      src: "./images/coca_cola.gif",
-      alt: "coca-cola pc",
+      src: "./images/hp.gif",
+      alt: "HP Korea pc",
     },
   ];
   const imgTag = document.createElement("img");
