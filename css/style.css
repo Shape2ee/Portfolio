@@ -61,7 +61,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: move-gradient 30s linear infinite;
+  animation: move-gradient 15s linear infinite;
 }
 @keyframes move-gradient {
   100% {
@@ -135,19 +135,19 @@
   transition: opacity 0.7s;
 }
 
-.info_bg.bg1{
+.info_bg.bg1 {
   background-image: url(../images/img1.png);
 }
 
-.info_bg.bg2{
+.info_bg.bg2 {
   background-image: url(../images/img2.png);
 }
 
-.info_bg.bg3{
+.info_bg.bg3 {
   background-image: url(../images/img3.png);
 }
 
-.info_bg.bg4{
+.info_bg.bg4 {
   background-image: url(../images/img4.png);
 }
 
@@ -239,7 +239,6 @@
   position: absolute;
   left: 2rem;
   bottom: 4rem;
-  
 }
 
 .work_txt h3 {
@@ -248,7 +247,7 @@
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
-    line-height: 7rem;
+  line-height: 7rem;
   color: #fff;
 }
 
