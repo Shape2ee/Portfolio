@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* main image */
+.visual {
+  background-image: url(../images/bg1.png);
+}
+
+/* 목록 이동 */
+.worklist_prev {
+  background-image: url(../../common/images/coca-cola.png);
+}
+
+.worklist_next {
+  background-image: url(../../common/images/lotteCinema.png);
+}
+
+/* 폰트 */
+.info_font.nexon {
+  font-family: "MaplestoryOTFBold";
+}
+
+.info_font.pretendard {
+  margin-top: 6rem;
+  font-family: "Pretendard";
+}

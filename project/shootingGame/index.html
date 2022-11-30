@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko" data-dark="false">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임 | Dohyoung_Portfolio</title>
+    <meta name="description" content="JavaScript 토이프로젝트, 가위바위보 게임 사이트 입니다.">
+    <meta name="keywords" content="가위바위보, 가위, 바위, 보, 게임, Rock, Scissors, Paper, game, JavaScript, 자바스크립트, 토이프로젝트, toy">
+  
+    <!-- og -->
+    <meta property="og:title" content="가위바위보 게임 | Dohyoung_Portfolio">
+    <meta property="og:url" content="https://shape2ee.github.io/Portfolio/project/rockScissorPaper/">
+    <meta property="og:image" content="https://shape2ee.github.io/Portfolio/common/images/ogImage.png">
+    <meta property="og:description" content="JavaScript 토이프로젝트, 가위바위보 게임 사이트 입니다.">
+    <meta property="og:type" content="website">
+    
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="가위바위보 게임 | Dohyoung_Portfolio">
+    <meta name="twitter:url" content="https://shape2ee.github.io/Portfolio/project/rockScissorPaper/">
+    <meta name="twitter:image" content="https://shape2ee.github.io/Portfolio/common/images/ogImage.png">
+    <meta name="twitter:description" content="JavaScript 토이프로젝트, 가위바위보 게임 사이트 입니다.">
+  
+    <!-- favicon -->
+    <link rel="icon" href="../../common/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../common/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../../common/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../../common/favicon/site.webmanifest">
+  
+    <!-- reset css -->
+    <link rel="stylesheet" href="../../common/css/minireset.css">
+    <!-- font -->
+    <link rel="stylesheet" href="../../common/css/font.css">
+    <!-- 공통스타일 -->
+    <link rel="stylesheet" href="../../common/css/basic.css">
+    <link rel="stylesheet" href="../../common/css/contact.css">
+    <link rel="stylesheet" href="../common/css/style.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/rockScissorsPaper.css">
+    <!-- hover css -->
+    <link rel="stylesheet" href="../common/css/hover.css">
+    <!-- dark mode -->
+    <link rel="stylesheet" href="../common/css/dark.css">
+  </head>
+<body>
+  <!-- custom cursor -->
+  <div id="cursor1" class="cursor1"></div>
+  <div id="cursor2" class="cursor2"></div>
+  <!-- header -->
+  <header class="header project">
+    <div class="header_wrap">
+      <h1 class="header_logo"><a href="../../index.html">
+        <span class="blind">Dohyoung_Portfolio</span>
+      </a></h1>
+      <p>Portfolio</p>
+      <div class="header_menu">
+        <em>
+          <span class="blind">메뉴</span>
+        </em>
+      </div>
+    </div>
+  </header>
+  <!-- side nav -->
+  <nav class="side">
+    <div class="side_wrap">
+      <ul class="side_gnb">
+        <li class="side_item"><a href="../../work/index.html">work</a></li>
+          <li class="side_item"><a href="../../about/index.html">about</a></li>
+          <li class="side_item"><a href="https://shape-coding.tistory.com/" target="_blank">blog</a></li>
+          <li class="side_item"><a href="https://github.com/Shape2ee" target="_blank">github</a></li>
+      </ul>
+      <div class="side_info">
+        <div class="side_email">
+          <strong>Email</strong>
+          <p>shape1026@gamil.com</p>
+        </div>
+        <div class="side_phone">
+          <strong>Phone</strong>
+          <p>010-6621-8939</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- main visual -->
+  <article class="visual">
+    <!-- text box -->
+    <div class="visual_text">
+      <h2 class="visual_title">Rock
+        <span class="block">Scissors</span>
+        <span class="block">Paper</span>
+      </h2>
+      <h3 class="visual_sub-title">가위바위보 게임</h3>
+      <ul class="visual_tag">
+        <li>#ToyProject</li>
+        <li>#JavaScript</li>
+        <li>#Game</li>
+      </ul>
+    </div>
+    <!-- scroll animation -->
+    <div class="visual_scroll">
+      <span class="visual_mouse">
+        <span class="visual_ball"></span>
+      </span>
+      <p>scroll</p>
+    </div>
+  </article>
+  <!-- main -->
+  <main>
+      <!-- overview -->
+      <section class="overview">
+        <div class="inner_wrapper">
+          <h2 class="overview_main-tit title-font">overview</h2>
+          <h3 class="overview_tit">
+            <span class="overview_tit-block">
+              한 손으로 가위, 바위, 보의 세 모양을 만들어 차례나 승부를 정하는 
+            </span>
+            <span class="overview_tit-block">
+              방법 또는 놀이, 단순하지만 모두가 아는 가위바위보 게임
+            </span>
+          </h3>
+
+          <p class="overview_txt">
+          자바스크립트를 공부할 겸 함수식들을 만들어내는 연습을 하고 싶어
+          <span class="block">자바스크립트 토이프로젝트로 가위, 바위, 보 중에 하나를 선택하면 컴퓨터가</span>
+          <span class="block">랜덤으로 가위, 바위, 보를 선택하여 대결하는 게임을 작업했습니다.</span>
+          </p>
+          <div class="url_btn">
+            <a href="https://shape2ee.github.io/RockScissorPaper/" target="_blank" class="btn">사이트 바로가기</a>
+            <a href="https://github.com/Shape2ee/RockScissorPaper" target="_blank" class="btn">GitHub 바로가기</a>
+          </div>
+          <!-- 프로젝트 정보 -->
+          <ul class="overview_project">
+            <li>
+              <strong>프로젝트</strong>
+              <p>가위바위보 게임</p>
+            </li>
+            <li>
+              <strong>타입</strong>
+              <p>Toy Project</p>
+            </li>
+            <li>
+              <strong>기여도</strong>
+              <p>개인 프로젝트 100%</p>
+            </li>
+            <li>
+              <strong>작업기간</strong>
+              <p>22.07.30 ~ 22.07.31</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- imgBox -->
+      <section class="site-img">
+        <h2 class="blind">웹사이트 디자인</h2>
+        <div class="site-img_wrap">
+          <div class="site-img_box">
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- info -->
+      <section class="info">
+        <div class="inner_wrapper">
+          <!-- item1 keywords -->
+          <div class="info_item">
+            <h2 class="info_tit title-font">Keywords</h2>
+            <ul class="info_tag">
+              <li># Vanilla JavaScript</li>
+              <li># Math 함수</li>
+              <li># Cookie</li>
+            </ul>
+          </div>
+          <!-- item2 design -->
+          <div class="info_item">
+            <h2 class="info_tit title-font">Design</h2>
+            <div class="info_box">
+              <div class="info_color">
+                <h3 class="blind">color</h3>
+                <img src="./images/colorPalette.png" alt="color palette">
+              </div>
+              <div class="info_font nexon">
+                <h3>넥슨 메이플스토리</h3>
+                <ul class="info_font-style">
+                  <li>가나다라마바사아자차카타파하</li>
+                  <li>ABCDEFGHIJKLNMOPQRSTUVWXYZ</li>
+                  <li>abcdefghijklnmopqrstuvwxyz</li>
+                  <li>0123456789</li>
+                </ul>
+              </div>
+              <div class="info_font pretendard">
+                <h3>Pretendard</h3>
+                <ul class="info_font-style">
+                  <li>가나다라마바사아자차카타파하</li>
+                  <li>ABCDEFGHIJKLNMOPQRSTUVWXYZ</li>
+                  <li>abcdefghijklnmopqrstuvwxyz</li>
+                  <li>0123456789</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- item3 publishing -->
+          <div class="info_item">
+            <h2 class="info_tit title-font">Publishing</h2>
+            <ul class="info_list">
+              <li>Chrome 브라우저 최적화</li>
+              <li>PC & Tablet : 1920px ~ 769px / Mobile :768px~</li>
+              <li>Math.trunc()와 Math.random() 이용한 랜덤 숫자 구현</li>
+              <li>Cookie 설정을 통한 사용성 개선</li>
+              <li>flex와 grid를 이용한 웹페이지 레이아웃 제작/제어</li>
+              <li>pc에서의 사용자 접근성을 높이기 위해 일부 요소에 cursor: pointer 적용</li>
+            </ul>
+          </div>
+          <!-- item4 review -->
+          <div class="info_item">
+            <h2 class="info_tit title-font">Review</h2>
+            <ul class="info_review">
+              <li>
+                <h2 class="info_summary">하나의 동작은 한 곳에</h2>
+                <p>
+                  <span class="block">함수 식을 구현할 때 조금 더 클린 코드로 만들기 위해서 하나의 함수에는 </span>
+                  <span class="block">하나의 식을 구현하고 필요한 정보는 콜백 하도록 작업하였습니다.</span>
+                </p>
+              </li>
+              <li>
+                <h2 class="info_summary">쿠키 하나 구워주세요~</h2>
+                <p>
+                  <span class="block">게임 설명서가 새로고침을 하거나 재접속을 했을때, 계속해서 보여주는것이</span>
+                  <span class="block">사용자 경험에는 불편함으로 느껴질것이라고 생각했습니다. </span>
+                  <span class="block">그래서 Cookie에 데이터를 저장하여 사용자가 제어할 수 있도록 작업을 하였습니다.</span>
+                </p>
+              </li>
+              <li>
+                <h2 class="info_summary">사용자와 Communication</h2>
+                <p>
+                  <span class="block">가위, 바위, 보 버튼을 누르면 이미지가 바뀌는데 같은 버튼을 클릭하면 </span>
+                  <span class="block">같은 이미지가 보여지기 때문에 사용자로써는 눌린건지 알 수 없는 문제가 있었고,</span>
+                  <span class="block">이미지 전체를 지웠다가 보여지도록 작업하여 사용자 상호작용하도록 하여 해결했습니다.</span>
+                </p>
+              </li>
+              <li>
+                <div class="url_btn">
+                  <a href="https://shape2ee.github.io/RockScissorPaper/" target="_blank" class="btn">사이트 바로가기</a>
+                  <a href="https://github.com/Shape2ee/RockScissorPaper" target="_blank" class="btn">GitHub 바로가기</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <article class="worklist">
+    <h2 class="blind">다른 프로젝트 보기</h2>
+    <div class="worklist_pagemove">
+      <div class="worklist_prev">
+        <a href="../cocaCola/index.html">
+          <div class="worklist_txt">
+            <span class="worklist_small-txt">prev</span>
+            <p class="worklist_tit">Coca-Cola</p>
+          </div>
+        </a>
+      </div>
+      <div class="worklist_next">
+        <a href="../lotteCinema/index.html">
+          <div class="worklist_txt">
+            <span class="worklist_small-txt">next</span>
+            <p class="worklist_tit">Lotte Cinema</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="worklist_back-page">
+      <a href="../../work/">Work 목록으로 돌아가기</a>
+    </div>
+  </article>
+  <!-- footer -->
+  <footer>
+    <div class="footer_wrap">
+      <p>©2022 DoHyoung. All rights reserved</p>
+      <div class="footer_link">
+        <a href="https://github.com/Shape2ee" target="_blank">GitHub</a>
+          <a href="https://shape-coding.tistory.com/" target="_blank">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="btn_wrap">
+    <!-- go to up -->
+    <button type="button" class="top_btn" id="goToTop">
+      <em><span class="blind">위로가기</span></em>
+    </button>
+
+    <!-- dark mode -->
+    <button type="button" class="dark_btn" id="dark_btn">
+      <em><span class="blind">다크모드</span></em>
+    </button>
+
+  </div>
+  
+  <!-- 공통 script -->
+  <script src="../../common/js/side.js"></script>
+  <script src="../../common/js/basic.js"></script>
+  <script src="../../common/js/darkMode.js"></script>
+  <script src="../common/js/header_project.js"></script>
+  <!-- <script src="../common/js/image.js"></script> -->
+  <script src="../common/js/slideUP.js"></script>
+  <script src="./js/rockScissorsPaper.js"></script>
+</body>
+</html>
