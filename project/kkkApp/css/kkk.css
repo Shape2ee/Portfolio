@@ -33,7 +33,7 @@
 
 /* font */
 .info_font {
-  font-family: "AppleSDGothicNeo";
+  font-family: "AppleSDGothicNeo", sans-serif;
 }
 
 .info_uiux {

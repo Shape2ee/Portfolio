@@ -16,10 +16,10 @@
 
 /* 폰트 */
 .info_font.nexon {
-  font-family: "MaplestoryOTFBold";
+  font-family: "MaplestoryOTFBold", sans-serif;
 }
 
 .info_font.pretendard {
   margin-top: 6rem;
-  font-family: "Pretendard";
+  font-family: "Pretendard", sans-serif;
 }

@@ -92,6 +92,7 @@
         <li>#ToyProject</li>
         <li>#JavaScript</li>
         <li>#Game</li>
+        <li>#Canvas API</li>
       </ul>
     </div>
     <!-- scroll animation -->
@@ -162,6 +163,7 @@
               <li># Vanilla JavaScript</li>
               <li># JavaScript Class</li>
               <li># canvas API</li>
+              <li># this</li>
             </ul>
           </div>
           <!-- item2 design -->
@@ -172,8 +174,8 @@
                 <h3 class="blind">color</h3>
                 <img src="./images/colorPalette.png" alt="color palette">
               </div>
-              <div class="info_font nexon">
-                <h3>넥슨 메이플스토리</h3>
+              <div class="info_font logo">
+                <h3>태나다체</h3>
                 <ul class="info_font-style">
                   <li>가나다라마바사아자차카타파하</li>
                   <li>ABCDEFGHIJKLNMOPQRSTUVWXYZ</li>
@@ -181,15 +183,15 @@
                   <li>0123456789</li>
                 </ul>
               </div>
-              <div class="info_font pretendard">
-                <h3>Pretendard</h3>
+              <div class="info_font text">
+                <h3>갈무리11</h3>
                 <ul class="info_font-style">
                   <li>가나다라마바사아자차카타파하</li>
                   <li>ABCDEFGHIJKLNMOPQRSTUVWXYZ</li>
                   <li>abcdefghijklnmopqrstuvwxyz</li>
                   <li>0123456789</li>
                 </ul>
-              </div>
+              </div>  
             </div>
           </div>
           <!-- item3 publishing -->
@@ -197,11 +199,9 @@
             <h2 class="info_tit title-font">Publishing</h2>
             <ul class="info_list">
               <li>Chrome 브라우저 최적화</li>
-              <li>PC & Tablet : 1920px ~ 769px / Mobile :768px~</li>
               <li>Math.trunc()와 Math.random() 이용한 랜덤 숫자 구현</li>
-              <li>Cookie 설정을 통한 사용성 개선</li>
-              <li>flex와 grid를 이용한 웹페이지 레이아웃 제작/제어</li>
-              <li>pc에서의 사용자 접근성을 높이기 위해 일부 요소에 cursor: pointer 적용</li>
+              <li>Canvas API를 이용하여 우주선과 운석 움직임 구현</li>
+              <li>JavaScript class문법으로 연관 코드끼리의 그룹화</li>
             </ul>
           </div>
           <!-- item4 review -->
@@ -209,26 +209,21 @@
             <h2 class="info_tit title-font">Review</h2>
             <ul class="info_review">
               <li>
-                <h2 class="info_summary">하나의 동작은 한 곳에</h2>
+                <h2 class="info_summary">코드는 항상 시작과 끝이 중요하다</h2>
                 <p>
-                  <span class="block">함수 식을 구현할 때 조금 더 클린 코드로 만들기 위해서 하나의 함수에는 </span>
-                  <span class="block">하나의 식을 구현하고 필요한 정보는 콜백 하도록 작업하였습니다.</span>
+                  <span class="block">keyup event로 bullet을 발사하게 했는데 게임오버 후 다시 시작하면</span>
+                  <span class="block">오류와 함께 bullet이 발사가 되었고, 이유가 추가했었던 event를 </span>
+                  <span class="block">remove해주지 않아 event가 계속해서 추가 되는 문제였고,</span>
+                  <span class="block">이것을 게임이 종류되면 remove 해주는 것으로 해결 했습니다.</span>
                 </p>
               </li>
               <li>
-                <h2 class="info_summary">쿠키 하나 구워주세요~</h2>
+                <h2 class="info_summary">자바스크립트의 this 알아보기</h2>
                 <p>
-                  <span class="block">게임 설명서가 새로고침을 하거나 재접속을 했을때, 계속해서 보여주는것이</span>
-                  <span class="block">사용자 경험에는 불편함으로 느껴질것이라고 생각했습니다. </span>
-                  <span class="block">그래서 Cookie에 데이터를 저장하여 사용자가 제어할 수 있도록 작업을 하였습니다.</span>
-                </p>
-              </li>
-              <li>
-                <h2 class="info_summary">사용자와 Communication</h2>
-                <p>
-                  <span class="block">가위, 바위, 보 버튼을 누르면 이미지가 바뀌는데 같은 버튼을 클릭하면 </span>
-                  <span class="block">같은 이미지가 보여지기 때문에 사용자로써는 눌린건지 알 수 없는 문제가 있었고,</span>
-                  <span class="block">이미지 전체를 지웠다가 보여지도록 작업하여 사용자 상호작용하도록 하여 해결했습니다.</span>
+                  <span class="block">기존 강의의 코드를 새롭게 class문법을 적용하여 다시 작업을</span>
+                  <span class="block">하다보니 기존과는 다르게 this로 값들을 전달을 해주어야 해서</span>
+                  <span class="block">this의 이해가 필요하였고, 그 부분은 블로그에 정리도 하면서 공부하여</span>
+                  <span class="block">코드 작성을 하였습니다.</span>
                 </p>
               </li>
               <li>
@@ -247,18 +242,18 @@
     <h2 class="blind">다른 프로젝트 보기</h2>
     <div class="worklist_pagemove">
       <div class="worklist_prev">
-        <a href="../cocaCola/index.html">
+        <a href="../kkkApp/index.html">
           <div class="worklist_txt">
             <span class="worklist_small-txt">prev</span>
-            <p class="worklist_tit">Coca-Cola</p>
+            <p class="worklist_tit">킁.킁.킁 APP</p>
           </div>
         </a>
       </div>
       <div class="worklist_next">
-        <a href="../lotteCinema/index.html">
+        <a href="../hp/index.html">
           <div class="worklist_txt">
             <span class="worklist_small-txt">next</span>
-            <p class="worklist_tit">Lotte Cinema</p>
+            <p class="worklist_tit">HP코리아</p>
           </div>
         </a>
       </div>

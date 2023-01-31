@@ -1,25 +1,31 @@
 @charset "utf-8";
-
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+@font-face {
+  font-family: 'Tenada';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 /* main image */
 .visual {
-  background-image: url(../images/bg1.png);
+  background-image: url(../images/space-background.jpg);
 }
 
 /* 목록 이동 */
 .worklist_prev {
-  background-image: url(../../common/images/coca-cola.png);
+  background-image: url(../../common/images/kkk.png);
 }
 
 .worklist_next {
-  background-image: url(../../common/images/lotteCinema.png);
+  background-image: url(../../common/images/hp.png);
 }
 
 /* 폰트 */
-.info_font.nexon {
-  font-family: "MaplestoryOTFBold";
+.info_font.logo {
+  font-family: "Tenada", sans-serif;
 }
 
-.info_font.pretendard {
+.info_font.text {
   margin-top: 6rem;
-  font-family: "Pretendard";
+  font-family: "Galmuri11", sans-serif;
 }
